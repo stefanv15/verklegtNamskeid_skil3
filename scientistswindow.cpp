@@ -1,5 +1,7 @@
 #include "scientistswindow.h"
 #include "ui_scientistswindow.h"
+#include "domain.h"
+#include "person.h"
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
     QDialog(parent),

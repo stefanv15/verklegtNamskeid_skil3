@@ -1,5 +1,7 @@
 #ifndef COMPUTERWINDOW_H
 #define COMPUTERWINDOW_H
+#include "domain.h"
+#include "computers.h"
 
 #include <QDialog>
 
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::ComputerWindow *ui;
+    Domain m_domain;
 };
 
 #endif // COMPUTERWINDOW_H

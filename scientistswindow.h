@@ -1,5 +1,7 @@
 #ifndef SCIENTISTSWINDOW_H
 #define SCIENTISTSWINDOW_H
+#include "domain.h"
+#include "person.h"
 
 #include <QDialog>
 
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::ScientistsWindow *ui;
+    Domain m_domain;
 };
 
 #endif // SCIENTISTSWINDOW_H

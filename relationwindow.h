@@ -1,5 +1,8 @@
 #ifndef RELATIONWINDOW_H
 #define RELATIONWINDOW_H
+#include "domain.h"
+#include "computers.h"
+#include "person.h"
 
 #include <QDialog>
 

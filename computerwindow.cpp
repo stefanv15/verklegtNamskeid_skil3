@@ -1,5 +1,7 @@
 #include "computerwindow.h"
 #include "ui_computerwindow.h"
+#include "domain.h"
+#include "computers.h"
 
 ComputerWindow::ComputerWindow(QWidget *parent) :
     QDialog(parent),
