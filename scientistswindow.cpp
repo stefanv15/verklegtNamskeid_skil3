@@ -51,3 +51,15 @@ void ScientistsWindow::on_search_students_textChanged()
     vector<Person> persons = m_domain.searchScientist(search);
     displayScientists(persons);
 }
+
+void ScientistsWindow::on_add_button_clicked()
+{
+    QString name = ui->line_name->text();
+    QString gender = ui->line_gender->text();
+    QString yearOfBirth = ui->line_yearBorn->text();
+    QString yearOfDeath = ui->line_yearDied->text();
+
+    m_domain.createPerson(Person(name.toStdString(),gender.toStdString(),yearOfBirth.toInt(),yearOfDeath.toInt()));
+
+
+}
