@@ -15,9 +15,10 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QToolButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,10 +27,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QToolButton *Add;
-    QToolButton *ShowList;
-    QToolButton *Search;
-    QToolButton *Exit;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *computers_button;
+    QPushButton *scientists_button;
+    QPushButton *Exit;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -40,19 +42,29 @@ public:
         MainWindow->resize(400, 300);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        Add = new QToolButton(centralWidget);
-        Add->setObjectName(QStringLiteral("Add"));
-        Add->setGeometry(QRect(110, 100, 161, 31));
-        Add->setAutoFillBackground(false);
-        ShowList = new QToolButton(centralWidget);
-        ShowList->setObjectName(QStringLiteral("ShowList"));
-        ShowList->setGeometry(QRect(110, 140, 161, 31));
-        Search = new QToolButton(centralWidget);
-        Search->setObjectName(QStringLiteral("Search"));
-        Search->setGeometry(QRect(110, 180, 161, 31));
-        Exit = new QToolButton(centralWidget);
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(120, 110, 160, 151));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(5, 0, 5, 0);
+        computers_button = new QPushButton(verticalLayoutWidget);
+        computers_button->setObjectName(QStringLiteral("computers_button"));
+
+        verticalLayout->addWidget(computers_button);
+
+        scientists_button = new QPushButton(verticalLayoutWidget);
+        scientists_button->setObjectName(QStringLiteral("scientists_button"));
+
+        verticalLayout->addWidget(scientists_button);
+
+        Exit = new QPushButton(verticalLayoutWidget);
         Exit->setObjectName(QStringLiteral("Exit"));
-        Exit->setGeometry(QRect(110, 220, 161, 31));
+
+        verticalLayout->addWidget(Exit);
+
         MainWindow->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -69,10 +81,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        Add->setText(QApplication::translate("MainWindow", "Add", 0));
-        ShowList->setText(QApplication::translate("MainWindow", "Show List", 0));
-        Search->setText(QApplication::translate("MainWindow", "Search", 0));
-        Exit->setText(QApplication::translate("MainWindow", "Exit", 0));
+        computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
+        scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
+        Exit->setText(QApplication::translate("MainWindow", "Quit", 0));
     } // retranslateUi
 
 };

@@ -38,7 +38,7 @@ HEADERS += domain.h
 HEADERS += sqlite.h
 
 FORMS    += \
-    mainmenuwindow.ui \
     scientistswindow.ui \
     computerwindow.ui \
-    relationwindow.ui
+    relationwindow.ui \
+    mainwindow.ui

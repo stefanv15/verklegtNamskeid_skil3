@@ -15,18 +15,23 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QListWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_ScientistsWindow
 {
 public:
+    QListWidget *listWidget;
 
     void setupUi(QDialog *ScientistsWindow)
     {
         if (ScientistsWindow->objectName().isEmpty())
             ScientistsWindow->setObjectName(QStringLiteral("ScientistsWindow"));
-        ScientistsWindow->resize(400, 300);
+        ScientistsWindow->resize(413, 317);
+        listWidget = new QListWidget(ScientistsWindow);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setGeometry(QRect(10, 30, 381, 192));
 
         retranslateUi(ScientistsWindow);
 

@@ -15,18 +15,23 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QListWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_ComputerWindow
 {
 public:
+    QListWidget *listWidget;
 
     void setupUi(QDialog *ComputerWindow)
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
         ComputerWindow->resize(400, 300);
+        listWidget = new QListWidget(ComputerWindow);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setGeometry(QRect(5, 10, 391, 192));
 
         retranslateUi(ComputerWindow);
 
