@@ -13,7 +13,10 @@ TARGET = verkefnaskil3_hopur22
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    relation.cpp \
+    scientists.cpp \
+    computerwindow.cpp
 SOURCES += mainwindow.cpp
 SOURCES += person.cpp
 SOURCES += comp_pers.cpp
@@ -22,11 +25,19 @@ SOURCES += domain.cpp
 SOURCES += sqlite.cpp
 
 
-HEADERS += mainwindow.h
+HEADERS += \
+    scientists.h \
+    computerwindow.h \
+    relationwindow.h \
+    mainmenuwindow.h
 HEADERS += person.h
 HEADERS += comp_pers.h
 HEADERS += computers.h
 HEADERS += domain.h
 HEADERS += sqlite.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    computerwindow.ui \
+    mainmenuwindow.ui \
+    relationwindow.ui \
+    scientistswindow.ui
