@@ -141,7 +141,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="ret_button">
+  <widget class="QPushButton" name="button_schientist_return">
    <property name="geometry">
     <rect>
      <x>310</x>
@@ -190,7 +190,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Namel</string>
+    <string>Name</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="line_name">
@@ -284,7 +284,7 @@
     <string>When did the scientist die. type '-1' if he is alive</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="add_button">
+  <widget class="QPushButton" name="button_schientist_addSchientist">
    <property name="geometry">
     <rect>
      <x>10</x>

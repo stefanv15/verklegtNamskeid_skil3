@@ -35,15 +35,9 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->list_scientists->addItem(QString::fromStdString(currentScientist.getGender()));
         ui->list_scientists->addItem(QString::number(currentScientist.getDayOfBirth()));
         ui->list_scientists->addItem(QString::number(currentScientist.getDayOfDeath()));
-
-
     }
 }
 
-void ScientistsWindow::on_ret_button_clicked()
-{
-    this->close();
-}
 
 void ScientistsWindow::on_search_students_textChanged()
 {
@@ -52,7 +46,13 @@ void ScientistsWindow::on_search_students_textChanged()
     displayScientists(persons);
 }
 
-void ScientistsWindow::on_add_button_clicked()
+
+void ScientistsWindow::on_button_schientist_return_clicked()
+{
+    this->close();
+}
+
+void ScientistsWindow::on_button_schientist_addSchientist_clicked()
 {
     QString name = ui->line_name->text();
     QString gender = ui->line_gender->text();
@@ -60,6 +60,4 @@ void ScientistsWindow::on_add_button_clicked()
     QString yearOfDeath = ui->line_yearDied->text();
 
     m_domain.createPerson(Person(name.toStdString(),gender.toStdString(),yearOfBirth.toInt(),yearOfDeath.toInt()));
-
-
 }

@@ -26,7 +26,7 @@ class Ui_ScientistsWindow
 {
 public:
     QListWidget *list_scientists;
-    QPushButton *ret_button;
+    QPushButton *button_schientist_return;
     QLineEdit *search_students;
     QLabel *label;
     QLabel *label_2;
@@ -37,7 +37,7 @@ public:
     QLineEdit *line_yearBorn;
     QLabel *label_5;
     QLineEdit *line_yearDied;
-    QPushButton *add_button;
+    QPushButton *button_schientist_addSchientist;
 
     void setupUi(QDialog *ScientistsWindow)
     {
@@ -69,9 +69,9 @@ public:
         list_scientists = new QListWidget(ScientistsWindow);
         list_scientists->setObjectName(QStringLiteral("list_scientists"));
         list_scientists->setGeometry(QRect(10, 40, 381, 171));
-        ret_button = new QPushButton(ScientistsWindow);
-        ret_button->setObjectName(QStringLiteral("ret_button"));
-        ret_button->setGeometry(QRect(310, 440, 121, 31));
+        button_schientist_return = new QPushButton(ScientistsWindow);
+        button_schientist_return->setObjectName(QStringLiteral("button_schientist_return"));
+        button_schientist_return->setGeometry(QRect(310, 440, 121, 31));
         search_students = new QLineEdit(ScientistsWindow);
         search_students->setObjectName(QStringLiteral("search_students"));
         search_students->setGeometry(QRect(10, 10, 381, 20));
@@ -102,9 +102,9 @@ public:
         line_yearDied = new QLineEdit(ScientistsWindow);
         line_yearDied->setObjectName(QStringLiteral("line_yearDied"));
         line_yearDied->setGeometry(QRect(20, 430, 241, 20));
-        add_button = new QPushButton(ScientistsWindow);
-        add_button->setObjectName(QStringLiteral("add_button"));
-        add_button->setGeometry(QRect(10, 460, 251, 23));
+        button_schientist_addSchientist = new QPushButton(ScientistsWindow);
+        button_schientist_addSchientist->setObjectName(QStringLiteral("button_schientist_addSchientist"));
+        button_schientist_addSchientist->setGeometry(QRect(10, 460, 251, 23));
 
         retranslateUi(ScientistsWindow);
 
@@ -114,10 +114,10 @@ public:
     void retranslateUi(QDialog *ScientistsWindow)
     {
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
-        ret_button->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
+        button_schientist_return->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
         label->setText(QApplication::translate("ScientistsWindow", "<html><head/><body><p><span style=\" font-size:x-large; font-weight:600;\">Add new scientist</span></p></body></html>", 0));
-        label_2->setText(QApplication::translate("ScientistsWindow", "Namel", 0));
+        label_2->setText(QApplication::translate("ScientistsWindow", "Name", 0));
         line_name->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write name of scientist here", 0));
         label_3->setText(QApplication::translate("ScientistsWindow", "Gender", 0));
         line_gender->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write 'm' for male, 'f' for female", 0));
@@ -125,7 +125,7 @@ public:
         line_yearBorn->setPlaceholderText(QApplication::translate("ScientistsWindow", "When was the scientist born?", 0));
         label_5->setText(QApplication::translate("ScientistsWindow", "Year died", 0));
         line_yearDied->setPlaceholderText(QApplication::translate("ScientistsWindow", "When did the scientist die. type '-1' if he is alive", 0));
-        add_button->setText(QApplication::translate("ScientistsWindow", "Add scientist", 0));
+        button_schientist_addSchientist->setText(QApplication::translate("ScientistsWindow", "Add scientist", 0));
     } // retranslateUi
 
 };

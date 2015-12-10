@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ComputerWindow_t {
     QByteArrayData data[8];
-    char stringdata0[144];
+    char stringdata0[169];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,15 +34,16 @@ QT_MOC_LITERAL(1, 15, 14), // "sectionClicked"
 QT_MOC_LITERAL(2, 30, 0), // ""
 QT_MOC_LITERAL(3, 31, 5), // "index"
 QT_MOC_LITERAL(4, 37, 26), // "on_ComputerWindow_accepted"
-QT_MOC_LITERAL(5, 64, 17), // "on_btnAdd_clicked"
-QT_MOC_LITERAL(6, 82, 17), // "on_btnDel_clicked"
-QT_MOC_LITERAL(7, 100, 43) // "on_button_schientist_returnMa..."
+QT_MOC_LITERAL(5, 64, 33), // "on_button_computer_return_cli..."
+QT_MOC_LITERAL(6, 98, 36), // "on_button_computer_deleteCpu_..."
+QT_MOC_LITERAL(7, 135, 33) // "on_button_computer_addCpu_cli..."
 
     },
     "ComputerWindow\0sectionClicked\0\0index\0"
-    "on_ComputerWindow_accepted\0on_btnAdd_clicked\0"
-    "on_btnDel_clicked\0"
-    "on_button_schientist_returnMainMenu_clicked"
+    "on_ComputerWindow_accepted\0"
+    "on_button_computer_return_clicked\0"
+    "on_button_computer_deleteCpu_clicked\0"
+    "on_button_computer_addCpu_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -84,9 +85,9 @@ void ComputerWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->sectionClicked((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->on_ComputerWindow_accepted(); break;
-        case 2: _t->on_btnAdd_clicked(); break;
-        case 3: _t->on_btnDel_clicked(); break;
-        case 4: _t->on_button_schientist_returnMainMenu_clicked(); break;
+        case 2: _t->on_button_computer_return_clicked(); break;
+        case 3: _t->on_button_computer_deleteCpu_clicked(); break;
+        case 4: _t->on_button_computer_addCpu_clicked(); break;
         default: ;
         }
     }
