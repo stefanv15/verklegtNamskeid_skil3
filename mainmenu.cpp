@@ -1,5 +1,7 @@
-#include "mainwindow.h"
+#include "mainmenu.h"
 #include "ui_mainwindow.h"
+#include "relation.h"
+#include "search.h"
 #include <cstdlib>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -12,9 +14,4 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::on_Exit_clicked()
-{
-    exit(1);
 }
