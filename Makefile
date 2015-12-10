@@ -195,6 +195,7 @@ Makefile: verkefnaskil3_hopur22.pro C:/qt/5.5/mingw492_32/mkspecs/win32-g++/qmak
 		C:/qt/5.5/mingw492_32/lib/qtmaind.prl \
 		C:/qt/5.5/mingw492_32/lib/Qt5Widgets.prl \
 		C:/qt/5.5/mingw492_32/lib/Qt5Gui.prl \
+		C:/qt/5.5/mingw492_32/lib/Qt5Sql.prl \
 		C:/qt/5.5/mingw492_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ "CONFIG+=debug" -o Makefile verkefnaskil3_hopur22.pro
 C:/qt/5.5/mingw492_32/mkspecs/features/spec_pre.prf:
@@ -333,6 +334,7 @@ verkefnaskil3_hopur22.pro:
 C:/qt/5.5/mingw492_32/lib/qtmaind.prl:
 C:/qt/5.5/mingw492_32/lib/Qt5Widgets.prl:
 C:/qt/5.5/mingw492_32/lib/Qt5Gui.prl:
+C:/qt/5.5/mingw492_32/lib/Qt5Sql.prl:
 C:/qt/5.5/mingw492_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" -o Makefile verkefnaskil3_hopur22.pro

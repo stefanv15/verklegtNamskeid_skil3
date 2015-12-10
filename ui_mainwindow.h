@@ -15,9 +15,9 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,9 +25,12 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
     QWidget *centralWidget;
+    QToolButton *Add;
+    QToolButton *ShowList;
+    QToolButton *Search;
+    QToolButton *Exit;
+    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -35,15 +38,25 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(400, 300);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(mainToolBar);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        Add = new QToolButton(centralWidget);
+        Add->setObjectName(QStringLiteral("Add"));
+        Add->setGeometry(QRect(50, 50, 161, 31));
+        Add->setAutoFillBackground(false);
+        ShowList = new QToolButton(centralWidget);
+        ShowList->setObjectName(QStringLiteral("ShowList"));
+        ShowList->setGeometry(QRect(50, 80, 161, 31));
+        Search = new QToolButton(centralWidget);
+        Search->setObjectName(QStringLiteral("Search"));
+        Search->setGeometry(QRect(50, 110, 161, 31));
+        Exit = new QToolButton(centralWidget);
+        Exit->setObjectName(QStringLiteral("Exit"));
+        Exit->setGeometry(QRect(50, 140, 161, 31));
         MainWindow->setCentralWidget(centralWidget);
+        mainToolBar = new QToolBar(MainWindow);
+        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -56,6 +69,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        Add->setText(QApplication::translate("MainWindow", "Add", 0));
+        ShowList->setText(QApplication::translate("MainWindow", "Show List", 0));
+        Search->setText(QApplication::translate("MainWindow", "Search", 0));
+        Exit->setText(QApplication::translate("MainWindow", "Exit", 0));
     } // retranslateUi
 
 };
