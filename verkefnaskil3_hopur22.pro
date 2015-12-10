@@ -12,20 +12,20 @@ TARGET = verkefnaskil3_hopur22
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
-        person.cpp
-        comp_pers.cpp
-        computers.cpp
-        domain.cpp
-        sqlite.cpp
+SOURCES += main.cpp
+SOURCES += mainwindow.cpp
+SOURCES += person.cpp
+SOURCES += comp_pers.cpp
+SOURCES += computers.cpp
+SOURCES += domain.cpp
+SOURCES += sqlite.cpp
 
 
-HEADERS  += mainwindow.h
-            person.h
-            comp_pers.h
-            computers.h
-            domain.h
-            sqlite.h
+HEADERS += mainwindow.h
+HEADERS += person.h
+HEADERS += comp_pers.h
+HEADERS += computers.h
+HEADERS += domain.h
+HEADERS += sqlite.h
 
 FORMS    += mainwindow.ui
