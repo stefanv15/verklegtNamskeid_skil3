@@ -404,7 +404,7 @@ debug/moc_scientistswindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		scientistswindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore scientistswindow.h -o debug\moc_scientistswindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Notandi/Desktop/HR/Verklegt námskeið/hopur22/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore scientistswindow.h -o debug\moc_scientistswindow.cpp
 
 debug/moc_computerwindow.cpp: domain.h \
 		SQLite.h \
@@ -658,7 +658,7 @@ debug/moc_computerwindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		computerwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computerwindow.h -o debug\moc_computerwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Notandi/Desktop/HR/Verklegt námskeið/hopur22/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computerwindow.h -o debug\moc_computerwindow.cpp
 
 debug/moc_relationwindow.cpp: domain.h \
 		SQLite.h \
@@ -912,7 +912,7 @@ debug/moc_relationwindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		relationwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore relationwindow.h -o debug\moc_relationwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Notandi/Desktop/HR/Verklegt námskeið/hopur22/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore relationwindow.h -o debug\moc_relationwindow.cpp
 
 debug/moc_mainwindow.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
@@ -1020,7 +1020,7 @@ debug/moc_mainwindow.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qicon.h \
 		mainwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Notandi/Desktop/HR/Verklegt námskeið/hopur22/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_computeradd.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -1126,7 +1126,7 @@ debug/moc_computeradd.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
 		computeradd.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computeradd.h -o debug\moc_computeradd.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Notandi/Desktop/HR/Verklegt námskeið/hopur22/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computeradd.h -o debug\moc_computeradd.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1541,8 +1541,22 @@ debug/scientistswindow.o: scientistswindow.cpp scientistswindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QListWidget \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qlistwidget.h
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlistwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		mainwindow.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\scientistswindow.o scientistswindow.cpp
 
 debug/computerwindow.o: computerwindow.cpp computerwindow.h \
@@ -2484,7 +2498,49 @@ debug/computeradd.o: computeradd.cpp computeradd.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		ui_computeradd.h
+		ui_computeradd.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qicon.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QApplication \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialogButtonBox \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialogbuttonbox.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\computeradd.o computeradd.cpp
 
 debug/person.o: person.cpp person.h
