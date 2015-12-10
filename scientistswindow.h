@@ -24,6 +24,8 @@ public:
 private slots:
     void on_ret_button_clicked();
 
+    void on_search_students_textChanged();
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;

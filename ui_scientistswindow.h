@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 
@@ -25,6 +26,7 @@ class Ui_ScientistsWindow
 public:
     QListWidget *list_scientists;
     QPushButton *ret_button;
+    QLineEdit *search_students;
 
     void setupUi(QDialog *ScientistsWindow)
     {
@@ -33,10 +35,13 @@ public:
         ScientistsWindow->resize(413, 317);
         list_scientists = new QListWidget(ScientistsWindow);
         list_scientists->setObjectName(QStringLiteral("list_scientists"));
-        list_scientists->setGeometry(QRect(10, 30, 381, 192));
+        list_scientists->setGeometry(QRect(10, 40, 381, 192));
         ret_button = new QPushButton(ScientistsWindow);
         ret_button->setObjectName(QStringLiteral("ret_button"));
         ret_button->setGeometry(QRect(264, 262, 121, 41));
+        search_students = new QLineEdit(ScientistsWindow);
+        search_students->setObjectName(QStringLiteral("search_students"));
+        search_students->setGeometry(QRect(10, 10, 381, 20));
 
         retranslateUi(ScientistsWindow);
 
@@ -47,6 +52,7 @@ public:
     {
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
         ret_button->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
+        search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
     } // retranslateUi
 
 };

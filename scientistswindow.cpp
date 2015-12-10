@@ -44,3 +44,10 @@ void ScientistsWindow::on_ret_button_clicked()
 {
     this->close();
 }
+
+void ScientistsWindow::on_search_students_textChanged()
+{
+    string search = ui->search_students->text().toStdString();
+    vector<Person> persons = m_domain.searchScientist(search);
+    displayScientists(persons);
+}
