@@ -17,6 +17,16 @@ public:
     explicit ComputerWindow(QWidget *parent = 0);
     ~ComputerWindow();
 
+public slots:
+      void sectionClicked(int index);
+
+private slots:
+    void on_ComputerWindow_accepted();
+
+    void on_btnAdd_clicked();
+
+    void on_btnDel_clicked();
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;

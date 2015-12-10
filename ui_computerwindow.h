@@ -14,24 +14,53 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_ComputerWindow
 {
 public:
-    QListWidget *listWidget;
+    QGridLayout *gridLayout;
+    QTableWidget *tableWidget;
+    QPushButton *btnAdd;
+    QPushButton *btnDel;
 
     void setupUi(QDialog *ComputerWindow)
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-        ComputerWindow->resize(400, 300);
-        listWidget = new QListWidget(ComputerWindow);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(5, 10, 391, 192));
+        ComputerWindow->resize(730, 420);
+        gridLayout = new QGridLayout(ComputerWindow);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        tableWidget = new QTableWidget(ComputerWindow);
+        if (tableWidget->columnCount() < 4)
+            tableWidget->setColumnCount(4);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+
+        gridLayout->addWidget(tableWidget, 0, 0, 1, 1);
+
+        btnAdd = new QPushButton(ComputerWindow);
+        btnAdd->setObjectName(QStringLiteral("btnAdd"));
+
+        gridLayout->addWidget(btnAdd, 1, 0, 1, 1);
+
+        btnDel = new QPushButton(ComputerWindow);
+        btnDel->setObjectName(QStringLiteral("btnDel"));
+
+        gridLayout->addWidget(btnDel, 2, 0, 1, 1);
+
 
         retranslateUi(ComputerWindow);
 
@@ -40,7 +69,17 @@ public:
 
     void retranslateUi(QDialog *ComputerWindow)
     {
-        ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Dialog", 0));
+        ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("ComputerWindow", "Type", 0));
+        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QApplication::translate("ComputerWindow", "Was built", 0));
+        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QApplication::translate("ComputerWindow", "Year built", 0));
+        btnAdd->setText(QApplication::translate("ComputerWindow", "Add computer", 0));
+        btnDel->setText(QApplication::translate("ComputerWindow", "Delete computer", 0));
     } // retranslateUi
 
 };

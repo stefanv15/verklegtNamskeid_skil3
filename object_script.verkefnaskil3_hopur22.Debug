@@ -4,6 +4,7 @@ INPUT(
 ./debug\computerwindow.o
 ./debug\relationwindow.o
 ./debug\mainwindow.o
+./debug\computeradd.o
 ./debug\person.o
 ./debug\comp_pers.o
 ./debug\computers.o
@@ -13,4 +14,5 @@ INPUT(
 ./debug\moc_computerwindow.o
 ./debug\moc_relationwindow.o
 ./debug\moc_mainwindow.o
+./debug\moc_computeradd.o
 );

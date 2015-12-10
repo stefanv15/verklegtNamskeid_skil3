@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     scientistswindow.cpp \
     computerwindow.cpp \
     relationwindow.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    computeradd.cpp
 SOURCES +=
 SOURCES += person.cpp
 SOURCES += comp_pers.cpp
@@ -30,7 +31,8 @@ HEADERS += \
     scientistswindow.h \
     computerwindow.h \
     relationwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    computeradd.h
 HEADERS += person.h
 HEADERS += comp_pers.h
 HEADERS += computers.h
@@ -41,4 +43,5 @@ FORMS    += \
     scientistswindow.ui \
     computerwindow.ui \
     relationwindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    computeradd.ui
