@@ -67,3 +67,8 @@ void ComputerWindow::sectionClicked(int index)
 {
     QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
 }
+
+void ComputerWindow::on_button_schientist_returnMainMenu_clicked()
+{
+    this->close();
+}

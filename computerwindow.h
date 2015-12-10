@@ -27,6 +27,8 @@ private slots:
 
     void on_btnDel_clicked();
 
+    void on_button_schientist_returnMainMenu_clicked();
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;
