@@ -13,14 +13,40 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="listWidget">
+  <widget class="QListWidget" name="list_scientists">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>30</y>
+     <y>40</y>
      <width>381</width>
      <height>192</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ret_button">
+   <property name="geometry">
+    <rect>
+     <x>264</x>
+     <y>262</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>return to main menu</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="search_students">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Write here to search</string>
    </property>
   </widget>
  </widget>

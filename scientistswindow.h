@@ -2,8 +2,10 @@
 #define SCIENTISTSWINDOW_H
 #include "domain.h"
 #include "person.h"
+#include <vector>
 
 #include <QDialog>
+using namespace std;
 
 namespace Ui {
 class ScientistsWindow;
@@ -16,6 +18,13 @@ class ScientistsWindow : public QDialog
 public:
     explicit ScientistsWindow(QWidget *parent = 0);
     ~ScientistsWindow();
+    void displayAllScientists();
+    void displayScientists(vector<Person> persons);
+
+private slots:
+    void on_ret_button_clicked();
+
+    void on_search_students_textChanged();
 
 private:
     Ui::ScientistsWindow *ui;
