@@ -32,6 +32,9 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
         ui->list_scientists->addItem(QString::fromStdString(currentScientist.getName()));
         ui->list_scientists->addItem(QString::fromStdString(currentScientist.getGender()));
+        ui->list_scientists->addItem(QString::number(currentScientist.getDayOfBirth()));
+        ui->list_scientists->addItem(QString::number(currentScientist.getDayOfDeath()));
+
 
     }
 }
