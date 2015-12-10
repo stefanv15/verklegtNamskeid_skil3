@@ -22,16 +22,16 @@ QT_BEGIN_NAMESPACE
 class Ui_ScientistsWindow
 {
 public:
-    QListWidget *listWidget;
+    QListWidget *list_scientists;
 
     void setupUi(QDialog *ScientistsWindow)
     {
         if (ScientistsWindow->objectName().isEmpty())
             ScientistsWindow->setObjectName(QStringLiteral("ScientistsWindow"));
         ScientistsWindow->resize(413, 317);
-        listWidget = new QListWidget(ScientistsWindow);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(10, 30, 381, 192));
+        list_scientists = new QListWidget(ScientistsWindow);
+        list_scientists->setObjectName(QStringLiteral("list_scientists"));
+        list_scientists->setGeometry(QRect(10, 30, 381, 192));
 
         retranslateUi(ScientistsWindow);
 

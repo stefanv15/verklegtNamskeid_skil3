@@ -2,6 +2,7 @@
 #include "scientistswindow.h"
 #include "ui_mainwindow.h"
 #include "computerwindow.h"
+#include <vector>
 #include <cstdlib>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -34,3 +35,4 @@ void MainWindow::on_computers_button_clicked()
     computerwindow.setModal(true);
     computerwindow.exec();
 }
+
