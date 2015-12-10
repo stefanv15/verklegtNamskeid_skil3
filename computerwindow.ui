@@ -1,6 +1,6 @@
 <ui version="4.0">
- <class>computerwindow</class>
- <widget class="QDialog" name="computerwindow">
+ <class>ComputerWindow</class>
+ <widget class="QDialog" name="ComputerWindow">
   <property name="geometry">
    <rect>
     <x>0</x>

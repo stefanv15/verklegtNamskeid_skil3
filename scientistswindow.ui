@@ -1,6 +1,6 @@
 <ui version="4.0">
- <class>scientists</class>
- <widget class="QDialog" name="scientists">
+ <class>ScientistsWindow</class>
+ <widget class="QDialog" name="ScientistsWindow">
   <property name="geometry">
    <rect>
     <x>0</x>

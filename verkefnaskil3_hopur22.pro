@@ -14,10 +14,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    relation.cpp \
-    scientists.cpp \
-    computerwindow.cpp
-SOURCES += mainwindow.cpp
+    mainmenuwindow.cpp \
+    scientistswindow.cpp \
+    computerwindow.cpp \
+    relationwindow.cpp
+SOURCES +=
 SOURCES += person.cpp
 SOURCES += comp_pers.cpp
 SOURCES += computers.cpp
@@ -26,10 +27,10 @@ SOURCES += sqlite.cpp
 
 
 HEADERS += \
-    scientists.h \
+    mainmenuwindow.h \
+    scientistswindow.h \
     computerwindow.h \
-    relationwindow.h \
-    mainmenuwindow.h
+    relationwindow.h
 HEADERS += person.h
 HEADERS += comp_pers.h
 HEADERS += computers.h
@@ -37,7 +38,7 @@ HEADERS += domain.h
 HEADERS += sqlite.h
 
 FORMS    += \
-    computerwindow.ui \
     mainmenuwindow.ui \
-    relationwindow.ui \
-    scientistswindow.ui
+    scientistswindow.ui \
+    computerwindow.ui \
+    relationwindow.ui

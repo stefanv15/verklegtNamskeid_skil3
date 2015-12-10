@@ -1,5 +1,4 @@
-#include "relation.h"
-#include "ui_relation.h"
+#include "relationwindow.h"
 
 relation::relation(QWidget *parent) :
     QDialog(parent),

@@ -1,14 +1,14 @@
 #include "computerwindow.h"
 #include "ui_computerwindow.h"
 
-computerwindow::computerwindow(QWidget *parent) :
+ComputerWindow::ComputerWindow(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::computerwindow)
+    ui(new Ui::ComputerWindow)
 {
     ui->setupUi(this);
 }
 
-computerwindow::~computerwindow()
+ComputerWindow::~ComputerWindow()
 {
     delete ui;
 }

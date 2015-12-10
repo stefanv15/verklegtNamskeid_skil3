@@ -1,5 +1,4 @@
 #include "scientists.h"
-#include "ui_scientists.h"
 
 scientists::scientists(QWidget *parent) :
     QDialog(parent),

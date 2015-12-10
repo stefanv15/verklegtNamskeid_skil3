@@ -1,22 +1,22 @@
-#ifndef RELATION_H
-#define RELATION_H
+#ifndef RELATIONWINDOW_H
+#define RELATIONWINDOW_H
 
 #include <QDialog>
 
 namespace Ui {
-class relation;
+class RelationWindow;
 }
 
-class relation : public QDialog
+class RelationWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit relation(QWidget *parent = 0);
-    ~relation();
+    explicit RelationWindow(QWidget *parent = 0);
+    ~RelationWindow();
 
 private:
-    Ui::relation *ui;
+    Ui::RelationWindow *ui;
 };
 
-#endif // RELATION_H
+#endif // RELATIONWINDOW_H

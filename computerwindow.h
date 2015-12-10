@@ -4,19 +4,19 @@
 #include <QDialog>
 
 namespace Ui {
-class computerwindow;
+class ComputerWindow;
 }
 
-class computerwindow : public QDialog
+class ComputerWindow : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit computerwindow(QWidget *parent = 0);
-    ~computerwindow();
+    explicit ComputerWindow(QWidget *parent = 0);
+    ~ComputerWindow();
 
 private:
-    Ui::computerwindow *ui;
+    Ui::ComputerWindow *ui;
 };
 
 #endif // COMPUTERWINDOW_H
