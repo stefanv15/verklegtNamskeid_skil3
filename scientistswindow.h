@@ -21,6 +21,9 @@ public:
     void displayAllScientists();
     void displayScientists(vector<Person> persons);
 
+private slots:
+    void on_ret_button_clicked();
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;

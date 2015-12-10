@@ -2,6 +2,7 @@
 #include "ui_scientistswindow.h"
 #include "domain.h"
 #include "person.h"
+#include "mainwindow.h"
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
     QDialog(parent),
@@ -37,4 +38,9 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
 
     }
+}
+
+void ScientistsWindow::on_ret_button_clicked()
+{
+    this->close();
 }

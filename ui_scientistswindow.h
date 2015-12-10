@@ -16,6 +16,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QListWidget>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -23,6 +24,7 @@ class Ui_ScientistsWindow
 {
 public:
     QListWidget *list_scientists;
+    QPushButton *ret_button;
 
     void setupUi(QDialog *ScientistsWindow)
     {
@@ -32,6 +34,9 @@ public:
         list_scientists = new QListWidget(ScientistsWindow);
         list_scientists->setObjectName(QStringLiteral("list_scientists"));
         list_scientists->setGeometry(QRect(10, 30, 381, 192));
+        ret_button = new QPushButton(ScientistsWindow);
+        ret_button->setObjectName(QStringLiteral("ret_button"));
+        ret_button->setGeometry(QRect(264, 262, 121, 41));
 
         retranslateUi(ScientistsWindow);
 
@@ -41,6 +46,7 @@ public:
     void retranslateUi(QDialog *ScientistsWindow)
     {
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
+        ret_button->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
     } // retranslateUi
 
 };
