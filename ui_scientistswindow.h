@@ -25,7 +25,6 @@ QT_BEGIN_NAMESPACE
 class Ui_ScientistsWindow
 {
 public:
-    QPushButton *button_schientist_return;
     QLineEdit *search_students;
     QLabel *label;
     QLabel *label_2;
@@ -38,6 +37,7 @@ public:
     QLineEdit *line_yearDied;
     QPushButton *button_schientist_addSchientist;
     QTableWidget *table_scientists;
+    QPushButton *ret_button;
 
     void setupUi(QDialog *ScientistsWindow)
     {
@@ -66,9 +66,6 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush2);
         ScientistsWindow->setPalette(palette);
-        button_schientist_return = new QPushButton(ScientistsWindow);
-        button_schientist_return->setObjectName(QStringLiteral("button_schientist_return"));
-        button_schientist_return->setGeometry(QRect(310, 440, 121, 31));
         search_students = new QLineEdit(ScientistsWindow);
         search_students->setObjectName(QStringLiteral("search_students"));
         search_students->setGeometry(QRect(10, 10, 381, 20));
@@ -117,6 +114,9 @@ public:
         table_scientists->setGeometry(QRect(10, 40, 431, 192));
         table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
         table_scientists->horizontalHeader()->setStretchLastSection(true);
+        ret_button = new QPushButton(ScientistsWindow);
+        ret_button->setObjectName(QStringLiteral("ret_button"));
+        ret_button->setGeometry(QRect(324, 460, 121, 23));
 
         retranslateUi(ScientistsWindow);
 
@@ -126,7 +126,6 @@ public:
     void retranslateUi(QDialog *ScientistsWindow)
     {
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
-        button_schientist_return->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
         label->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Add a new scientist</h2>", 0));
         label_2->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Name</h2>", 0));
@@ -146,6 +145,7 @@ public:
         ___qtablewidgetitem2->setText(QApplication::translate("ScientistsWindow", "Year born", 0));
         QTableWidgetItem *___qtablewidgetitem3 = table_scientists->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("ScientistsWindow", "Year died", 0));
+        ret_button->setText(QApplication::translate("ScientistsWindow", "Return to main menu", 0));
     } // retranslateUi
 
 };

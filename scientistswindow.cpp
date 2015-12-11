@@ -52,10 +52,6 @@ void ScientistsWindow::on_search_students_textChanged()
 }
 
 
-void ScientistsWindow::on_button_schientist_return_clicked()
-{
-    this->close();
-}
 
 void ScientistsWindow::on_button_schientist_addSchientist_clicked()
 {
@@ -69,4 +65,9 @@ void ScientistsWindow::on_button_schientist_addSchientist_clicked()
     ui->line_gender->clear();
     ui->line_yearBorn->clear();
     ui->line_yearDied->clear();
+}
+
+void ScientistsWindow::on_ret_button_clicked()
+{
+   this->close();
 }

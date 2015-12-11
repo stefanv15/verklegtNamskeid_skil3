@@ -25,9 +25,10 @@ private slots:
 
     void on_search_students_textChanged();
 
-    void on_button_schientist_return_clicked();
 
     void on_button_schientist_addSchientist_clicked();
+
+    void on_ret_button_clicked();
 
 private:
     Ui::ScientistsWindow *ui;

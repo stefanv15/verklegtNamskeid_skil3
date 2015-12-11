@@ -131,19 +131,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="button_schientist_return">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>440</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>return to main menu</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="search_students">
    <property name="geometry">
     <rect>
@@ -322,6 +309,19 @@
      <string>Year died</string>
     </property>
    </column>
+  </widget>
+  <widget class="QPushButton" name="ret_button">
+   <property name="geometry">
+    <rect>
+     <x>324</x>
+     <y>460</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Return to main menu</string>
+   </property>
   </widget>
  </widget>
  <resources/>
