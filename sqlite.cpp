@@ -87,7 +87,7 @@ void SQLite::saveData()
 //Bætir persónu við gagnagrunninn.
 void SQLite::addData(Person& p)
 {
-    QString sInsertSQL = "INSTERT INTO person(name, gender, yearOfBirth, yearOfDeath) "
+    QString sInsertSQL = "INSERT INTO person(name, gender, yearOfBirth, yearOfDeath) "
                          "VALUES (:name,:gender,:yearOfBirth,:yearOfDeath)";
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);
@@ -102,7 +102,7 @@ void SQLite::addData(Person& p)
 void SQLite::addComputer(Computers& c)
 {
 
-    QString sInsertSQL = "INSTERT INTO computers(nameOfCpu, yearBuilt, typeOfCpu, wasBuilt) "
+    QString sInsertSQL = "INSERT INTO computers(nameOfCpu, yearBuilt, typeOfCpu, wasBuilt) "
                          "VALUES (:nameOfCpu,:yearBuilt,:typeOfCpu,:wasBuilt)";
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);

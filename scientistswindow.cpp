@@ -58,6 +58,10 @@ void ScientistsWindow::on_button_schientist_addSchientist_clicked()
     QString gender = ui->line_gender->text();
     QString yearOfBirth = ui->line_yearBorn->text();
     QString yearOfDeath = ui->line_yearDied->text();
-
-    m_domain.createPerson(Person(name.toStdString(),gender.toStdString(),yearOfBirth.toInt(),yearOfDeath.toInt()));
+    Person newPerson(name.toStdString(),gender.toStdString(),yearOfBirth.toInt(),yearOfDeath.toInt());
+    m_domain.createPerson(newPerson);
+    ui->line_name->clear();
+    ui->line_gender->clear();
+    ui->line_yearBorn->clear();
+    ui->line_yearDied->clear();
 }
