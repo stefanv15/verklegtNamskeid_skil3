@@ -69,7 +69,7 @@ void ComputerAdd::on_buttonOK_clicked()
     if (isEditing)
     {
         c.setId(idToEdit);
-        res = m_domain.UpdateComputer(c);
+        res = m_domain.updateComputer(c);
     }
     else
         res = m_domain.createComputer(c);

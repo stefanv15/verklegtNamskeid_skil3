@@ -67,7 +67,6 @@ vector<Person> SQLite::getPersonList()
 }
 
 //Sækir lista af tölvum.
-
 vector<Computers> SQLite::getComputerList()
 {
     QSqlQuery query(m_db);
@@ -98,6 +97,24 @@ void SQLite::addData(Person& p)
     query.exec();
 }
 
+//Breytir persónu í gagnagrunninum.
+string SQLite::updateData(Person &p)
+{
+    string retVal = "";
+    QString sInsertSQL = "UPDATE person "
+                         "SET name = :name, gender = :gender, yearOfBirth = :yearOfBirth, yearOfDeath = :yearOfDeath "
+                         "WHERE id=:id";
+    QSqlQuery query(m_db);
+    query.prepare(sInsertSQL);
+    query.bindValue(":name",QString::fromStdString(p.getName()));
+    query.bindValue(":gender",QString::fromStdString(p.getGender()));
+    query.bindValue(":yearOfBirth",p.getDayOfBirth());
+    query.bindValue(":yearOfDeath",p.getDayOfDeath());
+    if (!query.exec())
+        retVal = query.lastError().text().toStdString();
+    return retVal;
+}
+
 //Bætir tölvu við gagnagrunn.
 string SQLite::addComputer(Computers& c)
 {
@@ -121,6 +138,7 @@ string SQLite::addComputer(Computers& c)
     return retVal;
 }
 
+//Breytir tölvu í gagnagrunninum.
 string SQLite::updateComputer(Computers &c)
 {
     string retVal = "";

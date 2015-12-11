@@ -11,6 +11,7 @@ public:
     SQLite();
     void saveData();                                            //Lokar á tengsl við gagnagrunn.
     void addData(Person& p);                                    //Bætir persónu við gagnagrunn.
+    string updateData(Person& p);                               //Breytir persónu í gagnagrunni.
     string addComputer(Computers& c);                           //Bætir tölvu við gagnagrunn.
     string updateComputer(Computers& c);                        //Breytir tölvu í gagnagrunni.
     void addRelation(int computerID, int personID);             //Venslar persónu og tölvu saman.
@@ -20,6 +21,8 @@ public:
     vector<Computers> getComputerList();                        //Sækir lista af tölvum.
     void removeScientist(int input);                            //Eyðir persónu úr gagnagrunninum.
     void removeComputer(int input);                             //Eyðir tölvu úr gagnagrunnninum.
+    void editScientist(int input, Person& pers);                //Yfirskrifar persónu í gagnagrunninum.
+    void editComputer(int input, Computers& comp);              //Yfirskrifar tölvu í gagnagrunninum.
     vector<Person> searchPersons(string search);                //Leitar af persónum í gagnagrunninum.
     vector<Computers> searchComputers(string search);           //Leitar af tölvum í gagnagrunninum.
     vector<Person> sortAscName();                               //Raðar persónum í gagnagrunninum eftir stafrófsröð.
