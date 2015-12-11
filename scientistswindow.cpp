@@ -25,16 +25,21 @@ void ScientistsWindow::displayAllScientists()
 
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
-    ui->list_scientists->clear();
+    vector<Person> list =  m_domain.getList();
+    ui->setupUi(this);
+
+    ui->table_scientists->setRowCount(list.size());
+
+    ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     for(unsigned int i = 0; i < persons.size(); i++)
     {
         Person currentScientist = persons[i];
 
-        ui->list_scientists->addItem(QString::fromStdString(currentScientist.getName()));
-        ui->list_scientists->addItem(QString::fromStdString(currentScientist.getGender()));
-        ui->list_scientists->addItem(QString::number(currentScientist.getDayOfBirth()));
-        ui->list_scientists->addItem(QString::number(currentScientist.getDayOfDeath()));
+        ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(list[i].getName())));
+        ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(list[i].getGender())));
+        ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(list[i].getDayOfBirth())));
+        ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].getDayOfDeath())));
     }
 }
 
@@ -47,10 +52,6 @@ void ScientistsWindow::on_search_students_textChanged()
 }
 
 
-void ScientistsWindow::on_button_schientist_return_clicked()
-{
-    this->close();
-}
 
 void ScientistsWindow::on_button_schientist_addSchientist_clicked()
 {
@@ -64,4 +65,9 @@ void ScientistsWindow::on_button_schientist_addSchientist_clicked()
     ui->line_gender->clear();
     ui->line_yearBorn->clear();
     ui->line_yearDied->clear();
+}
+
+void ScientistsWindow::on_ret_button_clicked()
+{
+   this->close();
 }

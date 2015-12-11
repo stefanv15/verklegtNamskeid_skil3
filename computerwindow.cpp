@@ -30,6 +30,11 @@ ComputerWindow::~ComputerWindow()
     delete ui;
 }
 
+void ComputerWindow::sectionClicked(int index)
+{
+    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
+}
+
 void ComputerWindow::on_ComputerWindow_accepted()
 {
 
@@ -37,18 +42,6 @@ void ComputerWindow::on_ComputerWindow_accepted()
 
 void ComputerWindow::on_button_computer_deleteCpu_clicked()
 {
-    int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected Computer?");
-
-    if(mbAnswer == QMessageBox::Yes)
-    {
-        int rowidx = ui->tableWidget->selectionModel()->currentIndex().row();
-        int id = ui->tableWidget->model()->index(rowidx, 4).data().toInt();
-        m_domain.removeComputer(id);
-        fillList();
-       // QMessageBox::information(this,"Info","Ok, lets delete!");
-    }
-    else
-        QMessageBox::information(this,"Info","Ok, see you!");
 }
 
 QString getType(string type)
@@ -124,4 +117,20 @@ void ComputerWindow::on_btnAdd_clicked()
 void ComputerWindow::on_button_computer_return_clicked()
 {
     this->close();
+}
+
+void ComputerWindow::on_btnDel_clicked()
+{
+    int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected Computer?");
+
+    if(mbAnswer == QMessageBox::Yes)
+    {
+        int rowidx = ui->tableWidget->selectionModel()->currentIndex().row();
+        int id = ui->tableWidget->model()->index(rowidx, 4).data().toInt();
+        m_domain.removeComputer(id);
+        fillList();
+       // QMessageBox::information(this,"Info","Ok, lets delete!");
+    }
+    else
+        QMessageBox::information(this,"Info","Ok, see you!");
 }

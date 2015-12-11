@@ -73,6 +73,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidget->setSortingEnabled(true);
 
         gridLayout->addWidget(tableWidget, 0, 0, 1, 1);
 

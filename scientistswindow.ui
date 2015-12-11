@@ -131,29 +131,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="list_scientists">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>381</width>
-     <height>171</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button_schientist_return">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>440</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>return to main menu</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="search_students">
    <property name="geometry">
     <rect>
@@ -172,12 +149,12 @@
     <rect>
      <x>20</x>
      <y>230</y>
-     <width>161</width>
+     <width>181</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600;&quot;&gt;Add new scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Add a new scientist&lt;/h2&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -185,12 +162,12 @@
     <rect>
      <x>20</x>
      <y>260</y>
-     <width>47</width>
-     <height>13</height>
+     <width>61</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Name</string>
+    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Name&lt;/h2&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="line_name">
@@ -211,12 +188,12 @@
     <rect>
      <x>20</x>
      <y>310</y>
-     <width>47</width>
-     <height>13</height>
+     <width>71</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Gender</string>
+    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Gender&lt;/h2&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="line_gender">
@@ -237,12 +214,12 @@
     <rect>
      <x>20</x>
      <y>360</y>
-     <width>51</width>
-     <height>16</height>
+     <width>91</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Year born</string>
+    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Year born&lt;/h2&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="line_yearBorn">
@@ -263,12 +240,12 @@
     <rect>
      <x>20</x>
      <y>410</y>
-     <width>47</width>
-     <height>13</height>
+     <width>91</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Year died</string>
+    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Year died&lt;/h2&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="line_yearDied">
@@ -295,6 +272,55 @@
    </property>
    <property name="text">
     <string>Add scientist</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="table_scientists">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>431</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Gender</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Year born</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Year died</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="ret_button">
+   <property name="geometry">
+    <rect>
+     <x>324</x>
+     <y>460</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Return to main menu</string>
    </property>
   </widget>
  </widget>
