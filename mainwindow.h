@@ -2,9 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "domain.h"
+
 using namespace std;
-
-
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Domain m_domain;
 };
 
 #endif // MAINWINDOW_H

@@ -15,6 +15,7 @@ class ComputerWindow : public QDialog
 
 public:
     explicit ComputerWindow(QWidget *parent = 0);
+    void setDomain(Domain domain);
     ~ComputerWindow();
 
 public slots:
@@ -27,9 +28,12 @@ private slots:
 
     void on_btnDel_clicked();
 
+    void on_buttonEditComputer_clicked();
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;
+    void fillList();
 };
 
 #endif // COMPUTERWINDOW_H

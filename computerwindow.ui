@@ -7,13 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>730</width>
-    <height>420</height>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Computer list</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QPushButton" name="btnAdd">
+     <property name="text">
+      <string>Add computer</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QTableWidget" name="tableWidget">
      <column>
@@ -36,19 +43,24 @@
        <string>Year built</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="btnAdd">
+   <item row="3" column="0">
+    <widget class="QPushButton" name="btnDel">
      <property name="text">
-      <string>Add computer</string>
+      <string>Delete computer</string>
      </property>
     </widget>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="btnDel">
+    <widget class="QPushButton" name="buttonEditComputer">
      <property name="text">
-      <string>Delete computer</string>
+      <string>Edit computer</string>
      </property>
     </widget>
    </item>

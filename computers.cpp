@@ -58,3 +58,8 @@ string Computers::getWasBuilt()
 {
     return wasBuilt;
 }
+
+void Computers::setId(int id)
+{
+    this->id = id;
+}

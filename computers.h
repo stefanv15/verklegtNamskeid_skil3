@@ -16,7 +16,7 @@ public:
     int getId();                                                                    //Skilar ID á tölvu.
     string getTypeOfCpu();                                                          //Skilar tegund tölvu.
     string getWasBuilt();                                                           //Skilar upplýsingar um hvort tölva hafi verið byggð.
-
+    void setId(int id);
 private:                                                                            //Prívat breytur.
     int id;
     string nameOfCpu;
