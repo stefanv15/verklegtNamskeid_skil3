@@ -24,11 +24,15 @@ public slots:
 private slots:
     void on_ComputerWindow_accepted();
 
+    void on_button_computer_return_clicked();
+
+    void on_button_computer_deleteCpu_clicked();
+
+    void on_button_computer_addCpu_clicked();
+
+    void on_buttonEdit_clicked();
+
     void on_btnAdd_clicked();
-
-    void on_btnDel_clicked();
-
-    void on_buttonEditComputer_clicked();
 
 private:
     Ui::ComputerWindow *ui;

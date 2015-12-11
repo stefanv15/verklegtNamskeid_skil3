@@ -14,10 +14,31 @@
    <string>Computer list</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="0">
-    <widget class="QPushButton" name="btnAdd">
+   <item row="4" column="0">
+    <widget class="QPushButton" name="button_computer_deleteCpu">
      <property name="text">
-      <string>Add computer</string>
+      <string>Delete computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="buttonEdit">
+     <property name="text">
+      <string>Edit computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="btnDel">
+     <property name="text">
+      <string>Delete computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="button_computer_return">
+     <property name="text">
+      <string>Return to Main Menu</string>
      </property>
     </widget>
    </item>
@@ -50,17 +71,10 @@
      </column>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="btnDel">
-     <property name="text">
-      <string>Delete computer</string>
-     </property>
-    </widget>
-   </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="buttonEditComputer">
+    <widget class="QPushButton" name="btnAdd">
      <property name="text">
-      <string>Edit computer</string>
+      <string>Add computer</string>
      </property>
     </widget>
    </item>

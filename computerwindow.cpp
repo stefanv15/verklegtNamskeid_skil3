@@ -35,19 +35,7 @@ void ComputerWindow::on_ComputerWindow_accepted()
 
 }
 
-void ComputerWindow::on_btnAdd_clicked()
-{
- //   QMessageBox::question(this,"Question","Are you sure you want to add a new Computer?");
-
-    ComputerAdd ca;
-    ca.setModal(true);
-    ca.exec();
-    if(ca.result()==QDialog::Accepted)
-        fillList();
-
-}
-
-void ComputerWindow::on_btnDel_clicked()
+void ComputerWindow::on_button_computer_deleteCpu_clicked()
 {
     int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected Computer?");
 
@@ -61,7 +49,6 @@ void ComputerWindow::on_btnDel_clicked()
     }
     else
         QMessageBox::information(this,"Info","Ok, see you!");
-
 }
 
 QString getType(string type)
@@ -99,13 +86,15 @@ void ComputerWindow::fillList()
      }
 }
 
-
-void ComputerWindow::sectionClicked(int index)
+void ComputerWindow::on_button_computer_addCpu_clicked()
 {
-    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
+
+    ComputerAdd ca;
+    ca.setModal(true);
+    ca.exec();
 }
 
-void ComputerWindow::on_buttonEditComputer_clicked()
+void ComputerWindow::on_buttonEdit_clicked()
 {
     int rowidx = ui->tableWidget->selectionModel()->currentIndex().row();
 
@@ -119,4 +108,20 @@ void ComputerWindow::on_buttonEditComputer_clicked()
     ca.exec();
     if(ca.result()==QDialog::Accepted)
         fillList();
+}
+
+void ComputerWindow::on_btnAdd_clicked()
+{
+    //   QMessageBox::question(this,"Question","Are you sure you want to add a new Computer?");
+
+       ComputerAdd ca;
+       ca.setModal(true);
+       ca.exec();
+       if(ca.result()==QDialog::Accepted)
+           fillList();
+}
+
+void ComputerWindow::on_button_computer_return_clicked()
+{
+    this->close();
 }
