@@ -17,15 +17,14 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_ScientistsWindow
 {
 public:
-    QListWidget *list_scientists;
     QPushButton *button_schientist_return;
     QLineEdit *search_students;
     QLabel *label;
@@ -38,6 +37,7 @@ public:
     QLabel *label_5;
     QLineEdit *line_yearDied;
     QPushButton *button_schientist_addSchientist;
+    QTableWidget *table_scientists;
 
     void setupUi(QDialog *ScientistsWindow)
     {
@@ -66,9 +66,6 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush2);
         ScientistsWindow->setPalette(palette);
-        list_scientists = new QListWidget(ScientistsWindow);
-        list_scientists->setObjectName(QStringLiteral("list_scientists"));
-        list_scientists->setGeometry(QRect(10, 40, 381, 171));
         button_schientist_return = new QPushButton(ScientistsWindow);
         button_schientist_return->setObjectName(QStringLiteral("button_schientist_return"));
         button_schientist_return->setGeometry(QRect(310, 440, 121, 31));
@@ -77,34 +74,49 @@ public:
         search_students->setGeometry(QRect(10, 10, 381, 20));
         label = new QLabel(ScientistsWindow);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 230, 161, 21));
+        label->setGeometry(QRect(20, 230, 181, 21));
         label_2 = new QLabel(ScientistsWindow);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 260, 47, 13));
+        label_2->setGeometry(QRect(20, 260, 61, 21));
         line_name = new QLineEdit(ScientistsWindow);
         line_name->setObjectName(QStringLiteral("line_name"));
         line_name->setGeometry(QRect(20, 280, 241, 20));
         label_3 = new QLabel(ScientistsWindow);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(20, 310, 47, 13));
+        label_3->setGeometry(QRect(20, 310, 71, 21));
         line_gender = new QLineEdit(ScientistsWindow);
         line_gender->setObjectName(QStringLiteral("line_gender"));
         line_gender->setGeometry(QRect(20, 330, 241, 20));
         label_4 = new QLabel(ScientistsWindow);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(20, 360, 51, 16));
+        label_4->setGeometry(QRect(20, 360, 91, 21));
         line_yearBorn = new QLineEdit(ScientistsWindow);
         line_yearBorn->setObjectName(QStringLiteral("line_yearBorn"));
         line_yearBorn->setGeometry(QRect(20, 380, 241, 20));
         label_5 = new QLabel(ScientistsWindow);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(20, 410, 47, 13));
+        label_5->setGeometry(QRect(20, 410, 91, 21));
         line_yearDied = new QLineEdit(ScientistsWindow);
         line_yearDied->setObjectName(QStringLiteral("line_yearDied"));
         line_yearDied->setGeometry(QRect(20, 430, 241, 20));
         button_schientist_addSchientist = new QPushButton(ScientistsWindow);
         button_schientist_addSchientist->setObjectName(QStringLiteral("button_schientist_addSchientist"));
         button_schientist_addSchientist->setGeometry(QRect(10, 460, 251, 23));
+        table_scientists = new QTableWidget(ScientistsWindow);
+        if (table_scientists->columnCount() < 4)
+            table_scientists->setColumnCount(4);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        table_scientists->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        table_scientists->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        table_scientists->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        table_scientists->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        table_scientists->setObjectName(QStringLiteral("table_scientists"));
+        table_scientists->setGeometry(QRect(10, 40, 431, 192));
+        table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
+        table_scientists->horizontalHeader()->setStretchLastSection(true);
 
         retranslateUi(ScientistsWindow);
 
@@ -116,16 +128,24 @@ public:
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
         button_schientist_return->setText(QApplication::translate("ScientistsWindow", "return to main menu", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
-        label->setText(QApplication::translate("ScientistsWindow", "<html><head/><body><p><span style=\" font-size:x-large; font-weight:600;\">Add new scientist</span></p></body></html>", 0));
-        label_2->setText(QApplication::translate("ScientistsWindow", "Name", 0));
+        label->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Add a new scientist</h2>", 0));
+        label_2->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Name</h2>", 0));
         line_name->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write name of scientist here", 0));
-        label_3->setText(QApplication::translate("ScientistsWindow", "Gender", 0));
+        label_3->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Gender</h2>", 0));
         line_gender->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write 'm' for male, 'f' for female", 0));
-        label_4->setText(QApplication::translate("ScientistsWindow", "Year born", 0));
+        label_4->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Year born</h2>", 0));
         line_yearBorn->setPlaceholderText(QApplication::translate("ScientistsWindow", "When was the scientist born?", 0));
-        label_5->setText(QApplication::translate("ScientistsWindow", "Year died", 0));
+        label_5->setText(QApplication::translate("ScientistsWindow", "<h2 style=\"color:#FFA500;\">Year died</h2>", 0));
         line_yearDied->setPlaceholderText(QApplication::translate("ScientistsWindow", "When did the scientist die. type '-1' if he is alive", 0));
         button_schientist_addSchientist->setText(QApplication::translate("ScientistsWindow", "Add scientist", 0));
+        QTableWidgetItem *___qtablewidgetitem = table_scientists->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("ScientistsWindow", "Name", 0));
+        QTableWidgetItem *___qtablewidgetitem1 = table_scientists->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("ScientistsWindow", "Gender", 0));
+        QTableWidgetItem *___qtablewidgetitem2 = table_scientists->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QApplication::translate("ScientistsWindow", "Year born", 0));
+        QTableWidgetItem *___qtablewidgetitem3 = table_scientists->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QApplication::translate("ScientistsWindow", "Year died", 0));
     } // retranslateUi
 
 };

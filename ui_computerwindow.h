@@ -54,6 +54,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidget->setSortingEnabled(true);
 
         gridLayout->addWidget(tableWidget, 0, 0, 1, 1);
 
