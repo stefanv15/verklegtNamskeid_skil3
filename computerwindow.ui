@@ -7,17 +7,38 @@
     <x>0</x>
     <y>0</y>
     <width>730</width>
-    <height>420</height>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Computer list</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="3" column="0">
+   <item row="4" column="0">
     <widget class="QPushButton" name="button_computer_deleteCpu">
      <property name="text">
       <string>Delete Computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="buttonEdit">
+     <property name="text">
+      <string>Edit Computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="btnDel">
+     <property name="text">
+      <string>Delete Computer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="button_computer_return">
+     <property name="text">
+      <string>Return to Main Menu</string>
      </property>
     </widget>
    </item>
@@ -46,17 +67,15 @@
        <string>Year built</string>
       </property>
      </column>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QPushButton" name="button_computer_return">
-     <property name="text">
-      <string>Return to Main Menu</string>
-     </property>
+     <column>
+      <property name="text">
+       <string>id</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="button_computer_addCpu">
+    <widget class="QPushButton" name="btnAdd">
      <property name="text">
       <string>Add Computer</string>
      </property>

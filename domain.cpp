@@ -16,9 +16,14 @@ void Domain::createPerson(Person p)
 }
 
 //Býr til eintak af tölvu.
-void Domain::createComputer(Computers c)
+string Domain::createComputer(Computers c)
 {
-    m_sqlite.addComputer(c);
+    return m_sqlite.addComputer(c);
+}
+
+string Domain::UpdateComputer(Computers c)
+{
+    return m_sqlite.updateComputer(c);
 }
 
 //Sækir personlist úr sqlite og skilar honum.

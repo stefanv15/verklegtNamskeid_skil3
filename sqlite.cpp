@@ -99,18 +99,49 @@ void SQLite::addData(Person& p)
 }
 
 //Bætir tölvu við gagnagrunn.
-void SQLite::addComputer(Computers& c)
+string SQLite::addComputer(Computers& c)
 {
+    string retVal = "";
 
     QString sInsertSQL = "INSERT INTO computers(nameOfCpu, yearBuilt, typeOfCpu, wasBuilt) "
                          "VALUES (:nameOfCpu,:yearBuilt,:typeOfCpu,:wasBuilt)";
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);
     query.bindValue(":nameOfCpu",QString::fromStdString(c.getNameOfCpu()));
-    query.bindValue(":yearBuilt",c.getYearBuilt());
+
+    if(c.getYearBuilt()>0)
+        query.bindValue(":yearBuilt",QString::number(c.getYearBuilt()));
+    else
+        query.bindValue(":yearBuilt",QVariant(QVariant::Int)); // Null value
+
     query.bindValue(":typeOfCpu",QString::fromStdString(c.getTypeOfCpu()));
     query.bindValue(":wasBuilt",QString::fromStdString(c.getWasBuilt()));
-    query.exec();
+    if (!query.exec())
+        retVal = query.lastError().text().toStdString();
+    return retVal;
+}
+
+string SQLite::updateComputer(Computers &c)
+{
+    string retVal = "";
+    QString sInsertSQL = "UPDATE computers "
+                         "SET nameOfCpu = :nameOfCpu, yearBuilt = :yearBuilt, typeOfCpu = :typeOfCpu, wasBuilt = :wasBuilt "
+                         "WHERE id=:id";
+    QSqlQuery query(m_db);
+    query.prepare(sInsertSQL);
+    query.bindValue(":nameOfCpu",QString::fromStdString(c.getNameOfCpu()));
+
+    if(c.getYearBuilt()>0)
+        query.bindValue(":yearBuilt",QString::number(c.getYearBuilt()));
+    else
+        query.bindValue(":yearBuilt",QVariant(QVariant::Int)); // Null value
+
+    query.bindValue(":typeOfCpu",QString::fromStdString(c.getTypeOfCpu()));
+    query.bindValue(":wasBuilt",QString::fromStdString(c.getWasBuilt()));
+    query.bindValue(":id",QString::number(c.getId()));
+    if (!query.exec())
+        retVal = query.lastError().text().toStdString();
+    return retVal;
 }
 
 //Venslar persónu og tölvu saman.

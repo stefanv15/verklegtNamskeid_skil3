@@ -11,7 +11,8 @@ public:
     SQLite();
     void saveData();                                            //Lokar á tengsl við gagnagrunn.
     void addData(Person& p);                                    //Bætir persónu við gagnagrunn.
-    void addComputer(Computers& c);                             //Bætir tölvu við gagnagrunn.
+    string addComputer(Computers& c);                           //Bætir tölvu við gagnagrunn.
+    string updateComputer(Computers& c);                        //Breytir tölvu í gagnagrunni.
     void addRelation(int computerID, int personID);             //Venslar persónu og tölvu saman.
     vector<Comp_pers> getLinkedComputers(int pID);              //Sækir lista af venslafærslum fyrir persónur.
     vector<Comp_pers> getLinkedPerson(int cID);                 //Sækir lista af venslafærslum fyrir tölvur.
