@@ -77,7 +77,7 @@ public:
     void retranslateUi(QDialog *ComputerWindow)
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
-        button_computer_deleteCpu->setText(QApplication::translate("ComputerWindow", "Delete computer", 0));
+        button_computer_deleteCpu->setText(QApplication::translate("ComputerWindow", "Delete Computer", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -87,7 +87,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("ComputerWindow", "Year built", 0));
         button_computer_return->setText(QApplication::translate("ComputerWindow", "Return to Main Menu", 0));
-        button_computer_addCpu->setText(QApplication::translate("ComputerWindow", "Add computer", 0));
+        button_computer_addCpu->setText(QApplication::translate("ComputerWindow", "Add Computer", 0));
     } // retranslateUi
 
 };

@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ScientistsWindow_t {
     QByteArrayData data[5];
-    char stringdata0[114];
+    char stringdata0[112];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,12 +32,12 @@ static const qt_meta_stringdata_ScientistsWindow_t qt_meta_stringdata_Scientists
 QT_MOC_LITERAL(0, 0, 16), // "ScientistsWindow"
 QT_MOC_LITERAL(1, 17, 30), // "on_search_students_textChanged"
 QT_MOC_LITERAL(2, 48, 0), // ""
-QT_MOC_LITERAL(3, 49, 42), // "on_button_schientist_addSchie..."
-QT_MOC_LITERAL(4, 92, 21) // "on_ret_button_clicked"
+QT_MOC_LITERAL(3, 49, 40), // "on_button_scientist_addScient..."
+QT_MOC_LITERAL(4, 90, 21) // "on_ret_button_clicked"
 
     },
     "ScientistsWindow\0on_search_students_textChanged\0"
-    "\0on_button_schientist_addSchientist_clicked\0"
+    "\0on_button_scientist_addScientist_clicked\0"
     "on_ret_button_clicked"
 };
 #undef QT_MOC_LITERAL
@@ -75,7 +75,7 @@ void ScientistsWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_search_students_textChanged(); break;
-        case 1: _t->on_button_schientist_addSchientist_clicked(); break;
+        case 1: _t->on_button_scientist_addScientist_clicked(); break;
         case 2: _t->on_ret_button_clicked(); break;
         default: ;
         }

@@ -17,7 +17,7 @@
    <item row="3" column="0">
     <widget class="QPushButton" name="button_computer_deleteCpu">
      <property name="text">
-      <string>Delete computer</string>
+      <string>Delete Computer</string>
      </property>
     </widget>
    </item>
@@ -58,7 +58,7 @@
    <item row="2" column="0">
     <widget class="QPushButton" name="button_computer_addCpu">
      <property name="text">
-      <string>Add computer</string>
+      <string>Add Computer</string>
      </property>
     </widget>
    </item>

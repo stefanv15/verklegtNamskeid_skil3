@@ -53,7 +53,7 @@ void ScientistsWindow::on_search_students_textChanged()
 
 
 
-void ScientistsWindow::on_button_schientist_addSchientist_clicked()
+void ScientistsWindow::on_button_scientist_addScientist_clicked()
 {
     QString name = ui->line_name->text();
     QString gender = ui->line_gender->text();
