@@ -21,7 +21,14 @@ string Domain::createComputer(Computers c)
     return m_sqlite.addComputer(c);
 }
 
-string Domain::UpdateComputer(Computers c)
+//Breytir eintaki af persónu.
+string Domain::updatePerson(Person p)
+{
+    return m_sqlite.updateData(p);
+}
+
+//Breytir eintaki af tölvu.
+string Domain::updateComputer(Computers c)
 {
     return m_sqlite.updateComputer(c);
 }

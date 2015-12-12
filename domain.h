@@ -15,7 +15,8 @@ public:
     Domain();                                           //Sjálfgefinn smiður.
     void createPerson(Person p);                        //Býr til eintak af persónu.
     string createComputer(Computers c);                 //Býr til eintak af tölvu.
-    string UpdateComputer(Computers c);                 //Breyta eintaki af tölvu.
+    string updatePerson(Person p);                      //Breytir eintaki af persónu.
+    string updateComputer(Computers c);                 //Breytir eintaki af tölvu.
     vector<Person> getList();                           //Sækir personlist.
     vector<Computers> getComputerList();                //Sækir computerlist.
     void saveAllData();                                 //Kallar á savedata.
