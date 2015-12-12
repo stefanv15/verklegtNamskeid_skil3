@@ -15,6 +15,7 @@ ComputerAdd::ComputerAdd(QWidget *parent) :
 void ComputerAdd::edit(Computers c)
 {
     isEditing = true;
+    this->setWindowTitle("Edit computer");
     ui->editComputerName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
     if(c.getYearBuilt()>0)
         ui->editYearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt

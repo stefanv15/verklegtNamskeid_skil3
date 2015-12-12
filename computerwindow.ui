@@ -6,14 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>523</width>
-    <height>418</height>
+    <width>531</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Computer list</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="EditSearch"/>
+   </item>
    <item>
     <widget class="QTableWidget" name="tableWidget">
      <property name="minimumSize">
