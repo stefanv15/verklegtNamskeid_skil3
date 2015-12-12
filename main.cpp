@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QSplashScreen *splash = new QSplashScreen;
-    splash -> setPixmap(QPixmap("stef.jpg"));
+    splash -> setPixmap(QPixmap("stebo.jpg"));
     splash->show();
 
     MainWindow window;
