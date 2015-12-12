@@ -15,6 +15,11 @@ public:
     explicit AddScientist(QWidget *parent = 0);
     ~AddScientist();
 
+private slots:
+    void on_button_cancel_clicked();
+
+    void on_check_isdead_stateChanged(int arg1);
+
 private:
     Ui::AddScientist *ui;
 };

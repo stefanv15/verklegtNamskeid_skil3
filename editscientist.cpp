@@ -12,3 +12,8 @@ EditScientist::~EditScientist()
 {
     delete ui;
 }
+
+void EditScientist::on_button_cancel_clicked()
+{
+    this->close();
+}

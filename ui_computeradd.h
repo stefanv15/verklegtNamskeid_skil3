@@ -28,15 +28,15 @@ class Ui_ComputerAdd
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLineEdit *editComputerName;
     QLabel *label;
-    QRadioButton *radioAnalog;
+    QLineEdit *editComputerName;
     QLabel *label_2;
+    QRadioButton *radioAnalog;
     QRadioButton *radioDigital;
     QRadioButton *radioHybrid;
     QCheckBox *checkWasBuilt;
-    QLineEdit *editYearBuilt;
     QLabel *label_4;
+    QLineEdit *editYearBuilt;
     QPushButton *buttonOK;
     QPushButton *buttonCancel;
 
@@ -47,26 +47,26 @@ public:
         ComputerAdd->resize(373, 299);
         verticalLayout = new QVBoxLayout(ComputerAdd);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        label = new QLabel(ComputerAdd);
+        label->setObjectName(QStringLiteral("label"));
+
+        verticalLayout->addWidget(label);
+
         editComputerName = new QLineEdit(ComputerAdd);
         editComputerName->setObjectName(QStringLiteral("editComputerName"));
 
         verticalLayout->addWidget(editComputerName);
 
-        label = new QLabel(ComputerAdd);
-        label->setObjectName(QStringLiteral("label"));
+        label_2 = new QLabel(ComputerAdd);
+        label_2->setObjectName(QStringLiteral("label_2"));
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(label_2);
 
         radioAnalog = new QRadioButton(ComputerAdd);
         radioAnalog->setObjectName(QStringLiteral("radioAnalog"));
         radioAnalog->setChecked(true);
 
         verticalLayout->addWidget(radioAnalog);
-
-        label_2 = new QLabel(ComputerAdd);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        verticalLayout->addWidget(label_2);
 
         radioDigital = new QRadioButton(ComputerAdd);
         radioDigital->setObjectName(QStringLiteral("radioDigital"));
@@ -85,16 +85,16 @@ public:
 
         verticalLayout->addWidget(checkWasBuilt);
 
+        label_4 = new QLabel(ComputerAdd);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        verticalLayout->addWidget(label_4);
+
         editYearBuilt = new QLineEdit(ComputerAdd);
         editYearBuilt->setObjectName(QStringLiteral("editYearBuilt"));
         editYearBuilt->setEnabled(false);
 
         verticalLayout->addWidget(editYearBuilt);
-
-        label_4 = new QLabel(ComputerAdd);
-        label_4->setObjectName(QStringLiteral("label_4"));
-
-        verticalLayout->addWidget(label_4);
 
         buttonOK = new QPushButton(ComputerAdd);
         buttonOK->setObjectName(QStringLiteral("buttonOK"));
@@ -123,12 +123,14 @@ public:
     {
         ComputerAdd->setWindowTitle(QApplication::translate("ComputerAdd", "Add new Computer", 0));
         label->setText(QApplication::translate("ComputerAdd", "Computer name:", 0));
-        radioAnalog->setText(QApplication::translate("ComputerAdd", "Analog", 0));
+        editComputerName->setPlaceholderText(QApplication::translate("ComputerAdd", "Type name of computer here", 0));
         label_2->setText(QApplication::translate("ComputerAdd", "Computer type:", 0));
+        radioAnalog->setText(QApplication::translate("ComputerAdd", "Analog", 0));
         radioDigital->setText(QApplication::translate("ComputerAdd", "Digital", 0));
         radioHybrid->setText(QApplication::translate("ComputerAdd", "Hybrid", 0));
         checkWasBuilt->setText(QApplication::translate("ComputerAdd", "Was built?", 0));
         label_4->setText(QApplication::translate("ComputerAdd", "Year built:", 0));
+        editYearBuilt->setPlaceholderText(QApplication::translate("ComputerAdd", "Type here when computer was built.", 0));
         buttonOK->setText(QApplication::translate("ComputerAdd", "Save", 0));
         buttonCancel->setText(QApplication::translate("ComputerAdd", "Cancel", 0));
     } // retranslateUi
