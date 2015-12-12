@@ -25,10 +25,11 @@ private slots:
 
     void on_search_students_textChanged();
 
+    void on_ret_button_clicked();
 
     void on_button_scientist_addScientist_clicked();
 
-    void on_ret_button_clicked();
+    void on_button_scientist_editscientist_clicked();
 
 private:
     Ui::ScientistsWindow *ui;

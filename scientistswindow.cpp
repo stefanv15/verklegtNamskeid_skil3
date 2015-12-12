@@ -3,6 +3,8 @@
 #include "domain.h"
 #include "person.h"
 #include "mainwindow.h"
+#include "addscientist.h"
+#include "editscientist.h"
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
     QDialog(parent),
@@ -25,8 +27,16 @@ void ScientistsWindow::displayAllScientists()
 
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
+
     vector<Person> list =  m_domain.getList();
-    ui->setupUi(this);
+         ui->table_scientists->clear();
+         ui->table_scientists->setColumnCount(5);
+
+         QStringList TableHeader;
+         TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"id";
+
+
+    ui->table_scientists->setHorizontalHeaderLabels(TableHeader);
 
     ui->table_scientists->setRowCount(list.size());
 
@@ -37,7 +47,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         Person currentScientist = persons[i];
 
         ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(list[i].getName())));
-        ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(list[i].getGender())));
+        ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(list[i].getGender() == "m"?"Male":"Female")));
         ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(list[i].getDayOfBirth())));
         ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].getDayOfDeath())));
     }
@@ -51,23 +61,22 @@ void ScientistsWindow::on_search_students_textChanged()
     displayScientists(persons);
 }
 
+void ScientistsWindow::on_ret_button_clicked()
+{
+   this->close();
+}
 
 
 void ScientistsWindow::on_button_scientist_addScientist_clicked()
 {
-    QString name = ui->line_name->text();
-    QString gender = ui->line_gender->text();
-    QString yearOfBirth = ui->line_yearBorn->text();
-    QString yearOfDeath = ui->line_yearDied->text();
-    Person newPerson(name.toStdString(),gender.toStdString(),yearOfBirth.toInt(),yearOfDeath.toInt());
-    m_domain.createPerson(newPerson);
-    ui->line_name->clear();
-    ui->line_gender->clear();
-    ui->line_yearBorn->clear();
-    ui->line_yearDied->clear();
+    AddScientist addscientist;
+    addscientist.setModal(true);
+    addscientist.exec();
 }
 
-void ScientistsWindow::on_ret_button_clicked()
+void ScientistsWindow::on_button_scientist_editscientist_clicked()
 {
-   this->close();
+    EditScientist editscientist;
+    editscientist.setModal(true);
+    editscientist.exec();
 }

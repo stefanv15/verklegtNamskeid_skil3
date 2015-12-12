@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
-    <height>483</height>
+    <width>498</width>
+    <height>481</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>498</width>
+    <height>481</height>
+   </size>
   </property>
   <property name="palette">
    <palette>
@@ -131,198 +137,79 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="search_students">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>381</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>Write here to search</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>230</y>
-     <width>181</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Add a new scientist&lt;/h2&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>260</y>
-     <width>51</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Name&lt;/h2&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_name">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>280</y>
-     <width>241</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>Write name of scientist here</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>310</y>
-     <width>71</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Gender&lt;/h2&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_gender">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>330</y>
-     <width>241</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>Write 'm' for male, 'f' for female</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>360</y>
-     <width>91</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Year born&lt;/h2&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_yearBorn">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>380</y>
-     <width>241</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>When was the scientist born?</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>410</y>
-     <width>91</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;h2 style=&quot;color:#FFA500;&quot;&gt;Year died&lt;/h2&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="line_yearDied">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>430</y>
-     <width>241</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="placeholderText">
-    <string>When did the scientist die. type '-1' if he is alive</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button_schientist_addSchientist">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>460</y>
-     <width>251</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add Scientist</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="table_scientists">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>431</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <property name="selectionBehavior">
-    <enum>QAbstractItemView::SelectRows</enum>
-   </property>
-   <attribute name="horizontalHeaderStretchLastSection">
-    <bool>true</bool>
-   </attribute>
-   <column>
-    <property name="text">
-     <string>Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Gender</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Year born</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Year died</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QPushButton" name="ret_button">
-   <property name="geometry">
-    <rect>
-     <x>324</x>
-     <y>460</y>
-     <width>121</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Return to Main Menu</string>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="search_students">
+     <property name="placeholderText">
+      <string>Write here to search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_scientists">
+     <property name="minimumSize">
+      <size>
+       <width>452</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Year born</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Year died</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="button_scientist_addScientist">
+     <property name="text">
+      <string>Add Scientist</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="button_scientist_editscientist">
+     <property name="text">
+      <string>Edit Scientist</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="button_Scientist_delscientist">
+     <property name="text">
+      <string>Delete Scientist</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ret_button">
+     <property name="text">
+      <string>Return To Main Menu</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

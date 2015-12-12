@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -28,12 +29,12 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QWidget *verticalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
+    QTextEdit *textEdit;
     QPushButton *computers_button;
     QPushButton *scientists_button;
     QPushButton *Exit;
-    QTextEdit *textEdit;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -41,7 +42,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(423, 394);
         QPalette palette;
         QBrush brush(QColor(255, 181, 8, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -62,33 +63,17 @@ public:
         MainWindow->setTabShape(QTabWidget::Rounded);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayoutWidget = new QWidget(centralWidget);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(120, 120, 160, 151));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        horizontalLayout = new QHBoxLayout(centralWidget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(4);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(5, 0, 5, 0);
-        computers_button = new QPushButton(verticalLayoutWidget);
-        computers_button->setObjectName(QStringLiteral("computers_button"));
-
-        verticalLayout->addWidget(computers_button);
-
-        scientists_button = new QPushButton(verticalLayoutWidget);
-        scientists_button->setObjectName(QStringLiteral("scientists_button"));
-
-        verticalLayout->addWidget(scientists_button);
-
-        Exit = new QPushButton(verticalLayoutWidget);
-        Exit->setObjectName(QStringLiteral("Exit"));
-
-        verticalLayout->addWidget(Exit);
-
+        verticalLayout->setContentsMargins(5, -1, 5, -1);
         textEdit = new QTextEdit(centralWidget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setEnabled(false);
-        textEdit->setGeometry(QRect(60, 20, 291, 81));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -125,6 +110,27 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
         palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush);
         textEdit->setPalette(palette1);
+
+        verticalLayout->addWidget(textEdit, 0, Qt::AlignHCenter);
+
+        computers_button = new QPushButton(centralWidget);
+        computers_button->setObjectName(QStringLiteral("computers_button"));
+
+        verticalLayout->addWidget(computers_button);
+
+        scientists_button = new QPushButton(centralWidget);
+        scientists_button->setObjectName(QStringLiteral("scientists_button"));
+
+        verticalLayout->addWidget(scientists_button);
+
+        Exit = new QPushButton(centralWidget);
+        Exit->setObjectName(QStringLiteral("Exit"));
+
+        verticalLayout->addWidget(Exit);
+
+
+        horizontalLayout->addLayout(verticalLayout);
+
         MainWindow->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -141,15 +147,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
-        scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
-        Exit->setText(QApplication::translate("MainWindow", "Quit", 0));
         textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">WELCOME!</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">#This program was made by group 22 by <br />#students from Reykjav\303\255k University</span></p></body></html>", 0));
+        computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
+        scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
+        Exit->setText(QApplication::translate("MainWindow", "Quit", 0));
     } // retranslateUi
 
 };

@@ -5,6 +5,8 @@ INPUT(
 ./debug\relationwindow.o
 ./debug\mainwindow.o
 ./debug\computeradd.o
+./debug\addscientist.o
+./debug\editscientist.o
 ./debug\person.o
 ./debug\comp_pers.o
 ./debug\computers.o
@@ -15,4 +17,6 @@ INPUT(
 ./debug\moc_relationwindow.o
 ./debug\moc_mainwindow.o
 ./debug\moc_computeradd.o
+./debug\moc_addscientist.o
+./debug\moc_editscientist.o
 );
