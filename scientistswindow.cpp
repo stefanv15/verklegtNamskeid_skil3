@@ -5,12 +5,23 @@
 #include "mainwindow.h"
 #include "addscientist.h"
 #include "editscientist.h"
+#include <QMessageBox>
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ScientistsWindow)
 {
     ui->setupUi(this);
+
+    ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->table_scientists->setSelectionMode(QAbstractItemView::SingleSelection);
+    ui->table_scientists->hideColumn(4);
+}
+
+void ScientistsWindow::setDomain(Domain domain)
+{
+    m_domain = domain;
     displayAllScientists();
 }
 
@@ -40,7 +51,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
     ui->table_scientists->setRowCount(list.size());
 
-    ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    //ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     for(unsigned int i = 0; i < persons.size(); i++)
     {
@@ -49,7 +60,9 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(list[i].getName())));
         ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(list[i].getGender() == "m"?"Male":"Female")));
         ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(list[i].getDayOfBirth())));
-        ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].getDayOfDeath())));
+        if (list[i].getDayOfDeath() > 0)
+            ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].getDayOfDeath())));
+        ui->table_scientists->setItem(i, 4, new QTableWidgetItem(QString::number(list[i].getId())));
     }
 }
 

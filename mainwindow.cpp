@@ -25,6 +25,7 @@ void MainWindow::on_Exit_clicked()
 void MainWindow::on_scientists_button_clicked()
 {
     ScientistsWindow scientistswindow;
+    scientistswindow.setDomain(m_domain);
     scientistswindow.setModal(true);
     scientistswindow.exec();
 }

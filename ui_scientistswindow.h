@@ -82,6 +82,7 @@ public:
         table_scientists->setObjectName(QStringLiteral("table_scientists"));
         table_scientists->setMinimumSize(QSize(452, 140));
         table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
+        table_scientists->setSortingEnabled(true);
         table_scientists->horizontalHeader()->setStretchLastSection(true);
 
         verticalLayout->addWidget(table_scientists);
