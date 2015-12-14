@@ -40,6 +40,8 @@ private slots:
 
     void on_button_computer_relation_clicked();
 
+    void on_tableWidget_activated(const QModelIndex &index);
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;

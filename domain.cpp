@@ -4,7 +4,8 @@
 #include "comp_pers.h"
 #include <algorithm>
 
-Domain::Domain()    //Sjálfgefni smiðurinn fyrir domain klasann.
+//Sjálfgefni smiðurinn fyrir domain klasann.
+Domain::Domain()
 {
 
 }

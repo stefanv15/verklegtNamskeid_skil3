@@ -18,13 +18,17 @@ public:
     explicit RelationWindow(QWidget *parent = 0);
     ~RelationWindow();
 
+
 private slots:
     //void on_search_relation_searchScientist_textChanged(const QString &arg1);
-    
-    void on_table_relation_schientists_activated(const QModelIndex &index);
-    
+    void on_button_relation_return_clicked();
+
 private:
     Ui::RelationWindow *ui;
+    void setDomain(Domain domain);
+    void displayAllSchientists();
+    void displayScientists(vector<Person> schientists);
+    Domain m_domain;
 };
 
 #endif // RELATIONWINDOW_H
