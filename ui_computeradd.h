@@ -45,10 +45,34 @@ public:
         if (ComputerAdd->objectName().isEmpty())
             ComputerAdd->setObjectName(QStringLiteral("ComputerAdd"));
         ComputerAdd->resize(373, 299);
+        QPalette palette;
+        QBrush brush(QColor(255, 170, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(255, 255, 255, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush2(QColor(0, 0, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        ComputerAdd->setPalette(palette);
         verticalLayout = new QVBoxLayout(ComputerAdd);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label = new QLabel(ComputerAdd);
         label->setObjectName(QStringLiteral("label"));
+        QFont font;
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        label->setFont(font);
 
         verticalLayout->addWidget(label);
 
@@ -59,27 +83,34 @@ public:
 
         label_2 = new QLabel(ComputerAdd);
         label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setFont(font);
 
         verticalLayout->addWidget(label_2);
 
         radioAnalog = new QRadioButton(ComputerAdd);
         radioAnalog->setObjectName(QStringLiteral("radioAnalog"));
+        QFont font1;
+        font1.setPointSize(9);
+        radioAnalog->setFont(font1);
         radioAnalog->setChecked(true);
 
         verticalLayout->addWidget(radioAnalog);
 
         radioDigital = new QRadioButton(ComputerAdd);
         radioDigital->setObjectName(QStringLiteral("radioDigital"));
+        radioDigital->setFont(font1);
 
         verticalLayout->addWidget(radioDigital);
 
         radioHybrid = new QRadioButton(ComputerAdd);
         radioHybrid->setObjectName(QStringLiteral("radioHybrid"));
+        radioHybrid->setFont(font1);
 
         verticalLayout->addWidget(radioHybrid);
 
         checkWasBuilt = new QCheckBox(ComputerAdd);
         checkWasBuilt->setObjectName(QStringLiteral("checkWasBuilt"));
+        checkWasBuilt->setFont(font1);
         checkWasBuilt->setLayoutDirection(Qt::LeftToRight);
         checkWasBuilt->setAutoFillBackground(false);
 
@@ -87,6 +118,11 @@ public:
 
         label_4 = new QLabel(ComputerAdd);
         label_4->setObjectName(QStringLiteral("label_4"));
+        QFont font2;
+        font2.setPointSize(9);
+        font2.setBold(true);
+        font2.setWeight(75);
+        label_4->setFont(font2);
 
         verticalLayout->addWidget(label_4);
 
@@ -98,11 +134,28 @@ public:
 
         buttonOK = new QPushButton(ComputerAdd);
         buttonOK->setObjectName(QStringLiteral("buttonOK"));
+        QFont font3;
+        font3.setFamily(QStringLiteral("Rockwell"));
+        font3.setPointSize(10);
+        font3.setBold(true);
+        font3.setWeight(75);
+        buttonOK->setFont(font3);
+        buttonOK->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonOK);
 
         buttonCancel = new QPushButton(ComputerAdd);
         buttonCancel->setObjectName(QStringLiteral("buttonCancel"));
+        buttonCancel->setFont(font3);
+        buttonCancel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonCancel);
 

@@ -37,7 +37,23 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
+
+        ComputerWindow->resize(531, 482);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        ComputerWindow->setPalette(palette);
+
         ComputerWindow->resize(533, 502);
+
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         EditSearch = new QLineEdit(ComputerWindow);
@@ -60,6 +76,19 @@ public:
         tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(505, 284));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush2(QColor(255, 170, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush2);
+        tableWidget->setPalette(palette1);
         tableWidget->setSortingEnabled(true);
         tableWidget->horizontalHeader()->setStretchLastSection(true);
 
@@ -67,21 +96,55 @@ public:
 
         btnAdd = new QPushButton(ComputerWindow);
         btnAdd->setObjectName(QStringLiteral("btnAdd"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        btnAdd->setFont(font);
+        btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnAdd);
 
         buttonEdit = new QPushButton(ComputerWindow);
         buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
+        buttonEdit->setFont(font);
+        buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonEdit);
 
         btnDel = new QPushButton(ComputerWindow);
         btnDel->setObjectName(QStringLiteral("btnDel"));
+        btnDel->setFont(font);
+        btnDel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnDel);
 
         button_computer_return = new QPushButton(ComputerWindow);
         button_computer_return->setObjectName(QStringLiteral("button_computer_return"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(11);
+        font1.setBold(true);
+        font1.setWeight(75);
+        button_computer_return->setFont(font1);
+        button_computer_return->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_computer_return);
 

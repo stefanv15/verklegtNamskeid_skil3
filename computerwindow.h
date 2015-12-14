@@ -38,6 +38,7 @@ private slots:
 
     void on_EditSearch_textChanged();
 
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;

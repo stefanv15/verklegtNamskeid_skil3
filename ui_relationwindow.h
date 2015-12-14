@@ -26,7 +26,19 @@ public:
     {
         if (RelationWindow->objectName().isEmpty())
             RelationWindow->setObjectName(QStringLiteral("RelationWindow"));
-        RelationWindow->resize(400, 300);
+        RelationWindow->resize(406, 345);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        RelationWindow->setPalette(palette);
 
         retranslateUi(RelationWindow);
 
