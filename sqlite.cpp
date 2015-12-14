@@ -84,8 +84,10 @@ void SQLite::saveData()
 }
 
 //Bætir persónu við gagnagrunninn.
-void SQLite::addData(Person& p)
+string SQLite::addData(Person& p)
 {
+    string retVal = "";
+
     QString sInsertSQL = "INSERT INTO person(name, gender, yearOfBirth, yearOfDeath) "
                          "VALUES (:name,:gender,:yearOfBirth,:yearOfDeath)";
     QSqlQuery query(m_db);
@@ -94,7 +96,9 @@ void SQLite::addData(Person& p)
     query.bindValue(":gender",QString::fromStdString(p.getGender()));
     query.bindValue(":yearOfBirth",p.getDayOfBirth());
     query.bindValue(":yearOfDeath",p.getDayOfDeath());
-    query.exec();
+    if(!query.exec())
+        retVal = query.lastError().text().toStdString();
+    return retVal;
 }
 
 //Breytir persónu í gagnagrunninum.

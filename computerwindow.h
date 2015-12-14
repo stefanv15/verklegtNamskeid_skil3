@@ -2,7 +2,6 @@
 #define COMPUTERWINDOW_H
 #include "domain.h"
 #include "computers.h"
-
 #include <QDialog>
 
 namespace Ui {

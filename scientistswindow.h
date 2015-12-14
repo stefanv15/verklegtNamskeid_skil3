@@ -18,8 +18,8 @@ class ScientistsWindow : public QDialog
 public:
     explicit ScientistsWindow(QWidget *parent = 0);
     ~ScientistsWindow();
-
     void setDomain(Domain domain);
+
 private slots:
 
     void on_ret_button_clicked();

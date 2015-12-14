@@ -106,7 +106,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="name">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -125,7 +125,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="gender">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -137,14 +137,21 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_gender">
-     <property name="placeholderText">
-      <string>Type &quot;m&quot; for male and &quot;f&quot; for female</string>
+    <widget class="QRadioButton" name="radioButtonMale">
+     <property name="text">
+      <string>Male</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_3">
+    <widget class="QRadioButton" name="radioButtonFemale">
+     <property name="text">
+      <string>Female</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="YearBorn">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -175,7 +182,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="yearDied">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -211,7 +218,7 @@
 }</string>
      </property>
      <property name="text">
-      <string>Add this scientist</string>
+      <string>Confirm</string>
      </property>
     </widget>
    </item>

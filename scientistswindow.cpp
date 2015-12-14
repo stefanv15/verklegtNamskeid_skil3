@@ -4,7 +4,6 @@
 #include "person.h"
 #include "mainwindow.h"
 #include "addscientist.h"
-#include "editscientist.h"
 #include <QMessageBox>
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
@@ -39,8 +38,8 @@ void ScientistsWindow::displayAllScientists()
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
 
-    ui->table_scientists->clearContents();
-    ui->table_scientists->setColumnCount(4);
+    ui->table_scientists->clear();
+    ui->table_scientists->setColumnCount(5);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"id";
@@ -80,13 +79,23 @@ void ScientistsWindow::on_button_scientist_addScientist_clicked()
     AddScientist addscientist;
     addscientist.setModal(true);
     addscientist.exec();
+    if(addscientist.result()==QDialog::Accepted)
+        displayAllScientists();
 }
 
 void ScientistsWindow::on_button_scientist_editscientist_clicked()
 {
-    EditScientist editscientist;
-    editscientist.setModal(true);
-    editscientist.exec();
+    int rowidx = ui->table_scientists->selectionModel()->currentIndex().row();
+    int id = ui->table_scientists->model()->index(rowidx, 4).data().toInt();
+    Person p = m_domain.findPersonById(id);
+
+    AddScientist editScientist;
+    editScientist.setDomain(m_domain);
+    editScientist.edit(p);
+    editScientist.setModal(true);
+    editScientist.exec();
+    if(editScientist.result()==QDialog::Accepted)
+        displayAllScientists();
 }
 
 void ScientistsWindow::on_search_students_textChanged()
