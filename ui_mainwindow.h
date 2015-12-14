@@ -210,6 +210,18 @@ public:
 
         Button_fun = new QPushButton(centralWidget);
         Button_fun->setObjectName(QStringLiteral("Button_fun"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(11);
+        font1.setBold(false);
+        font1.setWeight(50);
+        Button_fun->setFont(font1);
+        Button_fun->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); \n"
+"	border: none;\n"
+"}"));
 
         verticalLayout->addWidget(Button_fun);
 

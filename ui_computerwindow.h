@@ -37,8 +37,7 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-
-        ComputerWindow->resize(531, 482);
+        ComputerWindow->resize(533, 502);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -51,9 +50,6 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         ComputerWindow->setPalette(palette);
-
-        ComputerWindow->resize(533, 502);
-
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         EditSearch = new QLineEdit(ComputerWindow);
