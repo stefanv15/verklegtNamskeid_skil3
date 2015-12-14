@@ -2,6 +2,7 @@
 #include "ui_computerwindow.h"
 #include "domain.h"
 #include "computers.h"
+#include "relationwindow.h"
 #include <QMessageBox>
 #include "computeradd.h"
 
@@ -147,4 +148,11 @@ void ComputerWindow::on_EditSearch_textChanged()
     string search = ui->EditSearch->text().toStdString();
     vector<Computers> computers = m_domain.searchComputer(search);
     displayComputer(computers);
+}
+
+void ComputerWindow::on_button_computer_relation_clicked()
+{
+    RelationWindow relation;
+
+    relation.exec();
 }

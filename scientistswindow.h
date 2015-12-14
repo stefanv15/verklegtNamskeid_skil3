@@ -32,6 +32,8 @@ private slots:
 
     void on_button_Scientist_delscientist_clicked();
 
+    void on_button_scientist_relation_clicked();
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;

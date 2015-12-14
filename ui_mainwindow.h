@@ -126,7 +126,7 @@ public:
         textEdit->setLayoutDirection(Qt::LeftToRight);
         textEdit->setAutoFillBackground(false);
 
-        verticalLayout->addWidget(textEdit);
+        verticalLayout->addWidget(textEdit, 0, Qt::AlignHCenter);
 
         computers_button = new QPushButton(centralWidget);
         computers_button->setObjectName(QStringLiteral("computers_button"));
@@ -210,6 +210,18 @@ public:
 
         Button_fun = new QPushButton(centralWidget);
         Button_fun->setObjectName(QStringLiteral("Button_fun"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(11);
+        font1.setBold(false);
+        font1.setWeight(50);
+        Button_fun->setFont(font1);
+        Button_fun->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); \n"
+"	border: none;\n"
+"}"));
 
         verticalLayout->addWidget(Button_fun);
 
@@ -223,29 +235,32 @@ public:
         Quit->setMinimumSize(QSize(0, 0));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush5);
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush3);
+        QBrush brush7(QColor(255, 200, 0, 255));
+        brush7.setStyle(Qt::SolidPattern);
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush7);
         palette4.setBrush(QPalette::Active, QPalette::Text, brush5);
         palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush3);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush3);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush7);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush7);
         palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush7);
         palette4.setBrush(QPalette::Inactive, QPalette::Text, brush5);
         palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush3);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush7);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush7);
         palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush7);
         palette4.setBrush(QPalette::Disabled, QPalette::Text, brush5);
         palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush3);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush7);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush7);
         Quit->setPalette(palette4);
         Quit->setFont(font);
         Quit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
-"	background-color: rgba(255, 170, 0); border: none;\n"
+"	background-color: rgba(255, 200, 0);\n"
+"	border: none;\n"
 "}\n"
 "\n"
 ""));

@@ -174,7 +174,7 @@
       <property name="rightMargin">
        <number>5</number>
       </property>
-      <item>
+      <item alignment="Qt::AlignHCenter">
        <widget class="QTextEdit" name="textEdit">
         <property name="enabled">
          <bool>false</bool>
@@ -935,6 +935,22 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QPushButton" name="Button_fun">
+        <property name="font">
+         <font>
+          <family>Rockwell</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); 
+	border: none;
+}</string>
+        </property>
         <property name="text">
          <string>CLICK HERE FOR FUN</string>
         </property>
@@ -970,7 +986,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -997,7 +1013,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1006,7 +1022,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1026,7 +1042,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1053,7 +1069,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1062,7 +1078,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1082,7 +1098,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1109,7 +1125,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1118,7 +1134,7 @@ p, li { white-space: pre-wrap; }
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
-              <green>170</green>
+              <green>200</green>
               <blue>0</blue>
              </color>
             </brush>
@@ -1136,7 +1152,8 @@ p, li { white-space: pre-wrap; }
          <string notr="true">QPushButton
 {
 	color: black;
-	background-color: rgba(255, 170, 0); border: none;
+	background-color: rgba(255, 200, 0);
+	border: none;
 }
 
 </string>

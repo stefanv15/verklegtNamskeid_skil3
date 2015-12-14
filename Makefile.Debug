@@ -1531,6 +1531,154 @@ debug/moc_addscientist.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		domain.h \
+		SQLite.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/QtSql \
+		C:/qt/5.5/mingw492_32/include/QtSql/QtSqlDepends \
+		C:/qt/5.5/mingw492_32/include/QtCore/QtCore \
+		C:/qt/5.5/mingw492_32/include/QtCore/QtCoreDepends \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qanimationgroup.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qparallelanimationgroup.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qpauseanimation.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qpropertyanimation.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qvariantanimation.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qeasingcurve.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsequentialanimationgroup.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtextcodec.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qendian.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qbuffer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qdir.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfileinfo.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qdiriterator.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfileselector.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/QObject \
+		C:/qt/5.5/mingw492_32/include/QtCore/QStringList \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfilesystemwatcher.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qlockfile.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qloggingcategory.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qprocess.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qresource.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsavefile.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsettings.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstandardpaths.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstorageinfo.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtemporarydir.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/QScopedPointer \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtemporaryfile.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qidentityproxymodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qjsonarray.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qjsonvalue.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qjsondocument.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qjsonobject.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstracteventdispatcher.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qbasictimer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmath.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmetaobject.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmimedata.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qpointer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsystemsemaphore.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtimer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtranslator.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qwineventnotifier.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmimedatabase.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmimetype.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfactoryinterface.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qlibrary.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qplugin.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qpluginloader.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/quuid.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractstate.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstracttransition.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qeventtransition.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfinalstate.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qhistorystate.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsignaltransition.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstate.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstatemachine.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qexception.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfuture.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfutureinterface.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qrunnable.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qresultstore.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfuturesynchronizer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qfuturewatcher.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qreadwritelock.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qsemaphore.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qthread.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qthreadpool.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qthreadstorage.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qwaitcondition.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qarraydataops.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qbitarray.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcache.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcollator.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcryptographichash.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qelapsedtimer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qlinkedlist.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qmessageauthenticationcode.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qqueue.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qstack.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtimeline.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtimezone.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qxmlstream.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqldriver.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqldriverplugin.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlerror.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlfield.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlindex.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlresult.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qicon.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		C:/qt/5.5/mingw492_32/include/QtSql/qtsqlversion.h \
+		person.h \
+		computers.h \
+		comp_pers.h \
 		addscientist.h
 	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore addscientist.h -o debug\moc_addscientist.cpp
 
@@ -2118,6 +2266,7 @@ debug/scientistswindow.o: scientistswindow.cpp scientistswindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
 		addscientist.h \
+		relationwindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\scientistswindow.o scientistswindow.cpp
@@ -2405,6 +2554,7 @@ debug/computerwindow.o: computerwindow.cpp computerwindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		relationwindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h \
 		computeradd.h
@@ -2675,7 +2825,19 @@ debug/relationwindow.o: relationwindow.cpp relationwindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QTableWidget \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtablewidget.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtableview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\relationwindow.o relationwindow.cpp
 
 debug/mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -3389,59 +3551,6 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		ui_addscientist.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/QVariant \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QAction \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qicon.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QApplication \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QCheckBox \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qcheckbox.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QLabel \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qpen.h \
-		C:/qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QRadioButton \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qradiobutton.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
 		domain.h \
 		SQLite.h \
 		C:/qt/5.5/mingw492_32/include/QtSql/QtSql \
@@ -3479,8 +3588,10 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qtemporarydir.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/QScopedPointer \
 		C:/qt/5.5/mingw492_32/include/QtCore/qtemporaryfile.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qabstractproxymodel.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qidentityproxymodel.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qsortfilterproxymodel.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qstringlistmodel.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qjsonarray.h \
@@ -3488,8 +3599,10 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qjsondocument.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qjsonobject.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qabstracteventdispatcher.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qeventloop.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qbasictimer.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qmath.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qmetaobject.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qmimedata.h \
@@ -3543,6 +3656,7 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qlinkedlist.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qmessageauthenticationcode.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qqueue.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qstack.h \
 		C:/qt/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
@@ -3563,7 +3677,21 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		C:/qt/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
 		C:/qt/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qicon.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
 		C:/qt/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
 		C:/qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
@@ -3571,6 +3699,40 @@ debug/addscientist.o: addscientist.cpp addscientist.h \
 		person.h \
 		computers.h \
 		comp_pers.h \
+		ui_addscientist.h \
+		C:/qt/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QApplication \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qguiapplication.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QCheckBox \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qcheckbox.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QLineEdit \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlineedit.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextcursor.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextformat.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/qt/5.5/mingw492_32/include/QtGui/qtextoption.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QRadioButton \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qradiobutton.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h \
 		Person.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\addscientist.o addscientist.cpp

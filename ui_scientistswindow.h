@@ -27,6 +27,7 @@ class Ui_ScientistsWindow
 public:
     QVBoxLayout *verticalLayout;
     QLineEdit *search_students;
+    QPushButton *button_scientist_relation;
     QTableWidget *table_scientists;
     QPushButton *button_scientist_addScientist;
     QPushButton *button_scientist_editscientist;
@@ -68,6 +69,22 @@ public:
 
         verticalLayout->addWidget(search_students);
 
+        button_scientist_relation = new QPushButton(ScientistsWindow);
+        button_scientist_relation->setObjectName(QStringLiteral("button_scientist_relation"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setBold(true);
+        font.setWeight(75);
+        button_scientist_relation->setFont(font);
+        button_scientist_relation->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0);\n"
+"	border: none;\n"
+"}"));
+
+        verticalLayout->addWidget(button_scientist_relation);
+
         table_scientists = new QTableWidget(ScientistsWindow);
         if (table_scientists->columnCount() < 4)
             table_scientists->setColumnCount(4);
@@ -96,12 +113,12 @@ public:
 
         button_scientist_addScientist = new QPushButton(ScientistsWindow);
         button_scientist_addScientist->setObjectName(QStringLiteral("button_scientist_addScientist"));
-        QFont font;
-        font.setFamily(QStringLiteral("Rockwell"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setWeight(75);
-        button_scientist_addScientist->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        button_scientist_addScientist->setFont(font1);
         button_scientist_addScientist->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -112,7 +129,7 @@ public:
 
         button_scientist_editscientist = new QPushButton(ScientistsWindow);
         button_scientist_editscientist->setObjectName(QStringLiteral("button_scientist_editscientist"));
-        button_scientist_editscientist->setFont(font);
+        button_scientist_editscientist->setFont(font1);
         button_scientist_editscientist->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -123,7 +140,7 @@ public:
 
         button_Scientist_delscientist = new QPushButton(ScientistsWindow);
         button_Scientist_delscientist->setObjectName(QStringLiteral("button_Scientist_delscientist"));
-        button_Scientist_delscientist->setFont(font);
+        button_Scientist_delscientist->setFont(font1);
         button_Scientist_delscientist->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -134,16 +151,17 @@ public:
 
         ret_button = new QPushButton(ScientistsWindow);
         ret_button->setObjectName(QStringLiteral("ret_button"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Rockwell"));
-        font1.setPointSize(11);
-        font1.setBold(true);
-        font1.setWeight(75);
-        ret_button->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Rockwell"));
+        font2.setPointSize(11);
+        font2.setBold(true);
+        font2.setWeight(75);
+        ret_button->setFont(font2);
         ret_button->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
-"	background-color: rgba(255, 170, 0); border: none;\n"
+"	background-color: rgba(255, 200, 0);\n"
+"	border: none;\n"
 "}"));
 
         verticalLayout->addWidget(ret_button);
@@ -158,6 +176,7 @@ public:
     {
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
+        button_scientist_relation->setText(QApplication::translate("ScientistsWindow", "Relate", 0));
         QTableWidgetItem *___qtablewidgetitem = table_scientists->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ScientistsWindow", "Name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = table_scientists->horizontalHeaderItem(1);

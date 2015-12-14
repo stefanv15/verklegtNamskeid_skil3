@@ -4,6 +4,7 @@
 #include "person.h"
 #include "mainwindow.h"
 #include "addscientist.h"
+#include "relationwindow.h"
 #include <QMessageBox>
 
 ScientistsWindow::ScientistsWindow(QWidget *parent) :
@@ -39,7 +40,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 {
 
     ui->table_scientists->clear();
-    ui->table_scientists->setColumnCount(5);
+    ui->table_scientists->setColumnCount(4);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"id";
@@ -54,8 +55,6 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
     for(unsigned int i = 0; i < persons.size(); i++)
     {
        // Person currentScientist = persons[i];
-
-
         ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(persons[i].getName())));
         ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(persons[i].getGender() == "m"?"Male":"Female")));
         ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
@@ -119,4 +118,11 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
     {
         QMessageBox::information(this,"Info","Oh well");
     }
+}
+
+void ScientistsWindow::on_button_scientist_relation_clicked()
+{
+    RelationWindow relation;
+
+    relation.exec();
 }
