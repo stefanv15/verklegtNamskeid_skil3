@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -25,6 +26,7 @@ class Ui_ComputerWindow
 {
 public:
     QVBoxLayout *verticalLayout;
+    QLineEdit *EditSearch;
     QTableWidget *tableWidget;
     QPushButton *btnAdd;
     QPushButton *buttonEdit;
@@ -35,9 +37,14 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-        ComputerWindow->resize(523, 418);
+        ComputerWindow->resize(533, 502);
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        EditSearch = new QLineEdit(ComputerWindow);
+        EditSearch->setObjectName(QStringLiteral("EditSearch"));
+
+        verticalLayout->addWidget(EditSearch);
+
         tableWidget = new QTableWidget(ComputerWindow);
         if (tableWidget->columnCount() < 5)
             tableWidget->setColumnCount(5);
@@ -87,6 +94,7 @@ public:
     void retranslateUi(QDialog *ComputerWindow)
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
+        EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

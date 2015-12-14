@@ -36,6 +36,7 @@ private slots:
 
     void on_btnDel_clicked();
 
+    void on_EditSearch_textChanged();
 
 private:
     Ui::ComputerWindow *ui;

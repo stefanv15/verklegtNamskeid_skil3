@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>531</width>
-    <height>482</height>
+    <width>533</width>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,11 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLineEdit" name="EditSearch"/>
+    <widget class="QLineEdit" name="EditSearch">
+     <property name="placeholderText">
+      <string>Write here to search</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QTableWidget" name="tableWidget">
