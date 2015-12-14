@@ -45,7 +45,7 @@ public:
     {
         if (AddScientist->objectName().isEmpty())
             AddScientist->setObjectName(QStringLiteral("AddScientist"));
-        AddScientist->resize(455, 325);
+        AddScientist->resize(455, 418);
         QPalette palette;
         QBrush brush(QColor(255, 170, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -121,6 +121,7 @@ public:
 
         line_yeardied = new QLineEdit(AddScientist);
         line_yeardied->setObjectName(QStringLiteral("line_yeardied"));
+        line_yeardied->setEnabled(false);
 
         verticalLayout->addWidget(line_yeardied);
 

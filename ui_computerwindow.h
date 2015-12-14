@@ -38,7 +38,7 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-        ComputerWindow->resize(533, 502);
+        ComputerWindow->resize(903, 512);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -59,8 +59,8 @@ public:
         verticalLayout->addWidget(EditSearch);
 
         tableWidget = new QTableWidget(ComputerWindow);
-        if (tableWidget->columnCount() < 5)
-            tableWidget->setColumnCount(5);
+        if (tableWidget->columnCount() < 6)
+            tableWidget->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -71,6 +71,8 @@ public:
         tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(505, 284));
         QPalette palette1;
@@ -181,7 +183,9 @@ public:
         QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
         ___qtablewidgetitem3->setText(QApplication::translate("ComputerWindow", "Year built", 0));
         QTableWidgetItem *___qtablewidgetitem4 = tableWidget->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QApplication::translate("ComputerWindow", "id", 0));
+        ___qtablewidgetitem4->setText(QApplication::translate("ComputerWindow", "Related scientists", 0));
+        QTableWidgetItem *___qtablewidgetitem5 = tableWidget->horizontalHeaderItem(5);
+        ___qtablewidgetitem5->setText(QApplication::translate("ComputerWindow", "id", 0));
         btnAdd->setText(QApplication::translate("ComputerWindow", "Add Computer", 0));
         buttonEdit->setText(QApplication::translate("ComputerWindow", "Edit Computer", 0));
         btnDel->setText(QApplication::translate("ComputerWindow", "Delete Computer", 0));

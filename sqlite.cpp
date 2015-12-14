@@ -14,7 +14,8 @@ void SQLite::openDatabase()
     QString dbName = "scientists.sqlite";
     m_db.setDatabaseName(dbName);
 
-    m_db.open();
+    if(!m_db.open())
+        m_db.close();
 }
 
 //Nær í nýjust  gögn úr gagnagrunni persóna og skilar í vektor.

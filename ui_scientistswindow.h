@@ -38,7 +38,11 @@ public:
     {
         if (ScientistsWindow->objectName().isEmpty())
             ScientistsWindow->setObjectName(QStringLiteral("ScientistsWindow"));
+<<<<<<< HEAD
         ScientistsWindow->resize(581, 481);
+=======
+        ScientistsWindow->resize(928, 481);
+>>>>>>> 5f946be54c82680b40dd4ddcfeaa434648866932
         ScientistsWindow->setMinimumSize(QSize(498, 481));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
@@ -174,7 +178,7 @@ public:
 
     void retranslateUi(QDialog *ScientistsWindow)
     {
-        ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Dialog", 0));
+        ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Scientists", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
         button_scientist_relation->setText(QApplication::translate("ScientistsWindow", "Relate", 0));
         QTableWidgetItem *___qtablewidgetitem = table_scientists->horizontalHeaderItem(0);

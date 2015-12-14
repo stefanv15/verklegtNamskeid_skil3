@@ -233,3 +233,4 @@ debug/verklegtnamskeid.exe
 Makefile.Debug
 *.user
 *.user
+*.autosave

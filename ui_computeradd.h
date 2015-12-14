@@ -44,7 +44,7 @@ public:
     {
         if (ComputerAdd->objectName().isEmpty())
             ComputerAdd->setObjectName(QStringLiteral("ComputerAdd"));
-        ComputerAdd->resize(373, 299);
+        ComputerAdd->resize(373, 388);
         QPalette palette;
         QBrush brush(QColor(255, 170, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -129,6 +129,7 @@ public:
         editYearBuilt = new QLineEdit(ComputerAdd);
         editYearBuilt->setObjectName(QStringLiteral("editYearBuilt"));
         editYearBuilt->setEnabled(false);
+        editYearBuilt->setMaxLength(4);
 
         verticalLayout->addWidget(editYearBuilt);
 

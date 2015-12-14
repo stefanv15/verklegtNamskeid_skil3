@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>455</width>
-    <height>325</height>
+    <height>418</height>
    </rect>
   </property>
   <property name="palette">
@@ -195,6 +195,9 @@
    </item>
    <item>
     <widget class="QLineEdit" name="line_yeardied">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="placeholderText">
       <string>Type here when scientist died</string>
      </property>

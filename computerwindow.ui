@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
-    <height>502</height>
+    <width>903</width>
+    <height>512</height>
    </rect>
   </property>
   <property name="palette">
@@ -208,6 +208,11 @@
      <column>
       <property name="text">
        <string>Year built</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Related scientists</string>
       </property>
      </column>
      <column>
