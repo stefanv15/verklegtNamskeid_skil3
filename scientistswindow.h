@@ -30,6 +30,8 @@ private slots:
 
     void on_search_students_textChanged();
 
+    void on_button_Scientist_delscientist_clicked();
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;

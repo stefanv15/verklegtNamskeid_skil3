@@ -52,7 +52,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
     for(unsigned int i = 0; i < persons.size(); i++)
     {
-        Person currentScientist = persons[i];
+       // Person currentScientist = persons[i];
 
         ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(persons[i].getName())));
         ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(persons[i].getGender() == "m"?"Male":"Female")));
@@ -88,4 +88,21 @@ void ScientistsWindow::on_search_students_textChanged()
     string search = ui->search_students->text().toStdString();
     vector<Person> persons = m_domain.searchScientist(search);
     displayScientists(persons);
+}
+
+void ScientistsWindow::on_button_Scientist_delscientist_clicked()
+{
+    int answer = QMessageBox::question(this, "Question", "Are you sure you want to delete selected scientist?");
+    if (answer == QMessageBox::Yes)
+    {
+        int rowid = ui->table_scientists->selectionModel()->currentIndex().row();
+        int id = ui->table_scientists->model()->index(rowid, 4).data().toInt();
+        m_domain.removeScientist(id);
+        displayAllScientists();
+    }
+    else
+    {
+
+        QMessageBox::information(this,"Info","Oh well");
+    }
 }
