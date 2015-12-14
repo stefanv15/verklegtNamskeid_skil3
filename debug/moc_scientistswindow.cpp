@@ -30,17 +30,17 @@ struct qt_meta_stringdata_ScientistsWindow_t {
 static const qt_meta_stringdata_ScientistsWindow_t qt_meta_stringdata_ScientistsWindow = {
     {
 QT_MOC_LITERAL(0, 0, 16), // "ScientistsWindow"
-QT_MOC_LITERAL(1, 17, 30), // "on_search_students_textChanged"
-QT_MOC_LITERAL(2, 48, 0), // ""
-QT_MOC_LITERAL(3, 49, 21), // "on_ret_button_clicked"
-QT_MOC_LITERAL(4, 71, 40), // "on_button_scientist_addScient..."
-QT_MOC_LITERAL(5, 112, 41) // "on_button_scientist_editscien..."
+QT_MOC_LITERAL(1, 17, 21), // "on_ret_button_clicked"
+QT_MOC_LITERAL(2, 39, 0), // ""
+QT_MOC_LITERAL(3, 40, 40), // "on_button_scientist_addScient..."
+QT_MOC_LITERAL(4, 81, 41), // "on_button_scientist_editscien..."
+QT_MOC_LITERAL(5, 123, 30) // "on_search_students_textChanged"
 
     },
-    "ScientistsWindow\0on_search_students_textChanged\0"
-    "\0on_ret_button_clicked\0"
-    "on_button_scientist_addScientist_clicked\0"
-    "on_button_scientist_editscientist_clicked"
+    "ScientistsWindow\0on_ret_button_clicked\0"
+    "\0on_button_scientist_addScientist_clicked\0"
+    "on_button_scientist_editscientist_clicked\0"
+    "on_search_students_textChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -78,10 +78,10 @@ void ScientistsWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         ScientistsWindow *_t = static_cast<ScientistsWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_search_students_textChanged(); break;
-        case 1: _t->on_ret_button_clicked(); break;
-        case 2: _t->on_button_scientist_addScientist_clicked(); break;
-        case 3: _t->on_button_scientist_editscientist_clicked(); break;
+        case 0: _t->on_ret_button_clicked(); break;
+        case 1: _t->on_button_scientist_addScientist_clicked(); break;
+        case 2: _t->on_button_scientist_editscientist_clicked(); break;
+        case 3: _t->on_search_students_textChanged(); break;
         default: ;
         }
     }

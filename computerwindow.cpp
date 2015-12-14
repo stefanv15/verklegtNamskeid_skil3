@@ -135,3 +135,10 @@ void ComputerWindow::on_btnDel_clicked()
     else
         QMessageBox::information(this,"Info","Ok, see you!");
 }
+
+void ComputerWindow::on_EditSearch_textChanged()
+{
+    string search = ui->EditSearch->text().toStdString();
+    vector<Computers> computers = m_domain.searchComputer(search);
+    fillList();
+}

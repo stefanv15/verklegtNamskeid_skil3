@@ -37,6 +37,7 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
+<<<<<<< HEAD
         ComputerWindow->resize(531, 482);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
@@ -50,6 +51,9 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         ComputerWindow->setPalette(palette);
+=======
+        ComputerWindow->resize(533, 502);
+>>>>>>> ca066509b72e005ffe6546095b765a92481e7161
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         EditSearch = new QLineEdit(ComputerWindow);
@@ -153,6 +157,7 @@ public:
     void retranslateUi(QDialog *ComputerWindow)
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
+        EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
