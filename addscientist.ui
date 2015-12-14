@@ -10,12 +10,108 @@
     <height>325</height>
    </rect>
   </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>170</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>170</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>120</red>
+        <green>120</green>
+        <blue>120</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="name">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Name of scientist</string>
      </property>
@@ -29,21 +125,38 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="gender">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Gender</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_gender">
-     <property name="placeholderText">
-      <string>Type &quot;m&quot; for male and &quot;f&quot; for female</string>
+    <widget class="QRadioButton" name="radioButtonMale">
+     <property name="text">
+      <string>Male</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_3">
+    <widget class="QRadioButton" name="radioButtonFemale">
+     <property name="text">
+      <string>Female</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="YearBorn">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Year born</string>
      </property>
@@ -58,13 +171,23 @@
    </item>
    <item>
     <widget class="QCheckBox" name="check_isdead">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Is this scientist dead?</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="yearDied">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Year died</string>
      </property>
@@ -79,13 +202,43 @@
    </item>
    <item>
     <widget class="QPushButton" name="button_add">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
-      <string>Add this scientist</string>
+      <string>Confirm</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="button_cancel">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Cancel</string>
      </property>
