@@ -40,7 +40,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 {
 
     ui->table_scientists->clearContents();
-    ui->table_scientists->setRowCount(persons.size());
+    ui->table_scientists->setColumnCount(4);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"id";
@@ -62,6 +62,8 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
         if (persons[i].getDayOfDeath() > 0)
             ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(persons[i].getDayOfDeath())));
+        else
+            ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Still alive")));
         ui->table_scientists->setItem(i, 4, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }
@@ -96,7 +98,7 @@ void ScientistsWindow::on_search_students_textChanged()
 
 void ScientistsWindow::on_button_Scientist_delscientist_clicked()
 {
-    int answer = QMessageBox::question(this, "Question", "Are you sure you want to delete selected scientist?");
+    int answer = QMessageBox::question(this,"Question","Are you sure you want to delete selected scientist?");
     if (answer == QMessageBox::Yes)
     {
         int rowid = ui->table_scientists->selectionModel()->currentIndex().row();
@@ -106,7 +108,6 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
     }
     else
     {
-
         QMessageBox::information(this,"Info","Oh well");
     }
 }

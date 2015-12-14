@@ -58,26 +58,32 @@ QString getType(string type)
 
 void ComputerWindow::fillList()
 {    vector<Computers> list =  m_domain.getComputerList();
+     displayComputer(list);
+}
 
-     ui->tableWidget->clear();
-     ui->tableWidget->setColumnCount(5);
+void ComputerWindow::displayComputer(vector<Computers> computer)
+{
+    ui->tableWidget->clear();
+    ui->tableWidget->setColumnCount(5);
 
-     QStringList TableHeader;
-     TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"id";
-     ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
-     ui->tableWidget->setRowCount(list.size());
+    QStringList TableHeader;
+    TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"id";
+    ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
+    ui->tableWidget->setRowCount(computer.size());
 
 
-     for(unsigned int i = 0; i < list.size(); i++)
-     {
-         ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(list[i].getNameOfCpu())));
-         ui->tableWidget->setItem(i, 1, new QTableWidgetItem(getType(list[i].getTypeOfCpu())));
-         ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::fromStdString(list[i].getWasBuilt()=="y"?"Yes":"No")));
-         if (list[i].getYearBuilt()!=0)
-            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::number(list[i].getYearBuilt())));
-         ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::number(list[i].getId())));
-         //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
-     }
+    for(unsigned int i = 0; i < computer.size(); i++)
+    {
+        ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(computer[i].getNameOfCpu())));
+        ui->tableWidget->setItem(i, 1, new QTableWidgetItem(getType(computer[i].getTypeOfCpu())));
+        ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::fromStdString(computer[i].getWasBuilt()=="y"?"Yes":"No")));
+        if (computer[i].getYearBuilt()!=0)
+           ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
+        else
+            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
+        ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
+        //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
+    }
 }
 
 void ComputerWindow::on_button_computer_addCpu_clicked()
@@ -122,7 +128,7 @@ void ComputerWindow::on_button_computer_return_clicked()
 
 void ComputerWindow::on_btnDel_clicked()
 {
-    int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected Computer?");
+    int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected computer?");
 
     if(mbAnswer == QMessageBox::Yes)
     {
@@ -140,5 +146,5 @@ void ComputerWindow::on_EditSearch_textChanged()
 {
     string search = ui->EditSearch->text().toStdString();
     vector<Computers> computers = m_domain.searchComputer(search);
-    fillList();
+    displayComputer(computers);
 }
