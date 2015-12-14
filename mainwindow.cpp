@@ -2,6 +2,9 @@
 #include "scientistswindow.h"
 #include "ui_mainwindow.h"
 #include "computerwindow.h"
+#include <QtWebKitWidgets/QWebView>
+#include <QDesktopServices>
+#include <QUrl>
 #include <vector>
 #include <cstdlib>
 
@@ -37,4 +40,10 @@ void MainWindow::on_computers_button_clicked()
 void MainWindow::on_Quit_clicked()
 {
     exit(1);
+}
+
+void MainWindow::on_Button_fun_clicked()
+{
+    QString link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    QDesktopServices::openUrl(QUrl(link));
 }

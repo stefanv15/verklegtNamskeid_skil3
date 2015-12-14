@@ -34,6 +34,7 @@ public:
     QTextEdit *textEdit;
     QPushButton *computers_button;
     QPushButton *scientists_button;
+    QPushButton *Button_fun;
     QPushButton *Quit;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -207,6 +208,11 @@ public:
 
         verticalLayout->addWidget(scientists_button);
 
+        Button_fun = new QPushButton(centralWidget);
+        Button_fun->setObjectName(QStringLiteral("Button_fun"));
+
+        verticalLayout->addWidget(Button_fun);
+
         Quit = new QPushButton(centralWidget);
         Quit->setObjectName(QStringLiteral("Quit"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Maximum);
@@ -274,6 +280,7 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\"><br />#students from Reykjav\303\255k University</span></p></body></html>", 0));
         computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
         scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
+        Button_fun->setText(QApplication::translate("MainWindow", "CLICK HERE FOR FUN", 0));
         Quit->setText(QApplication::translate("MainWindow", "Quit", 0));
     } // retranslateUi
 

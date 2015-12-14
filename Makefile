@@ -193,8 +193,11 @@ Makefile: verkefnaskil3_hopur22.pro ../../../../Qt/5.5/mingw492_32/mkspecs/win32
 		../../../../Qt/5.5/mingw492_32/mkspecs/features/lex.prf \
 		verkefnaskil3_hopur22.pro \
 		C:/Qt/5.5/mingw492_32/lib/qtmaind.prl \
+		C:/Qt/5.5/mingw492_32/lib/Qt5WebKitWidgets.prl \
 		C:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl \
+		C:/Qt/5.5/mingw492_32/lib/Qt5WebKit.prl \
 		C:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl \
+		C:/Qt/5.5/mingw492_32/lib/Qt5Network.prl \
 		C:/Qt/5.5/mingw492_32/lib/Qt5Sql.prl \
 		C:/Qt/5.5/mingw492_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ "CONFIG+=debug" -o Makefile verkefnaskil3_hopur22.pro
@@ -332,8 +335,11 @@ Makefile: verkefnaskil3_hopur22.pro ../../../../Qt/5.5/mingw492_32/mkspecs/win32
 ../../../../Qt/5.5/mingw492_32/mkspecs/features/lex.prf:
 verkefnaskil3_hopur22.pro:
 C:/Qt/5.5/mingw492_32/lib/qtmaind.prl:
+C:/Qt/5.5/mingw492_32/lib/Qt5WebKitWidgets.prl:
 C:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl:
+C:/Qt/5.5/mingw492_32/lib/Qt5WebKit.prl:
 C:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl:
+C:/Qt/5.5/mingw492_32/lib/Qt5Network.prl:
 C:/Qt/5.5/mingw492_32/lib/Qt5Sql.prl:
 C:/Qt/5.5/mingw492_32/lib/Qt5Core.prl:
 qmake: FORCE

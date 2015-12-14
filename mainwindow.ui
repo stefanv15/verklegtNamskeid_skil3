@@ -934,6 +934,13 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="Button_fun">
+        <property name="text">
+         <string>CLICK HERE FOR FUN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="Quit">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">

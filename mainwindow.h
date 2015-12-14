@@ -26,6 +26,8 @@ private slots:
 
     void on_Quit_clicked();
 
+    void on_Button_fun_clicked();
+
 private:
     Ui::MainWindow *ui;
     Domain m_domain;
