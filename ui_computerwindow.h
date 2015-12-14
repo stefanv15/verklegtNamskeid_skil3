@@ -27,6 +27,7 @@ class Ui_ComputerWindow
 public:
     QVBoxLayout *verticalLayout;
     QLineEdit *EditSearch;
+    QPushButton *button_computer_relation;
     QTableWidget *tableWidget;
     QPushButton *btnAdd;
     QPushButton *buttonEdit;
@@ -56,6 +57,23 @@ public:
         EditSearch->setObjectName(QStringLiteral("EditSearch"));
 
         verticalLayout->addWidget(EditSearch);
+
+        button_computer_relation = new QPushButton(ComputerWindow);
+        button_computer_relation->setObjectName(QStringLiteral("button_computer_relation"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setItalic(false);
+        font.setWeight(75);
+        button_computer_relation->setFont(font);
+        button_computer_relation->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
+
+        verticalLayout->addWidget(button_computer_relation);
 
         tableWidget = new QTableWidget(ComputerWindow);
         if (tableWidget->columnCount() < 5)
@@ -92,12 +110,12 @@ public:
 
         btnAdd = new QPushButton(ComputerWindow);
         btnAdd->setObjectName(QStringLiteral("btnAdd"));
-        QFont font;
-        font.setFamily(QStringLiteral("Rockwell"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setWeight(75);
-        btnAdd->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        btnAdd->setFont(font1);
         btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -108,7 +126,7 @@ public:
 
         buttonEdit = new QPushButton(ComputerWindow);
         buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
-        buttonEdit->setFont(font);
+        buttonEdit->setFont(font1);
         buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -119,7 +137,7 @@ public:
 
         btnDel = new QPushButton(ComputerWindow);
         btnDel->setObjectName(QStringLiteral("btnDel"));
-        btnDel->setFont(font);
+        btnDel->setFont(font1);
         btnDel->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -130,16 +148,16 @@ public:
 
         button_computer_return = new QPushButton(ComputerWindow);
         button_computer_return->setObjectName(QStringLiteral("button_computer_return"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Rockwell"));
-        font1.setPointSize(11);
-        font1.setBold(true);
-        font1.setWeight(75);
-        button_computer_return->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Rockwell"));
+        font2.setPointSize(11);
+        font2.setBold(true);
+        font2.setWeight(75);
+        button_computer_return->setFont(font2);
         button_computer_return->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
-"	background-color: rgba(255, 170, 0); border: none;\n"
+"	background-color: rgba(255, 200, 0); border: none;\n"
 "}"));
 
         verticalLayout->addWidget(button_computer_return);
@@ -154,6 +172,7 @@ public:
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
         EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
+        button_computer_relation->setText(QApplication::translate("ComputerWindow", "Relate", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

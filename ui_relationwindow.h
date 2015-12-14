@@ -29,12 +29,13 @@ public:
     QLineEdit *search_relation_searchCpu;
     QTableWidget *table_relation_schientists;
     QPushButton *button_relation_relate;
+    QPushButton *button_relation_return;
 
     void setupUi(QDialog *RelationWindow)
     {
         if (RelationWindow->objectName().isEmpty())
             RelationWindow->setObjectName(QStringLiteral("RelationWindow"));
-        RelationWindow->resize(733, 280);
+        RelationWindow->resize(733, 276);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -96,6 +97,15 @@ public:
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
+        button_relation_return = new QPushButton(RelationWindow);
+        button_relation_return->setObjectName(QStringLiteral("button_relation_return"));
+        button_relation_return->setGeometry(QRect(320, 230, 81, 31));
+        button_relation_return->setFont(font);
+        button_relation_return->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 200, 0); border: none;\n"
+"}"));
 
         retranslateUi(RelationWindow);
 
@@ -126,6 +136,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem8 = table_relation_schientists->horizontalHeaderItem(3);
         ___qtablewidgetitem8->setText(QApplication::translate("RelationWindow", "Year died", 0));
         button_relation_relate->setText(QApplication::translate("RelationWindow", "Relate!", 0));
+        button_relation_return->setText(QApplication::translate("RelationWindow", " Return", 0));
     } // retranslateUi
 
 };

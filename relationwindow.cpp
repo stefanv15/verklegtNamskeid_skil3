@@ -15,3 +15,8 @@ RelationWindow::~RelationWindow()
 {
     delete ui;
 }
+
+void RelationWindow::on_button_relation_return_clicked()
+{
+    this->close();
+}

@@ -18,6 +18,10 @@ public:
     explicit RelationWindow(QWidget *parent = 0);
     ~RelationWindow();
 
+private slots:
+
+    void on_button_relation_return_clicked();
+
 private:
     Ui::RelationWindow *ui;
 };
