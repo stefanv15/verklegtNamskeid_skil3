@@ -17,7 +17,7 @@ ComputerWindow::ComputerWindow(QWidget *parent) :
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
-    ui->tableWidget->hideColumn(4);
+    ui->tableWidget->hideColumn(5);
 }
 
 void ComputerWindow::setDomain(Domain domain)
@@ -68,7 +68,7 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
     ui->tableWidget->setColumnCount(5);
 
     QStringList TableHeader;
-    TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"id";
+    TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"Related scientists"<<"id";
     ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
     ui->tableWidget->setRowCount(computer.size());
 
@@ -84,6 +84,8 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
             ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
         ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
         //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
+
+        ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
     }
 }
 

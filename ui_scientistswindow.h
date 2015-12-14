@@ -38,7 +38,7 @@ public:
     {
         if (ScientistsWindow->objectName().isEmpty())
             ScientistsWindow->setObjectName(QStringLiteral("ScientistsWindow"));
-        ScientistsWindow->resize(691, 481);
+        ScientistsWindow->resize(928, 481);
         ScientistsWindow->setMinimumSize(QSize(498, 481));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
