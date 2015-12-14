@@ -254,7 +254,6 @@ void SQLite::removeScientist(int input)
 }
 
 //Fjarlægir tölvu endanlega úr gagnagrunninum.
-
 void SQLite::removeComputer(int input)
 {
     QSqlQuery query(m_db);
@@ -263,7 +262,6 @@ void SQLite::removeComputer(int input)
 }
 
 //Raðar nafni tölvunarfræðings eftir stafrófsröð.
-
 vector <Person> SQLite::sortAscName()
 {
     QSqlQuery query(m_db);

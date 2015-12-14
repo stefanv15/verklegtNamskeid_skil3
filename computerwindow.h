@@ -43,6 +43,7 @@ private:
     Ui::ComputerWindow *ui;
     Domain m_domain;
     void fillList();
+    void displayComputer(vector<Computers> computer);
 };
 
 #endif // COMPUTERWINDOW_H
