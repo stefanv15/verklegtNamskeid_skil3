@@ -40,7 +40,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 {
 
     ui->table_scientists->clearContents();
-    ui->table_scientists->setColumnCount(5);
+    ui->table_scientists->setColumnCount(4);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"id";
