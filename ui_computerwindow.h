@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -25,6 +26,7 @@ class Ui_ComputerWindow
 {
 public:
     QVBoxLayout *verticalLayout;
+    QLineEdit *EditSearch;
     QTableWidget *tableWidget;
     QPushButton *btnAdd;
     QPushButton *buttonEdit;
@@ -35,9 +37,26 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-        ComputerWindow->resize(523, 418);
+        ComputerWindow->resize(531, 482);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        ComputerWindow->setPalette(palette);
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        EditSearch = new QLineEdit(ComputerWindow);
+        EditSearch->setObjectName(QStringLiteral("EditSearch"));
+
+        verticalLayout->addWidget(EditSearch);
+
         tableWidget = new QTableWidget(ComputerWindow);
         if (tableWidget->columnCount() < 5)
             tableWidget->setColumnCount(5);
@@ -53,6 +72,19 @@ public:
         tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(505, 284));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush2(QColor(255, 170, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush2);
+        tableWidget->setPalette(palette1);
         tableWidget->setSortingEnabled(true);
         tableWidget->horizontalHeader()->setStretchLastSection(true);
 

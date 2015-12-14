@@ -44,10 +44,32 @@ public:
         if (AddScientist->objectName().isEmpty())
             AddScientist->setObjectName(QStringLiteral("AddScientist"));
         AddScientist->resize(455, 325);
+        QPalette palette;
+        QBrush brush(QColor(255, 170, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(255, 255, 255, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush2(QColor(0, 0, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        AddScientist->setPalette(palette);
         verticalLayout = new QVBoxLayout(AddScientist);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label = new QLabel(AddScientist);
         label->setObjectName(QStringLiteral("label"));
+        QFont font;
+        font.setPointSize(10);
+        label->setFont(font);
 
         verticalLayout->addWidget(label);
 
@@ -58,6 +80,7 @@ public:
 
         label_2 = new QLabel(AddScientist);
         label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setFont(font);
 
         verticalLayout->addWidget(label_2);
 
@@ -68,6 +91,7 @@ public:
 
         label_3 = new QLabel(AddScientist);
         label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setFont(font);
 
         verticalLayout->addWidget(label_3);
 
@@ -78,11 +102,13 @@ public:
 
         check_isdead = new QCheckBox(AddScientist);
         check_isdead->setObjectName(QStringLiteral("check_isdead"));
+        check_isdead->setFont(font);
 
         verticalLayout->addWidget(check_isdead);
 
         label_4 = new QLabel(AddScientist);
         label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setFont(font);
 
         verticalLayout->addWidget(label_4);
 

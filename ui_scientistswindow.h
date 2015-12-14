@@ -46,19 +46,19 @@ public:
         QBrush brush1(QColor(202, 208, 203, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush);
         QBrush brush2(QColor(255, 181, 8, 255));
         brush2.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::ToolTipText, brush2);
         palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
         palette.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush2);
         QBrush brush3(QColor(120, 120, 120, 255));
         brush3.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Disabled, QPalette::Text, brush3);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush2);
         ScientistsWindow->setPalette(palette);
         verticalLayout = new QVBoxLayout(ScientistsWindow);
@@ -81,6 +81,13 @@ public:
         table_scientists->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         table_scientists->setObjectName(QStringLiteral("table_scientists"));
         table_scientists->setMinimumSize(QSize(452, 140));
+        QPalette palette1;
+        QBrush brush4(QColor(248, 255, 250, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush4);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush4);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        table_scientists->setPalette(palette1);
         table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
         table_scientists->horizontalHeader()->setStretchLastSection(true);
 

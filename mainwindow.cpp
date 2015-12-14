@@ -17,11 +17,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_Exit_clicked()
-{
-    exit(1);
-}
-
 void MainWindow::on_scientists_button_clicked()
 {
     ScientistsWindow scientistswindow;
@@ -37,3 +32,8 @@ void MainWindow::on_computers_button_clicked()
     computerwindow.exec();          // Opna glugga
 }
 
+
+void MainWindow::on_Quit_clicked()
+{
+    exit(1);
+}

@@ -30,15 +30,15 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 15), // "on_Exit_clicked"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 28), // "on_scientists_button_clicked"
-QT_MOC_LITERAL(4, 57, 27) // "on_computers_button_clicked"
+QT_MOC_LITERAL(1, 11, 28), // "on_scientists_button_clicked"
+QT_MOC_LITERAL(2, 40, 0), // ""
+QT_MOC_LITERAL(3, 41, 27), // "on_computers_button_clicked"
+QT_MOC_LITERAL(4, 69, 15) // "on_Quit_clicked"
 
     },
-    "MainWindow\0on_Exit_clicked\0\0"
-    "on_scientists_button_clicked\0"
-    "on_computers_button_clicked"
+    "MainWindow\0on_scientists_button_clicked\0"
+    "\0on_computers_button_clicked\0"
+    "on_Quit_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,9 +74,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_Exit_clicked(); break;
-        case 1: _t->on_scientists_button_clicked(); break;
-        case 2: _t->on_computers_button_clicked(); break;
+        case 0: _t->on_scientists_button_clicked(); break;
+        case 1: _t->on_computers_button_clicked(); break;
+        case 2: _t->on_Quit_clicked(); break;
         default: ;
         }
     }
