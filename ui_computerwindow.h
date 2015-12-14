@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -25,6 +26,8 @@ class Ui_ComputerWindow
 {
 public:
     QVBoxLayout *verticalLayout;
+    QLineEdit *EditSearch;
+    QPushButton *button_computer_relation;
     QTableWidget *tableWidget;
     QPushButton *btnAdd;
     QPushButton *buttonEdit;
@@ -35,9 +38,43 @@ public:
     {
         if (ComputerWindow->objectName().isEmpty())
             ComputerWindow->setObjectName(QStringLiteral("ComputerWindow"));
-        ComputerWindow->resize(523, 418);
+        ComputerWindow->resize(750, 512);
+        QPalette palette;
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        ComputerWindow->setPalette(palette);
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        EditSearch = new QLineEdit(ComputerWindow);
+        EditSearch->setObjectName(QStringLiteral("EditSearch"));
+
+        verticalLayout->addWidget(EditSearch);
+
+        button_computer_relation = new QPushButton(ComputerWindow);
+        button_computer_relation->setObjectName(QStringLiteral("button_computer_relation"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setItalic(false);
+        font.setWeight(75);
+        button_computer_relation->setFont(font);
+        button_computer_relation->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
+
+        verticalLayout->addWidget(button_computer_relation);
+
         tableWidget = new QTableWidget(ComputerWindow);
         if (tableWidget->columnCount() < 5)
             tableWidget->setColumnCount(5);
@@ -53,6 +90,19 @@ public:
         tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(505, 284));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush2(QColor(255, 170, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush2);
+        tableWidget->setPalette(palette1);
         tableWidget->setSortingEnabled(true);
         tableWidget->horizontalHeader()->setStretchLastSection(true);
 
@@ -60,21 +110,55 @@ public:
 
         btnAdd = new QPushButton(ComputerWindow);
         btnAdd->setObjectName(QStringLiteral("btnAdd"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        btnAdd->setFont(font1);
+        btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnAdd);
 
         buttonEdit = new QPushButton(ComputerWindow);
         buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
+        buttonEdit->setFont(font1);
+        buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonEdit);
 
         btnDel = new QPushButton(ComputerWindow);
         btnDel->setObjectName(QStringLiteral("btnDel"));
+        btnDel->setFont(font1);
+        btnDel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnDel);
 
         button_computer_return = new QPushButton(ComputerWindow);
         button_computer_return->setObjectName(QStringLiteral("button_computer_return"));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Rockwell"));
+        font2.setPointSize(11);
+        font2.setBold(true);
+        font2.setWeight(75);
+        button_computer_return->setFont(font2);
+        button_computer_return->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 200, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_computer_return);
 
@@ -87,6 +171,8 @@ public:
     void retranslateUi(QDialog *ComputerWindow)
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
+        EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
+        button_computer_relation->setText(QApplication::translate("ComputerWindow", "Relate", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

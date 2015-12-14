@@ -10,7 +10,7 @@ class SQLite
 public:
     SQLite();
     void saveData();                                            //Lokar á tengsl við gagnagrunn.
-    void addData(Person& p);                                    //Bætir persónu við gagnagrunn.
+    string addData(Person& p);                                    //Bætir persónu við gagnagrunn.
     string updateData(Person& p);                               //Breytir persónu í gagnagrunni.
     string addComputer(Computers& c);                           //Bætir tölvu við gagnagrunn.
     string updateComputer(Computers& c);                        //Breytir tölvu í gagnagrunni.

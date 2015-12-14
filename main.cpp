@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
 
     MainWindow window;
 
-    QTimer::singleShot(2000, splash, SLOT(close()));
-    QTimer::singleShot(2000, &window, SLOT(show()));
-    //window.show();
+    QTimer::singleShot(100, splash, SLOT(close()));
+    QTimer::singleShot(100, &window, SLOT(show()));
+    window.show();
 
     return a.exec();
 }

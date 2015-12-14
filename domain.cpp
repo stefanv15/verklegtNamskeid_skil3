@@ -10,9 +10,9 @@ Domain::Domain()    //Sjálfgefni smiðurinn fyrir domain klasann.
 }
 
 //Býr til eintak af persónu.
-void Domain::createPerson(Person p)
+string Domain::createPerson(Person p)
 {
-    m_sqlite.addData(p);
+    return m_sqlite.addData(p);
 }
 
 //Býr til eintak af tölvu.

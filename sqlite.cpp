@@ -14,7 +14,8 @@ void SQLite::openDatabase()
     QString dbName = "scientists.sqlite";
     m_db.setDatabaseName(dbName);
 
-    m_db.open();
+    if(!m_db.open())
+        m_db.close();
 }
 
 //Nær í nýjust  gögn úr gagnagrunni persóna og skilar í vektor.
@@ -84,8 +85,10 @@ void SQLite::saveData()
 }
 
 //Bætir persónu við gagnagrunninn.
-void SQLite::addData(Person& p)
+string SQLite::addData(Person& p)
 {
+    string retVal = "";
+
     QString sInsertSQL = "INSERT INTO person(name, gender, yearOfBirth, yearOfDeath) "
                          "VALUES (:name,:gender,:yearOfBirth,:yearOfDeath)";
     QSqlQuery query(m_db);
@@ -94,7 +97,9 @@ void SQLite::addData(Person& p)
     query.bindValue(":gender",QString::fromStdString(p.getGender()));
     query.bindValue(":yearOfBirth",p.getDayOfBirth());
     query.bindValue(":yearOfDeath",p.getDayOfDeath());
-    query.exec();
+    if(!query.exec())
+        retVal = query.lastError().text().toStdString();
+    return retVal;
 }
 
 //Breytir persónu í gagnagrunninum.
@@ -254,7 +259,6 @@ void SQLite::removeScientist(int input)
 }
 
 //Fjarlægir tölvu endanlega úr gagnagrunninum.
-
 void SQLite::removeComputer(int input)
 {
     QSqlQuery query(m_db);
@@ -263,7 +267,6 @@ void SQLite::removeComputer(int input)
 }
 
 //Raðar nafni tölvunarfræðings eftir stafrófsröð.
-
 vector <Person> SQLite::sortAscName()
 {
     QSqlQuery query(m_db);

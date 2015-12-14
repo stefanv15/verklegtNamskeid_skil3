@@ -59,3 +59,8 @@ int Person::getDayOfDeath()
 {
     return dayOfDeath;
 }
+
+void Person::setId(int id)
+{
+    this->id = id;
+}

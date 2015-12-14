@@ -2,7 +2,6 @@
 #define COMPUTERWINDOW_H
 #include "domain.h"
 #include "computers.h"
-
 #include <QDialog>
 
 namespace Ui {
@@ -36,10 +35,16 @@ private slots:
 
     void on_btnDel_clicked();
 
+    void on_EditSearch_textChanged();
+
+
+    void on_button_computer_relation_clicked();
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;
     void fillList();
+    void displayComputer(vector<Computers> computer);
 };
 
 #endif // COMPUTERWINDOW_H

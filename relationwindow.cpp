@@ -15,3 +15,8 @@ RelationWindow::~RelationWindow()
 {
     delete ui;
 }
+
+void RelationWindow::on_table_relation_schientists_activated(const QModelIndex &index)
+{
+    
+}

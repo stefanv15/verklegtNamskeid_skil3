@@ -19,6 +19,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -27,14 +28,15 @@ class Ui_AddScientist
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *label;
+    QLabel *name;
     QLineEdit *line_nameofscientist;
-    QLabel *label_2;
-    QLineEdit *line_gender;
-    QLabel *label_3;
+    QLabel *gender;
+    QRadioButton *radioButtonMale;
+    QRadioButton *radioButtonFemale;
+    QLabel *YearBorn;
     QLineEdit *line_yearborn;
     QCheckBox *check_isdead;
-    QLabel *label_4;
+    QLabel *yearDied;
     QLineEdit *line_yeardied;
     QPushButton *button_add;
     QPushButton *button_cancel;
@@ -43,33 +45,62 @@ public:
     {
         if (AddScientist->objectName().isEmpty())
             AddScientist->setObjectName(QStringLiteral("AddScientist"));
-        AddScientist->resize(455, 325);
+        AddScientist->resize(455, 418);
+        QPalette palette;
+        QBrush brush(QColor(255, 170, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(255, 255, 255, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        QBrush brush2(QColor(0, 0, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush2);
+        AddScientist->setPalette(palette);
         verticalLayout = new QVBoxLayout(AddScientist);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label = new QLabel(AddScientist);
-        label->setObjectName(QStringLiteral("label"));
+        name = new QLabel(AddScientist);
+        name->setObjectName(QStringLiteral("name"));
+        QFont font;
+        font.setPointSize(10);
+        name->setFont(font);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(name);
 
         line_nameofscientist = new QLineEdit(AddScientist);
         line_nameofscientist->setObjectName(QStringLiteral("line_nameofscientist"));
 
         verticalLayout->addWidget(line_nameofscientist);
 
-        label_2 = new QLabel(AddScientist);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        gender = new QLabel(AddScientist);
+        gender->setObjectName(QStringLiteral("gender"));
+        gender->setFont(font);
 
-        verticalLayout->addWidget(label_2);
+        verticalLayout->addWidget(gender);
 
-        line_gender = new QLineEdit(AddScientist);
-        line_gender->setObjectName(QStringLiteral("line_gender"));
+        radioButtonMale = new QRadioButton(AddScientist);
+        radioButtonMale->setObjectName(QStringLiteral("radioButtonMale"));
 
-        verticalLayout->addWidget(line_gender);
+        verticalLayout->addWidget(radioButtonMale);
 
-        label_3 = new QLabel(AddScientist);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        radioButtonFemale = new QRadioButton(AddScientist);
+        radioButtonFemale->setObjectName(QStringLiteral("radioButtonFemale"));
 
-        verticalLayout->addWidget(label_3);
+        verticalLayout->addWidget(radioButtonFemale);
+
+        YearBorn = new QLabel(AddScientist);
+        YearBorn->setObjectName(QStringLiteral("YearBorn"));
+        YearBorn->setFont(font);
+
+        verticalLayout->addWidget(YearBorn);
 
         line_yearborn = new QLineEdit(AddScientist);
         line_yearborn->setObjectName(QStringLiteral("line_yearborn"));
@@ -78,26 +109,46 @@ public:
 
         check_isdead = new QCheckBox(AddScientist);
         check_isdead->setObjectName(QStringLiteral("check_isdead"));
+        check_isdead->setFont(font);
 
         verticalLayout->addWidget(check_isdead);
 
-        label_4 = new QLabel(AddScientist);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        yearDied = new QLabel(AddScientist);
+        yearDied->setObjectName(QStringLiteral("yearDied"));
+        yearDied->setFont(font);
 
-        verticalLayout->addWidget(label_4);
+        verticalLayout->addWidget(yearDied);
 
         line_yeardied = new QLineEdit(AddScientist);
         line_yeardied->setObjectName(QStringLiteral("line_yeardied"));
+        line_yeardied->setEnabled(false);
 
         verticalLayout->addWidget(line_yeardied);
 
         button_add = new QPushButton(AddScientist);
         button_add->setObjectName(QStringLiteral("button_add"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        button_add->setFont(font1);
+        button_add->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_add);
 
         button_cancel = new QPushButton(AddScientist);
         button_cancel->setObjectName(QStringLiteral("button_cancel"));
+        button_cancel->setFont(font1);
+        button_cancel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_cancel);
 
@@ -110,16 +161,17 @@ public:
     void retranslateUi(QDialog *AddScientist)
     {
         AddScientist->setWindowTitle(QApplication::translate("AddScientist", "Dialog", 0));
-        label->setText(QApplication::translate("AddScientist", "Name of scientist", 0));
+        name->setText(QApplication::translate("AddScientist", "Name of scientist", 0));
         line_nameofscientist->setPlaceholderText(QApplication::translate("AddScientist", "Type name of scientist here", 0));
-        label_2->setText(QApplication::translate("AddScientist", "Gender", 0));
-        line_gender->setPlaceholderText(QApplication::translate("AddScientist", "Type \"m\" for male and \"f\" for female", 0));
-        label_3->setText(QApplication::translate("AddScientist", "Year born", 0));
+        gender->setText(QApplication::translate("AddScientist", "Gender", 0));
+        radioButtonMale->setText(QApplication::translate("AddScientist", "Male", 0));
+        radioButtonFemale->setText(QApplication::translate("AddScientist", "Female", 0));
+        YearBorn->setText(QApplication::translate("AddScientist", "Year born", 0));
         line_yearborn->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist was born", 0));
         check_isdead->setText(QApplication::translate("AddScientist", "Is this scientist dead?", 0));
-        label_4->setText(QApplication::translate("AddScientist", "Year died", 0));
+        yearDied->setText(QApplication::translate("AddScientist", "Year died", 0));
         line_yeardied->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist died", 0));
-        button_add->setText(QApplication::translate("AddScientist", "Add this scientist", 0));
+        button_add->setText(QApplication::translate("AddScientist", "Confirm", 0));
         button_cancel->setText(QApplication::translate("AddScientist", "Cancel", 0));
     } // retranslateUi
 

@@ -6,7 +6,6 @@ INPUT(
 ./release\mainwindow.o
 ./release\computeradd.o
 ./release\addscientist.o
-./release\editscientist.o
 ./release\person.o
 ./release\comp_pers.o
 ./release\computers.o
@@ -18,5 +17,4 @@ INPUT(
 ./release\moc_mainwindow.o
 ./release\moc_computeradd.o
 ./release\moc_addscientist.o
-./release\moc_editscientist.o
 );

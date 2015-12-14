@@ -18,12 +18,9 @@ class ScientistsWindow : public QDialog
 public:
     explicit ScientistsWindow(QWidget *parent = 0);
     ~ScientistsWindow();
-    void displayAllScientists();
-    void displayScientists(vector<Person> persons);
+    void setDomain(Domain domain);
 
 private slots:
-
-    void on_search_students_textChanged();
 
     void on_ret_button_clicked();
 
@@ -31,9 +28,17 @@ private slots:
 
     void on_button_scientist_editscientist_clicked();
 
+    void on_search_students_textChanged();
+
+    void on_button_Scientist_delscientist_clicked();
+
+    void on_button_scientist_relation_clicked();
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;
+    void displayAllScientists();
+    void displayScientists(vector<Person> persons);
 };
 
 #endif // SCIENTISTSWINDOW_H

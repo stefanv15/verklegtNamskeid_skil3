@@ -15,6 +15,7 @@ public:
     string getGender();                                     //Sækir kyn.
     int getDayOfBirth();                                    //Sækir fæðingarárið.
     int getDayOfDeath();                                    //Sækir dánar árið.
+    void setId(int id);
 
 private:                                                    //Private breytur fyrir upplýsingar yfir person.
     int id;

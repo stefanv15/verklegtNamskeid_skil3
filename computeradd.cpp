@@ -54,6 +54,22 @@ void ComputerAdd::on_checkWasBuilt_stateChanged(int arg1)
 
 void ComputerAdd::on_buttonOK_clicked()
 {
+    if(ui->editComputerName->text()=="")
+    {
+        QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter Computer name!"));
+        ui->editComputerName->setFocus();
+
+        return;
+    }
+
+    if((ui->checkWasBuilt->isChecked()) && (ui->editYearBuilt->text()==""))
+    {
+        QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter year built!"));
+        ui->editYearBuilt->setFocus();
+
+        return;
+    }
+
     string type;
     if(ui->radioAnalog->isChecked())
         type = "a";
