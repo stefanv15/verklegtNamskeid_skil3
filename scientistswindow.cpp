@@ -62,6 +62,8 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
         if (persons[i].getDayOfDeath() > 0)
             ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(persons[i].getDayOfDeath())));
+        else
+            ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Still alive")));
         ui->table_scientists->setItem(i, 4, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }

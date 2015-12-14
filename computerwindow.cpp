@@ -79,6 +79,8 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
         ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::fromStdString(computer[i].getWasBuilt()=="y"?"Yes":"No")));
         if (computer[i].getYearBuilt()!=0)
            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
+        else
+            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
         ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
         //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
     }
