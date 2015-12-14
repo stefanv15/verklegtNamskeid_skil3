@@ -92,21 +92,55 @@ public:
 
         btnAdd = new QPushButton(ComputerWindow);
         btnAdd->setObjectName(QStringLiteral("btnAdd"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        btnAdd->setFont(font);
+        btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnAdd);
 
         buttonEdit = new QPushButton(ComputerWindow);
         buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
+        buttonEdit->setFont(font);
+        buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonEdit);
 
         btnDel = new QPushButton(ComputerWindow);
         btnDel->setObjectName(QStringLiteral("btnDel"));
+        btnDel->setFont(font);
+        btnDel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(btnDel);
 
         button_computer_return = new QPushButton(ComputerWindow);
         button_computer_return->setObjectName(QStringLiteral("button_computer_return"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(11);
+        font1.setBold(true);
+        font1.setWeight(75);
+        button_computer_return->setFont(font1);
+        button_computer_return->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_computer_return);
 

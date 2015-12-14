@@ -70,27 +70,46 @@ public:
         button_edit = new QPushButton(EditScientist);
         button_edit->setObjectName(QStringLiteral("button_edit"));
         button_edit->setGeometry(QRect(0, 255, 437, 23));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        button_edit->setFont(font);
+        button_edit->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
         label = new QLabel(EditScientist);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(0, 0, 437, 26));
-        QFont font;
-        font.setPointSize(10);
-        label->setFont(font);
+        QFont font1;
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label->setFont(font1);
         label_3 = new QLabel(EditScientist);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(0, 116, 437, 26));
-        label_3->setFont(font);
+        label_3->setFont(font1);
         button_cancel = new QPushButton(EditScientist);
         button_cancel->setObjectName(QStringLiteral("button_cancel"));
         button_cancel->setGeometry(QRect(0, 284, 437, 23));
+        button_cancel->setFont(font);
+        button_cancel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
         label_4 = new QLabel(EditScientist);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(0, 197, 437, 26));
-        label_4->setFont(font);
+        label_4->setFont(font1);
         label_2 = new QLabel(EditScientist);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(0, 58, 437, 26));
-        label_2->setFont(font);
+        label_2->setFont(font1);
         line_edityearborn = new QLineEdit(EditScientist);
         line_edityearborn->setObjectName(QStringLiteral("line_edityearborn"));
         line_edityearborn->setGeometry(QRect(0, 148, 437, 20));
@@ -100,7 +119,9 @@ public:
         check_editisdead = new QCheckBox(EditScientist);
         check_editisdead->setObjectName(QStringLiteral("check_editisdead"));
         check_editisdead->setGeometry(QRect(0, 174, 437, 17));
-        check_editisdead->setFont(font);
+        QFont font2;
+        font2.setPointSize(10);
+        check_editisdead->setFont(font2);
         line_editgender = new QLineEdit(EditScientist);
         line_editgender->setObjectName(QStringLiteral("line_editgender"));
         line_editgender->setGeometry(QRect(0, 90, 437, 20));

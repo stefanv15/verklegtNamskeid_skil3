@@ -119,11 +119,28 @@ public:
 
         button_add = new QPushButton(AddScientist);
         button_add->setObjectName(QStringLiteral("button_add"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        button_add->setFont(font1);
+        button_add->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_add);
 
         button_cancel = new QPushButton(AddScientist);
         button_cancel->setObjectName(QStringLiteral("button_cancel"));
+        button_cancel->setFont(font1);
+        button_cancel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_cancel);
 

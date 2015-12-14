@@ -215,6 +215,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="btnAdd">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Add Computer</string>
      </property>
@@ -222,6 +237,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="buttonEdit">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Edit Computer</string>
      </property>
@@ -229,6 +259,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="btnDel">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Delete Computer</string>
      </property>
@@ -236,6 +281,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="button_computer_return">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Return to Main Menu</string>
      </property>

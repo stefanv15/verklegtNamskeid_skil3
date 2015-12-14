@@ -20,6 +20,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_scientists_button_clicked()
 {
     ScientistsWindow scientistswindow;
+    scientistswindow.setDomain(m_domain);
     scientistswindow.setModal(true);
     scientistswindow.exec();
 }

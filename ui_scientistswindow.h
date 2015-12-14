@@ -89,27 +89,62 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::Base, brush);
         table_scientists->setPalette(palette1);
         table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
+        table_scientists->setSortingEnabled(true);
         table_scientists->horizontalHeader()->setStretchLastSection(true);
 
         verticalLayout->addWidget(table_scientists);
 
         button_scientist_addScientist = new QPushButton(ScientistsWindow);
         button_scientist_addScientist->setObjectName(QStringLiteral("button_scientist_addScientist"));
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        button_scientist_addScientist->setFont(font);
+        button_scientist_addScientist->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_scientist_addScientist);
 
         button_scientist_editscientist = new QPushButton(ScientistsWindow);
         button_scientist_editscientist->setObjectName(QStringLiteral("button_scientist_editscientist"));
+        button_scientist_editscientist->setFont(font);
+        button_scientist_editscientist->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_scientist_editscientist);
 
         button_Scientist_delscientist = new QPushButton(ScientistsWindow);
         button_Scientist_delscientist->setObjectName(QStringLiteral("button_Scientist_delscientist"));
+        button_Scientist_delscientist->setFont(font);
+        button_Scientist_delscientist->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(button_Scientist_delscientist);
 
         ret_button = new QPushButton(ScientistsWindow);
         ret_button->setObjectName(QStringLiteral("ret_button"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(11);
+        font1.setBold(true);
+        font1.setWeight(75);
+        ret_button->setFont(font1);
+        ret_button->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(ret_button);
 

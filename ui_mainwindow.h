@@ -89,6 +89,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
         textEdit->setSizePolicy(sizePolicy);
+        textEdit->setMinimumSize(QSize(0, 0));
         QPalette palette1;
         QBrush brush5(QColor(0, 0, 0, 255));
         brush5.setStyle(Qt::SolidPattern);
@@ -120,62 +121,125 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
         palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush);
         textEdit->setPalette(palette1);
+        textEdit->setContextMenuPolicy(Qt::DefaultContextMenu);
+        textEdit->setLayoutDirection(Qt::LeftToRight);
+        textEdit->setAutoFillBackground(false);
 
-        verticalLayout->addWidget(textEdit, 0, Qt::AlignHCenter);
+        verticalLayout->addWidget(textEdit);
 
         computers_button = new QPushButton(centralWidget);
         computers_button->setObjectName(QStringLiteral("computers_button"));
         QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush3);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush3);
         palette2.setBrush(QPalette::Active, QPalette::Highlight, brush3);
         palette2.setBrush(QPalette::Active, QPalette::Link, brush3);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush3);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush3);
         QBrush brush6(QColor(240, 240, 240, 255));
         brush6.setStyle(Qt::SolidPattern);
         palette2.setBrush(QPalette::Inactive, QPalette::Highlight, brush6);
         palette2.setBrush(QPalette::Inactive, QPalette::Link, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush3);
         palette2.setBrush(QPalette::Disabled, QPalette::Highlight, brush3);
         palette2.setBrush(QPalette::Disabled, QPalette::Link, brush3);
         computers_button->setPalette(palette2);
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(12);
+        computers_button->setFont(font);
+        computers_button->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}\n"
+"\n"
+""));
 
         verticalLayout->addWidget(computers_button);
 
         scientists_button = new QPushButton(centralWidget);
         scientists_button->setObjectName(QStringLiteral("scientists_button"));
         QPalette palette3;
-        QBrush brush7(QColor(227, 227, 227, 255));
-        brush7.setStyle(Qt::SolidPattern);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush7);
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush3);
         palette3.setBrush(QPalette::Active, QPalette::Link, brush3);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush7);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush3);
         palette3.setBrush(QPalette::Inactive, QPalette::Link, brush3);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush3);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush3);
         palette3.setBrush(QPalette::Disabled, QPalette::Link, brush3);
         scientists_button->setPalette(palette3);
-        scientists_button->setStyleSheet(QLatin1String("#MainWindow {\n"
-"background: #000000;\n"
+        scientists_button->setFont(font);
+        scientists_button->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
 "}\n"
 "\n"
-"#mainFrame {\n"
-"border: 3px solid gray;\n"
-"border-radius: 40px;\n"
-"background: white;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushbutton{\n"
-"color: rgb(255, 170, 0);\n"
-"}"));
+""));
 
         verticalLayout->addWidget(scientists_button);
 
         Quit = new QPushButton(centralWidget);
         Quit->setObjectName(QStringLiteral("Quit"));
-        Quit->setStyleSheet(QLatin1String("#QPushbutton\n"
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Maximum);
+        sizePolicy1.setHorizontalStretch(5);
+        sizePolicy1.setVerticalStretch(5);
+        sizePolicy1.setHeightForWidth(Quit->sizePolicy().hasHeightForWidth());
+        Quit->setSizePolicy(sizePolicy1);
+        Quit->setMinimumSize(QSize(0, 0));
+        QPalette palette4;
+        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush3);
+        palette4.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush3);
+        palette4.setBrush(QPalette::Active, QPalette::Window, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush3);
+        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush3);
+        Quit->setPalette(palette4);
+        Quit->setFont(font);
+        Quit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
-"	color: rgb(255, 170, 0);\n"
-"	border: 3px solid gray;	\n"
-"	border-radius: 40px;\n"
-"	background: white;\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
 "}\n"
 "\n"
 ""));
@@ -206,7 +270,8 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">WELCOME!</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">#This program was made by group 22 by <br />#students from Reykjav\303\255k University</span></p></body></html>", 0));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">#This program was made by group 22 by </span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\"><br />#students from Reykjav\303\255k University</span></p></body></html>", 0));
         computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
         scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
         Quit->setText(QApplication::translate("MainWindow", "Quit", 0));

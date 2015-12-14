@@ -36,6 +36,7 @@ private slots:
 
     void on_btnDel_clicked();
 
+
 private:
     Ui::ComputerWindow *ui;
     Domain m_domain;

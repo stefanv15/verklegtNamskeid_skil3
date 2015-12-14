@@ -153,6 +153,21 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+   </property>
    <property name="text">
     <string>Edit</string>
    </property>
@@ -169,6 +184,8 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -187,6 +204,8 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -201,6 +220,21 @@
      <width>437</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Rockwell</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
    </property>
    <property name="text">
     <string>Cancel</string>
@@ -218,6 +252,8 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -236,6 +272,8 @@
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">

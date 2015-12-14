@@ -195,6 +195,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="button_add">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Add this scientist</string>
      </property>
@@ -202,6 +217,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="button_cancel">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Cancel</string>
      </property>

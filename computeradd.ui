@@ -110,6 +110,8 @@
      <property name="font">
       <font>
        <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -129,6 +131,8 @@
      <property name="font">
       <font>
        <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -198,6 +202,8 @@
      <property name="font">
       <font>
        <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
@@ -217,6 +223,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="buttonOK">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Save</string>
      </property>
@@ -227,6 +248,21 @@
    </item>
    <item>
     <widget class="QPushButton" name="buttonCancel">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0); border: none;
+}</string>
+     </property>
      <property name="text">
       <string>Cancel</string>
      </property>

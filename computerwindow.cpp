@@ -67,6 +67,7 @@ void ComputerWindow::fillList()
      ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
      ui->tableWidget->setRowCount(list.size());
 
+
      for(unsigned int i = 0; i < list.size(); i++)
      {
          ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(list[i].getNameOfCpu())));

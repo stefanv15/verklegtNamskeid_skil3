@@ -70,6 +70,8 @@ public:
         label->setObjectName(QStringLiteral("label"));
         QFont font;
         font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
         label->setFont(font);
 
         verticalLayout->addWidget(label);
@@ -116,7 +118,11 @@ public:
 
         label_4 = new QLabel(ComputerAdd);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setFont(font1);
+        QFont font2;
+        font2.setPointSize(9);
+        font2.setBold(true);
+        font2.setWeight(75);
+        label_4->setFont(font2);
 
         verticalLayout->addWidget(label_4);
 
@@ -128,11 +134,28 @@ public:
 
         buttonOK = new QPushButton(ComputerAdd);
         buttonOK->setObjectName(QStringLiteral("buttonOK"));
+        QFont font3;
+        font3.setFamily(QStringLiteral("Rockwell"));
+        font3.setPointSize(10);
+        font3.setBold(true);
+        font3.setWeight(75);
+        buttonOK->setFont(font3);
+        buttonOK->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonOK);
 
         buttonCancel = new QPushButton(ComputerAdd);
         buttonCancel->setObjectName(QStringLiteral("buttonCancel"));
+        buttonCancel->setFont(font3);
+        buttonCancel->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
 
         verticalLayout->addWidget(buttonCancel);
 
