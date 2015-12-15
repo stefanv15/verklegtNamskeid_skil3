@@ -22,19 +22,19 @@ public:
 
 private slots:
 
-    void on_ret_button_clicked();
-
     void on_button_scientist_addScientist_clicked();
 
     void on_button_scientist_editscientist_clicked();
-
-    void on_search_students_textChanged();
 
     void on_button_Scientist_delscientist_clicked();
 
     void on_button_scientist_relation_clicked();
 
-    void on_table_scientists_doubleClicked(const QModelIndex &index);
+    void on_table_scientist_scientists_doubleClicked(const QModelIndex &index);
+
+    void on_button_scientist_return_clicked();
+
+    void on_search_scientist_scientists_textChanged();
 
 private:
     Ui::ScientistsWindow *ui;

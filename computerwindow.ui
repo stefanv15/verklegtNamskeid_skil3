@@ -79,14 +79,14 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLineEdit" name="EditSearch">
+    <widget class="QLineEdit" name="search_computer_searchCpu">
      <property name="placeholderText">
       <string>Write here to search</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="table_computer_listCpu">
      <property name="minimumSize">
       <size>
        <width>505</width>
@@ -193,7 +193,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="btnAdd">
+    <widget class="QPushButton" name="button_computer_add">
      <property name="font">
       <font>
        <family>Rockwell</family>
@@ -215,7 +215,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="buttonEdit">
+    <widget class="QPushButton" name="button_computer_edit">
      <property name="font">
       <font>
        <family>Rockwell</family>
@@ -237,7 +237,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="btnDel">
+    <widget class="QPushButton" name="button_computer_delete">
      <property name="font">
       <font>
        <family>Rockwell</family>

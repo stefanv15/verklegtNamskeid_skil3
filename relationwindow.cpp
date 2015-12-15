@@ -119,3 +119,8 @@ void RelationWindow::on_button_relation_return_clicked()
 }
 
 
+
+void RelationWindow::on_button_relation_relate_clicked()
+{
+
+}

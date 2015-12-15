@@ -20,28 +20,27 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_scientists_button_clicked()
+void MainWindow::on_button_main_fun_clicked()
 {
-    ScientistsWindow scientistswindow;
-    scientistswindow.setModal(true);
-    scientistswindow.exec();
+    QString link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    QDesktopServices::openUrl(QUrl(link));
 }
 
-void MainWindow::on_computers_button_clicked()
+void MainWindow::on_button_main_computer_clicked()
 {
     ComputerWindow computerwindow;  // Computer list gluggi verður til
     computerwindow.setModal(true);  // Stilla gluggann þannig að hann opnist án þess að hægt sé að komast í glugga bakvið
     computerwindow.exec();          // Opna glugga
 }
 
-
-void MainWindow::on_Quit_clicked()
+void MainWindow::on_button_main_quit_clicked()
 {
     exit(1);
 }
 
-void MainWindow::on_Button_fun_clicked()
+void MainWindow::on_button_main_scientist_clicked()
 {
-    QString link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    QDesktopServices::openUrl(QUrl(link));
+    ScientistsWindow scientistswindow;
+    scientistswindow.setModal(true);
+    scientistswindow.exec();
 }

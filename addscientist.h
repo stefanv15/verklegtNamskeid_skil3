@@ -19,13 +19,11 @@ public:
     void edit(Person p);
 
 private slots:
-    void on_button_cancel_clicked();
-
-    void on_check_isdead_stateChanged(int arg1);
-
     void on_check_isdead_toggled(bool checked);
+    void on_button_addScientist_save_clicked();
+    void on_button_addScientist_cancel_clicked();
 
-    void on_button_add_clicked();
+    void on_checkBox_addScientist_isdead_stateChanged(int arg1);
 
 private:
     Ui::AddScientist *ui;

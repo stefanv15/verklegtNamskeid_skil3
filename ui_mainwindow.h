@@ -31,11 +31,11 @@ public:
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
-    QTextEdit *textEdit;
-    QPushButton *computers_button;
-    QPushButton *scientists_button;
-    QPushButton *Button_fun;
-    QPushButton *Quit;
+    QTextEdit *text_main_welcome;
+    QPushButton *button_main_computer;
+    QPushButton *button_main_scientist;
+    QPushButton *button_main_fun;
+    QPushButton *button_main_quit;
     QStatusBar *statusBar;
     QToolBar *mainToolBar;
 
@@ -82,15 +82,15 @@ public:
         verticalLayout->setSpacing(4);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(5, -1, 5, -1);
-        textEdit = new QTextEdit(centralWidget);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setEnabled(false);
+        text_main_welcome = new QTextEdit(centralWidget);
+        text_main_welcome->setObjectName(QStringLiteral("text_main_welcome"));
+        text_main_welcome->setEnabled(false);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
-        textEdit->setSizePolicy(sizePolicy);
-        textEdit->setMinimumSize(QSize(0, 0));
+        sizePolicy.setHeightForWidth(text_main_welcome->sizePolicy().hasHeightForWidth());
+        text_main_welcome->setSizePolicy(sizePolicy);
+        text_main_welcome->setMinimumSize(QSize(0, 0));
         QPalette palette1;
         QBrush brush5(QColor(0, 0, 0, 255));
         brush5.setStyle(Qt::SolidPattern);
@@ -121,15 +121,15 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::Text, brush);
         palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
         palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush);
-        textEdit->setPalette(palette1);
-        textEdit->setContextMenuPolicy(Qt::DefaultContextMenu);
-        textEdit->setLayoutDirection(Qt::LeftToRight);
-        textEdit->setAutoFillBackground(false);
+        text_main_welcome->setPalette(palette1);
+        text_main_welcome->setContextMenuPolicy(Qt::DefaultContextMenu);
+        text_main_welcome->setLayoutDirection(Qt::LeftToRight);
+        text_main_welcome->setAutoFillBackground(false);
 
-        verticalLayout->addWidget(textEdit, 0, Qt::AlignHCenter);
+        verticalLayout->addWidget(text_main_welcome, 0, Qt::AlignHCenter);
 
-        computers_button = new QPushButton(centralWidget);
-        computers_button->setObjectName(QStringLiteral("computers_button"));
+        button_main_computer = new QPushButton(centralWidget);
+        button_main_computer->setObjectName(QStringLiteral("button_main_computer"));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush5);
         palette2.setBrush(QPalette::Active, QPalette::Button, brush3);
@@ -157,12 +157,12 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::Window, brush3);
         palette2.setBrush(QPalette::Disabled, QPalette::Highlight, brush3);
         palette2.setBrush(QPalette::Disabled, QPalette::Link, brush3);
-        computers_button->setPalette(palette2);
+        button_main_computer->setPalette(palette2);
         QFont font;
         font.setFamily(QStringLiteral("Rockwell"));
         font.setPointSize(12);
-        computers_button->setFont(font);
-        computers_button->setStyleSheet(QLatin1String("QPushButton\n"
+        button_main_computer->setFont(font);
+        button_main_computer->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
@@ -170,10 +170,10 @@ public:
 "\n"
 ""));
 
-        verticalLayout->addWidget(computers_button);
+        verticalLayout->addWidget(button_main_computer);
 
-        scientists_button = new QPushButton(centralWidget);
-        scientists_button->setObjectName(QStringLiteral("scientists_button"));
+        button_main_scientist = new QPushButton(centralWidget);
+        button_main_scientist->setObjectName(QStringLiteral("button_main_scientist"));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush5);
         palette3.setBrush(QPalette::Active, QPalette::Button, brush3);
@@ -196,9 +196,9 @@ public:
         palette3.setBrush(QPalette::Disabled, QPalette::Base, brush3);
         palette3.setBrush(QPalette::Disabled, QPalette::Window, brush3);
         palette3.setBrush(QPalette::Disabled, QPalette::Link, brush3);
-        scientists_button->setPalette(palette3);
-        scientists_button->setFont(font);
-        scientists_button->setStyleSheet(QLatin1String("QPushButton\n"
+        button_main_scientist->setPalette(palette3);
+        button_main_scientist->setFont(font);
+        button_main_scientist->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
@@ -206,33 +206,33 @@ public:
 "\n"
 ""));
 
-        verticalLayout->addWidget(scientists_button);
+        verticalLayout->addWidget(button_main_scientist);
 
-        Button_fun = new QPushButton(centralWidget);
-        Button_fun->setObjectName(QStringLiteral("Button_fun"));
+        button_main_fun = new QPushButton(centralWidget);
+        button_main_fun->setObjectName(QStringLiteral("button_main_fun"));
         QFont font1;
         font1.setFamily(QStringLiteral("Rockwell"));
         font1.setPointSize(11);
         font1.setBold(false);
         font1.setWeight(50);
-        Button_fun->setFont(font1);
-        Button_fun->setStyleSheet(QLatin1String("QPushButton\n"
+        button_main_fun->setFont(font1);
+        button_main_fun->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); \n"
 "	border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(Button_fun);
+        verticalLayout->addWidget(button_main_fun);
 
-        Quit = new QPushButton(centralWidget);
-        Quit->setObjectName(QStringLiteral("Quit"));
+        button_main_quit = new QPushButton(centralWidget);
+        button_main_quit->setObjectName(QStringLiteral("button_main_quit"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Maximum);
         sizePolicy1.setHorizontalStretch(5);
         sizePolicy1.setVerticalStretch(5);
-        sizePolicy1.setHeightForWidth(Quit->sizePolicy().hasHeightForWidth());
-        Quit->setSizePolicy(sizePolicy1);
-        Quit->setMinimumSize(QSize(0, 0));
+        sizePolicy1.setHeightForWidth(button_main_quit->sizePolicy().hasHeightForWidth());
+        button_main_quit->setSizePolicy(sizePolicy1);
+        button_main_quit->setMinimumSize(QSize(0, 0));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush5);
         QBrush brush7(QColor(255, 200, 0, 255));
@@ -254,9 +254,9 @@ public:
         palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
         palette4.setBrush(QPalette::Disabled, QPalette::Base, brush7);
         palette4.setBrush(QPalette::Disabled, QPalette::Window, brush7);
-        Quit->setPalette(palette4);
-        Quit->setFont(font);
-        Quit->setStyleSheet(QLatin1String("QPushButton\n"
+        button_main_quit->setPalette(palette4);
+        button_main_quit->setFont(font);
+        button_main_quit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 200, 0);\n"
@@ -265,7 +265,7 @@ public:
 "\n"
 ""));
 
-        verticalLayout->addWidget(Quit);
+        verticalLayout->addWidget(button_main_quit);
 
 
         horizontalLayout->addLayout(verticalLayout);
@@ -286,17 +286,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        text_main_welcome->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">WELCOME!</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">#This program was made by group 22</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\"><br />#students in Reykjav\303\255k University</span></p></body></html>", 0));
-        computers_button->setText(QApplication::translate("MainWindow", "Computers", 0));
-        scientists_button->setText(QApplication::translate("MainWindow", "Scientists", 0));
-        Button_fun->setText(QApplication::translate("MainWindow", "CLICK HERE FOR FUN", 0));
-        Quit->setText(QApplication::translate("MainWindow", "Quit", 0));
+        button_main_computer->setText(QApplication::translate("MainWindow", "Computers", 0));
+        button_main_scientist->setText(QApplication::translate("MainWindow", "Scientists", 0));
+        button_main_fun->setText(QApplication::translate("MainWindow", "CLICK HERE FOR FUN", 0));
+        button_main_quit->setText(QApplication::translate("MainWindow", "Quit", 0));
     } // retranslateUi
 
 };

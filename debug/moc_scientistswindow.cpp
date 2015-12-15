@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ScientistsWindow_t {
     QByteArrayData data[10];
-    char stringdata0[272];
+    char stringdata0[307];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,25 +30,25 @@ struct qt_meta_stringdata_ScientistsWindow_t {
 static const qt_meta_stringdata_ScientistsWindow_t qt_meta_stringdata_ScientistsWindow = {
     {
 QT_MOC_LITERAL(0, 0, 16), // "ScientistsWindow"
-QT_MOC_LITERAL(1, 17, 21), // "on_ret_button_clicked"
-QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 40), // "on_button_scientist_addScient..."
-QT_MOC_LITERAL(4, 81, 41), // "on_button_scientist_editscien..."
-QT_MOC_LITERAL(5, 123, 30), // "on_search_students_textChanged"
-QT_MOC_LITERAL(6, 154, 40), // "on_button_Scientist_delscient..."
-QT_MOC_LITERAL(7, 195, 36), // "on_button_scientist_relation_..."
-QT_MOC_LITERAL(8, 232, 33), // "on_table_scientists_doubleCli..."
-QT_MOC_LITERAL(9, 266, 5) // "index"
+QT_MOC_LITERAL(1, 17, 40), // "on_button_scientist_addScient..."
+QT_MOC_LITERAL(2, 58, 0), // ""
+QT_MOC_LITERAL(3, 59, 41), // "on_button_scientist_editscien..."
+QT_MOC_LITERAL(4, 101, 40), // "on_button_Scientist_delscient..."
+QT_MOC_LITERAL(5, 142, 36), // "on_button_scientist_relation_..."
+QT_MOC_LITERAL(6, 179, 43), // "on_table_scientist_scientists..."
+QT_MOC_LITERAL(7, 223, 5), // "index"
+QT_MOC_LITERAL(8, 229, 34), // "on_button_scientist_return_cl..."
+QT_MOC_LITERAL(9, 264, 42) // "on_search_scientist_scientist..."
 
     },
-    "ScientistsWindow\0on_ret_button_clicked\0"
-    "\0on_button_scientist_addScientist_clicked\0"
-    "on_button_scientist_editscientist_clicked\0"
-    "on_search_students_textChanged\0"
+    "ScientistsWindow\0"
+    "on_button_scientist_addScientist_clicked\0"
+    "\0on_button_scientist_editscientist_clicked\0"
     "on_button_Scientist_delscientist_clicked\0"
     "on_button_scientist_relation_clicked\0"
-    "on_table_scientists_doubleClicked\0"
-    "index"
+    "on_table_scientist_scientists_doubleClicked\0"
+    "index\0on_button_scientist_return_clicked\0"
+    "on_search_scientist_scientists_textChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,18 +70,18 @@ static const uint qt_meta_data_ScientistsWindow[] = {
        3,    0,   50,    2, 0x08 /* Private */,
        4,    0,   51,    2, 0x08 /* Private */,
        5,    0,   52,    2, 0x08 /* Private */,
-       6,    0,   53,    2, 0x08 /* Private */,
-       7,    0,   54,    2, 0x08 /* Private */,
-       8,    1,   55,    2, 0x08 /* Private */,
+       6,    1,   53,    2, 0x08 /* Private */,
+       8,    0,   56,    2, 0x08 /* Private */,
+       9,    0,   57,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QModelIndex,    7,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex,    9,
 
        0        // eod
 };
@@ -92,13 +92,13 @@ void ScientistsWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         ScientistsWindow *_t = static_cast<ScientistsWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_ret_button_clicked(); break;
-        case 1: _t->on_button_scientist_addScientist_clicked(); break;
-        case 2: _t->on_button_scientist_editscientist_clicked(); break;
-        case 3: _t->on_search_students_textChanged(); break;
-        case 4: _t->on_button_Scientist_delscientist_clicked(); break;
-        case 5: _t->on_button_scientist_relation_clicked(); break;
-        case 6: _t->on_table_scientists_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 0: _t->on_button_scientist_addScientist_clicked(); break;
+        case 1: _t->on_button_scientist_editscientist_clicked(); break;
+        case 2: _t->on_button_Scientist_delscientist_clicked(); break;
+        case 3: _t->on_button_scientist_relation_clicked(); break;
+        case 4: _t->on_table_scientist_scientists_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 5: _t->on_button_scientist_return_clicked(); break;
+        case 6: _t->on_search_scientist_scientists_textChanged(); break;
         default: ;
         }
     }

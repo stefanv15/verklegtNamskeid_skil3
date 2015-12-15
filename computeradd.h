@@ -21,11 +21,11 @@ public:
 private slots:
     void on_checkBox_toggled(bool checked);
 
-    void on_checkWasBuilt_stateChanged(int arg1);
+    void on_button_computerAdd_save_clicked();
 
-    void on_buttonOK_clicked();
+    void on_checkbox_computerAdd_wasBuilt_stateChanged(int arg1);
 
-    void on_buttonCancel_clicked();
+    void on_button_computeradd_cancel_clicked();
 
 private:
     Ui::ComputerAdd *ui;

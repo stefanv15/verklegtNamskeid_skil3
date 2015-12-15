@@ -20,13 +20,13 @@ public:
 
 private slots:
 
-    void on_scientists_button_clicked();
+    void on_button_main_fun_clicked();
 
-    void on_computers_button_clicked();
+    void on_button_main_computer_clicked();
 
-    void on_Quit_clicked();
+    void on_button_main_quit_clicked();
 
-    void on_Button_fun_clicked();
+    void on_button_main_scientist_clicked();
 
 private:
     Ui::MainWindow *ui;

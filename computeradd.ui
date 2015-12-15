@@ -106,7 +106,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_computerAdd_cpuName">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -120,14 +120,14 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_ComputerName">
+    <widget class="QLineEdit" name="line_computerAdd_cpuName">
      <property name="placeholderText">
       <string>Type name of computer here</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="label_computerAdd_cpuType">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -141,7 +141,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="radioAnalog">
+    <widget class="QRadioButton" name="rbutton_computerAdd_analog">
      <property name="font">
       <font>
        <pointsize>9</pointsize>
@@ -156,7 +156,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="radioDigital">
+    <widget class="QRadioButton" name="rbutton_computerAdd_digital">
      <property name="font">
       <font>
        <pointsize>9</pointsize>
@@ -168,7 +168,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="radioHybrid">
+    <widget class="QRadioButton" name="rbutton_computerAdd_hybrid">
      <property name="font">
       <font>
        <pointsize>9</pointsize>
@@ -180,7 +180,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="checkWasBuilt">
+    <widget class="QCheckBox" name="checkbox_computerAdd_wasBuilt">
      <property name="font">
       <font>
        <pointsize>9</pointsize>
@@ -198,7 +198,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="label_computerAdd_yearBuilt">
      <property name="font">
       <font>
        <pointsize>9</pointsize>
@@ -212,7 +212,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_YearBuilt">
+    <widget class="QLineEdit" name="line_computerAdd_yearBuilt">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -225,7 +225,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="buttonOK">
+    <widget class="QPushButton" name="button_computerAdd_save">
      <property name="font">
       <font>
        <family>Rockwell</family>
@@ -250,7 +250,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="buttonCancel">
+    <widget class="QPushButton" name="button_computeradd_cancel">
      <property name="font">
       <font>
        <family>Rockwell</family>
@@ -274,11 +274,10 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>line_ComputerName</tabstop>
-  <tabstop>checkWasBuilt</tabstop>
-  <tabstop>line_YearBuilt</tabstop>
-  <tabstop>buttonOK</tabstop>
-  <tabstop>buttonCancel</tabstop>
+  <tabstop>checkbox_computerAdd_wasBuilt</tabstop>
+  <tabstop>line_computerAdd_yearBuilt</tabstop>
+  <tabstop>button_computerAdd_save</tabstop>
+  <tabstop>button_computeradd_cancel</tabstop>
  </tabstops>
  <resources/>
  <connections/>

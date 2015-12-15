@@ -28,18 +28,18 @@ class Ui_AddScientist
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *name;
-    QLineEdit *line_nameofscientist;
-    QLabel *gender;
-    QRadioButton *radioButtonMale;
-    QRadioButton *radioButtonFemale;
-    QLabel *YearBorn;
-    QLineEdit *line_yearborn;
-    QCheckBox *check_isdead;
-    QLabel *yearDied;
-    QLineEdit *line_yeardied;
-    QPushButton *button_add;
-    QPushButton *button_cancel;
+    QLabel *label_addScientist_name;
+    QLineEdit *line_addScientist_nOs;
+    QLabel *label_addScientist_gender;
+    QRadioButton *rbutton_addScientist_male;
+    QRadioButton *rbutton_addScientist_female;
+    QLabel *label_addScientist_yearBorn;
+    QLineEdit *line_addScientist_yearBorn;
+    QCheckBox *checkBox_addScientist_isdead;
+    QLabel *label_addScientist_yearDied;
+    QLineEdit *line_addSchientist_yearDied;
+    QPushButton *button_addScientist_save;
+    QPushButton *button_addScientist_cancel;
 
     void setupUi(QDialog *AddScientist)
     {
@@ -67,92 +67,92 @@ public:
         AddScientist->setPalette(palette);
         verticalLayout = new QVBoxLayout(AddScientist);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        name = new QLabel(AddScientist);
-        name->setObjectName(QStringLiteral("name"));
+        label_addScientist_name = new QLabel(AddScientist);
+        label_addScientist_name->setObjectName(QStringLiteral("label_addScientist_name"));
         QFont font;
         font.setPointSize(10);
-        name->setFont(font);
+        label_addScientist_name->setFont(font);
 
-        verticalLayout->addWidget(name);
+        verticalLayout->addWidget(label_addScientist_name);
 
-        line_nameofscientist = new QLineEdit(AddScientist);
-        line_nameofscientist->setObjectName(QStringLiteral("line_nameofscientist"));
+        line_addScientist_nOs = new QLineEdit(AddScientist);
+        line_addScientist_nOs->setObjectName(QStringLiteral("line_addScientist_nOs"));
 
-        verticalLayout->addWidget(line_nameofscientist);
+        verticalLayout->addWidget(line_addScientist_nOs);
 
-        gender = new QLabel(AddScientist);
-        gender->setObjectName(QStringLiteral("gender"));
-        gender->setFont(font);
+        label_addScientist_gender = new QLabel(AddScientist);
+        label_addScientist_gender->setObjectName(QStringLiteral("label_addScientist_gender"));
+        label_addScientist_gender->setFont(font);
 
-        verticalLayout->addWidget(gender);
+        verticalLayout->addWidget(label_addScientist_gender);
 
-        radioButtonMale = new QRadioButton(AddScientist);
-        radioButtonMale->setObjectName(QStringLiteral("radioButtonMale"));
+        rbutton_addScientist_male = new QRadioButton(AddScientist);
+        rbutton_addScientist_male->setObjectName(QStringLiteral("rbutton_addScientist_male"));
 
-        verticalLayout->addWidget(radioButtonMale);
+        verticalLayout->addWidget(rbutton_addScientist_male);
 
-        radioButtonFemale = new QRadioButton(AddScientist);
-        radioButtonFemale->setObjectName(QStringLiteral("radioButtonFemale"));
+        rbutton_addScientist_female = new QRadioButton(AddScientist);
+        rbutton_addScientist_female->setObjectName(QStringLiteral("rbutton_addScientist_female"));
 
-        verticalLayout->addWidget(radioButtonFemale);
+        verticalLayout->addWidget(rbutton_addScientist_female);
 
-        YearBorn = new QLabel(AddScientist);
-        YearBorn->setObjectName(QStringLiteral("YearBorn"));
-        YearBorn->setFont(font);
+        label_addScientist_yearBorn = new QLabel(AddScientist);
+        label_addScientist_yearBorn->setObjectName(QStringLiteral("label_addScientist_yearBorn"));
+        label_addScientist_yearBorn->setFont(font);
 
-        verticalLayout->addWidget(YearBorn);
+        verticalLayout->addWidget(label_addScientist_yearBorn);
 
-        line_yearborn = new QLineEdit(AddScientist);
-        line_yearborn->setObjectName(QStringLiteral("line_yearborn"));
-        line_yearborn->setMaxLength(4);
+        line_addScientist_yearBorn = new QLineEdit(AddScientist);
+        line_addScientist_yearBorn->setObjectName(QStringLiteral("line_addScientist_yearBorn"));
+        line_addScientist_yearBorn->setMaxLength(4);
 
-        verticalLayout->addWidget(line_yearborn);
+        verticalLayout->addWidget(line_addScientist_yearBorn);
 
-        check_isdead = new QCheckBox(AddScientist);
-        check_isdead->setObjectName(QStringLiteral("check_isdead"));
-        check_isdead->setFont(font);
+        checkBox_addScientist_isdead = new QCheckBox(AddScientist);
+        checkBox_addScientist_isdead->setObjectName(QStringLiteral("checkBox_addScientist_isdead"));
+        checkBox_addScientist_isdead->setFont(font);
 
-        verticalLayout->addWidget(check_isdead);
+        verticalLayout->addWidget(checkBox_addScientist_isdead);
 
-        yearDied = new QLabel(AddScientist);
-        yearDied->setObjectName(QStringLiteral("yearDied"));
-        yearDied->setFont(font);
+        label_addScientist_yearDied = new QLabel(AddScientist);
+        label_addScientist_yearDied->setObjectName(QStringLiteral("label_addScientist_yearDied"));
+        label_addScientist_yearDied->setFont(font);
 
-        verticalLayout->addWidget(yearDied);
+        verticalLayout->addWidget(label_addScientist_yearDied);
 
-        line_yeardied = new QLineEdit(AddScientist);
-        line_yeardied->setObjectName(QStringLiteral("line_yeardied"));
-        line_yeardied->setEnabled(false);
-        line_yeardied->setMaxLength(4);
+        line_addSchientist_yearDied = new QLineEdit(AddScientist);
+        line_addSchientist_yearDied->setObjectName(QStringLiteral("line_addSchientist_yearDied"));
+        line_addSchientist_yearDied->setEnabled(false);
+        line_addSchientist_yearDied->setMaxLength(4);
 
-        verticalLayout->addWidget(line_yeardied);
+        verticalLayout->addWidget(line_addSchientist_yearDied);
 
-        button_add = new QPushButton(AddScientist);
-        button_add->setObjectName(QStringLiteral("button_add"));
+        button_addScientist_save = new QPushButton(AddScientist);
+        button_addScientist_save->setObjectName(QStringLiteral("button_addScientist_save"));
         QFont font1;
         font1.setFamily(QStringLiteral("Rockwell"));
         font1.setPointSize(10);
         font1.setBold(true);
         font1.setWeight(75);
-        button_add->setFont(font1);
-        button_add->setStyleSheet(QLatin1String("QPushButton\n"
+        button_addScientist_save->setFont(font1);
+        button_addScientist_save->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(button_add);
+        verticalLayout->addWidget(button_addScientist_save);
 
-        button_cancel = new QPushButton(AddScientist);
-        button_cancel->setObjectName(QStringLiteral("button_cancel"));
-        button_cancel->setFont(font1);
-        button_cancel->setStyleSheet(QLatin1String("QPushButton\n"
+        button_addScientist_cancel = new QPushButton(AddScientist);
+        button_addScientist_cancel->setObjectName(QStringLiteral("button_addScientist_cancel"));
+        button_addScientist_cancel->setFont(font1);
+        button_addScientist_cancel->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(button_cancel);
+        verticalLayout->addWidget(button_addScientist_cancel);
 
 
         retranslateUi(AddScientist);
@@ -163,18 +163,18 @@ public:
     void retranslateUi(QDialog *AddScientist)
     {
         AddScientist->setWindowTitle(QApplication::translate("AddScientist", "Dialog", 0));
-        name->setText(QApplication::translate("AddScientist", "Name of scientist", 0));
-        line_nameofscientist->setPlaceholderText(QApplication::translate("AddScientist", "Type name of scientist here", 0));
-        gender->setText(QApplication::translate("AddScientist", "Gender", 0));
-        radioButtonMale->setText(QApplication::translate("AddScientist", "Male", 0));
-        radioButtonFemale->setText(QApplication::translate("AddScientist", "Female", 0));
-        YearBorn->setText(QApplication::translate("AddScientist", "Year born", 0));
-        line_yearborn->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist was born", 0));
-        check_isdead->setText(QApplication::translate("AddScientist", "Is this scientist dead?", 0));
-        yearDied->setText(QApplication::translate("AddScientist", "Year died", 0));
-        line_yeardied->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist died", 0));
-        button_add->setText(QApplication::translate("AddScientist", "Confirm", 0));
-        button_cancel->setText(QApplication::translate("AddScientist", "Cancel", 0));
+        label_addScientist_name->setText(QApplication::translate("AddScientist", "Name of scientist", 0));
+        line_addScientist_nOs->setPlaceholderText(QApplication::translate("AddScientist", "Type name of scientist here", 0));
+        label_addScientist_gender->setText(QApplication::translate("AddScientist", "Gender", 0));
+        rbutton_addScientist_male->setText(QApplication::translate("AddScientist", "Male", 0));
+        rbutton_addScientist_female->setText(QApplication::translate("AddScientist", "Female", 0));
+        label_addScientist_yearBorn->setText(QApplication::translate("AddScientist", "Year born", 0));
+        line_addScientist_yearBorn->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist was born", 0));
+        checkBox_addScientist_isdead->setText(QApplication::translate("AddScientist", "Is this scientist dead?", 0));
+        label_addScientist_yearDied->setText(QApplication::translate("AddScientist", "Year died", 0));
+        line_addSchientist_yearDied->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist died", 0));
+        button_addScientist_save->setText(QApplication::translate("AddScientist", "Save", 0));
+        button_addScientist_cancel->setText(QApplication::translate("AddScientist", "Cancel", 0));
     } // retranslateUi
 
 };

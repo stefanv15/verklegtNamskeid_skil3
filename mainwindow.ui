@@ -175,7 +175,7 @@
        <number>5</number>
       </property>
       <item alignment="Qt::AlignHCenter">
-       <widget class="QTextEdit" name="textEdit">
+       <widget class="QTextEdit" name="text_main_welcome">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -465,7 +465,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="computers_button">
+       <widget class="QPushButton" name="button_main_computer">
         <property name="palette">
          <palette>
           <active>
@@ -713,7 +713,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="scientists_button">
+       <widget class="QPushButton" name="button_main_scientist">
         <property name="palette">
          <palette>
           <active>
@@ -934,7 +934,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="Button_fun">
+       <widget class="QPushButton" name="button_main_fun">
         <property name="font">
          <font>
           <family>Rockwell</family>
@@ -957,7 +957,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="Quit">
+       <widget class="QPushButton" name="button_main_quit">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
           <horstretch>5</horstretch>

@@ -13,15 +13,15 @@ ScientistsWindow::ScientistsWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    ui->table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
-    ui->table_scientists->setSelectionMode(QAbstractItemView::SingleSelection);
-    ui->table_scientists->setColumnCount(6);
+    ui->table_scientist_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->table_scientist_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->table_scientist_scientists->setSelectionMode(QAbstractItemView::SingleSelection);
+    ui->table_scientist_scientists->setColumnCount(6);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"Related computers"<<"id";
-    ui->table_scientists->setHorizontalHeaderLabels(TableHeader);
-    ui->table_scientists->hideColumn(5);
+    ui->table_scientist_scientists->setHorizontalHeaderLabels(TableHeader);
+    ui->table_scientist_scientists->hideColumn(5);
 
     displayAllScientists();
 }
@@ -39,36 +39,30 @@ void ScientistsWindow::displayAllScientists()
 
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
-    ui->table_scientists->clearContents();
+    ui->table_scientist_scientists->clearContents();
 
-    ui->table_scientists->setRowCount(persons.size());
+    ui->table_scientist_scientists->setRowCount(persons.size());
 
-    //ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    //ui->table_scientist_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     for(unsigned int i = 0; i < persons.size(); i++)
     {
        // Person currentScientist = persons[i];
-        ui->table_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(persons[i].getName())));
-        ui->table_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(persons[i].getGender() == "m"?"Male":"Female")));
-        ui->table_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
+        ui->table_scientist_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(persons[i].getName())));
+        ui->table_scientist_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(persons[i].getGender() == "m"?"Male":"Female")));
+        ui->table_scientist_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
         if (persons[i].getDayOfDeath() > 0)
-            ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(persons[i].getDayOfDeath())));
+            ui->table_scientist_scientists->setItem(i, 3, new QTableWidgetItem(QString::number(persons[i].getDayOfDeath())));
         else
-            ui->table_scientists->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Still alive")));
-        ui->table_scientists->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getComputerList(persons[i].getId()))));
-        ui->table_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
+            ui->table_scientist_scientists->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Still alive")));
+        ui->table_scientist_scientists->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getComputerList(persons[i].getId()))));
+        ui->table_scientist_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }
 
     if(persons.size()> 0)
-        ui->table_scientists->selectRow(0);
+        ui->table_scientist_scientists->selectRow(0);
 }
-
-void ScientistsWindow::on_ret_button_clicked()
-{
-   this->close();
-}
-
 
 void ScientistsWindow::on_button_scientist_addScientist_clicked()
 {
@@ -76,13 +70,13 @@ void ScientistsWindow::on_button_scientist_addScientist_clicked()
     addscientist.setModal(true);
     addscientist.exec();
     if(addscientist.result()==QDialog::Accepted)
-        on_search_students_textChanged();
+        on_search_scientist_scientists_textChanged();
 }
 
 void ScientistsWindow::on_button_scientist_editscientist_clicked()
 {
-    int rowidx = ui->table_scientists->selectionModel()->currentIndex().row();
-    int id = ui->table_scientists->model()->index(rowidx, 5).data().toInt();
+    int rowidx = ui->table_scientist_scientists->selectionModel()->currentIndex().row();
+    int id = ui->table_scientist_scientists->model()->index(rowidx, 5).data().toInt();
     Person p = m_domain.findPersonById(id);
 
     AddScientist editScientist;
@@ -91,14 +85,7 @@ void ScientistsWindow::on_button_scientist_editscientist_clicked()
     editScientist.setModal(true);
     editScientist.exec();
     if(editScientist.result()==QDialog::Accepted)
-        on_search_students_textChanged();
-}
-
-void ScientistsWindow::on_search_students_textChanged()
-{
-    string search = ui->search_students->text().toStdString();
-    vector<Person> persons = m_domain.searchScientist(search);
-    displayScientists(persons);
+        on_search_scientist_scientists_textChanged();
 }
 
 void ScientistsWindow::on_button_Scientist_delscientist_clicked()
@@ -106,10 +93,10 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
     int answer = QMessageBox::question(this,"Question","Are you sure you want to delete selected scientist?");
     if (answer == QMessageBox::Yes)
     {
-        int rowid = ui->table_scientists->selectionModel()->currentIndex().row();
-        int id = ui->table_scientists->model()->index(rowid, 5).data().toInt();
+        int rowid = ui->table_scientist_scientists->selectionModel()->currentIndex().row();
+        int id = ui->table_scientist_scientists->model()->index(rowid, 5).data().toInt();
         m_domain.removeScientist(id);
-        on_search_students_textChanged();
+        on_search_scientist_scientists_textChanged();
     }
     else
     {
@@ -125,7 +112,19 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     relation.exec();
 }
 
-void ScientistsWindow::on_table_scientists_doubleClicked(const QModelIndex &index)
+void ScientistsWindow::on_table_scientist_scientists_doubleClicked(const QModelIndex &index)
 {
     on_button_scientist_editscientist_clicked();
+}
+
+void ScientistsWindow::on_button_scientist_return_clicked()
+{
+   this->close();
+}
+
+void ScientistsWindow::on_search_scientist_scientists_textChanged()
+{
+    string search = ui->search_scientist_scientists->text().toStdString();
+    vector<Person> persons = m_domain.searchScientist(search);
+    displayScientists(persons);
 }

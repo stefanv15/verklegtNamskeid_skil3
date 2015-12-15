@@ -106,7 +106,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="name">
+    <widget class="QLabel" name="label_addScientist_name">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -118,14 +118,14 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_nameofscientist">
+    <widget class="QLineEdit" name="line_addScientist_nOs">
      <property name="placeholderText">
       <string>Type name of scientist here</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="gender">
+    <widget class="QLabel" name="label_addScientist_gender">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -137,21 +137,21 @@
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="radioButtonMale">
+    <widget class="QRadioButton" name="rbutton_addScientist_male">
      <property name="text">
       <string>Male</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="radioButtonFemale">
+    <widget class="QRadioButton" name="rbutton_addScientist_female">
      <property name="text">
       <string>Female</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="YearBorn">
+    <widget class="QLabel" name="label_addScientist_yearBorn">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -163,7 +163,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_yearborn">
+    <widget class="QLineEdit" name="line_addScientist_yearBorn">
      <property name="maxLength">
       <number>4</number>
      </property>
@@ -173,7 +173,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="check_isdead">
+    <widget class="QCheckBox" name="checkBox_addScientist_isdead">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -185,7 +185,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="yearDied">
+    <widget class="QLabel" name="label_addScientist_yearDied">
      <property name="font">
       <font>
        <pointsize>10</pointsize>
@@ -197,7 +197,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="line_yeardied">
+    <widget class="QLineEdit" name="line_addSchientist_yearDied">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -210,7 +210,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="button_add">
+    <widget class="QPushButton" name="button_addScientist_save">
      <property name="font">
       <font>
        <family>Rockwell</family>
@@ -227,12 +227,12 @@
 }</string>
      </property>
      <property name="text">
-      <string>Confirm</string>
+      <string>Save</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="button_cancel">
+    <widget class="QPushButton" name="button_addScientist_cancel">
      <property name="font">
       <font>
        <family>Rockwell</family>

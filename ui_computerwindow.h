@@ -26,11 +26,11 @@ class Ui_ComputerWindow
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLineEdit *EditSearch;
-    QTableWidget *tableWidget;
-    QPushButton *btnAdd;
-    QPushButton *buttonEdit;
-    QPushButton *btnDel;
+    QLineEdit *search_computer_searchCpu;
+    QTableWidget *table_computer_listCpu;
+    QPushButton *button_computer_add;
+    QPushButton *button_computer_edit;
+    QPushButton *button_computer_delete;
     QPushButton *button_computer_relation;
     QPushButton *button_computer_return;
 
@@ -53,14 +53,14 @@ public:
         ComputerWindow->setPalette(palette);
         verticalLayout = new QVBoxLayout(ComputerWindow);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        EditSearch = new QLineEdit(ComputerWindow);
-        EditSearch->setObjectName(QStringLiteral("EditSearch"));
+        search_computer_searchCpu = new QLineEdit(ComputerWindow);
+        search_computer_searchCpu->setObjectName(QStringLiteral("search_computer_searchCpu"));
 
-        verticalLayout->addWidget(EditSearch);
+        verticalLayout->addWidget(search_computer_searchCpu);
 
-        tableWidget = new QTableWidget(ComputerWindow);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setMinimumSize(QSize(505, 284));
+        table_computer_listCpu = new QTableWidget(ComputerWindow);
+        table_computer_listCpu->setObjectName(QStringLiteral("table_computer_listCpu"));
+        table_computer_listCpu->setMinimumSize(QSize(505, 284));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::Base, brush);
         palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
@@ -73,49 +73,49 @@ public:
         palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush2);
-        tableWidget->setPalette(palette1);
-        tableWidget->setSortingEnabled(true);
-        tableWidget->horizontalHeader()->setStretchLastSection(true);
+        table_computer_listCpu->setPalette(palette1);
+        table_computer_listCpu->setSortingEnabled(true);
+        table_computer_listCpu->horizontalHeader()->setStretchLastSection(true);
 
-        verticalLayout->addWidget(tableWidget);
+        verticalLayout->addWidget(table_computer_listCpu);
 
-        btnAdd = new QPushButton(ComputerWindow);
-        btnAdd->setObjectName(QStringLiteral("btnAdd"));
+        button_computer_add = new QPushButton(ComputerWindow);
+        button_computer_add->setObjectName(QStringLiteral("button_computer_add"));
         QFont font;
         font.setFamily(QStringLiteral("Rockwell"));
         font.setPointSize(10);
         font.setBold(true);
         font.setWeight(75);
-        btnAdd->setFont(font);
-        btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
+        button_computer_add->setFont(font);
+        button_computer_add->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(btnAdd);
+        verticalLayout->addWidget(button_computer_add);
 
-        buttonEdit = new QPushButton(ComputerWindow);
-        buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
-        buttonEdit->setFont(font);
-        buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
+        button_computer_edit = new QPushButton(ComputerWindow);
+        button_computer_edit->setObjectName(QStringLiteral("button_computer_edit"));
+        button_computer_edit->setFont(font);
+        button_computer_edit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(buttonEdit);
+        verticalLayout->addWidget(button_computer_edit);
 
-        btnDel = new QPushButton(ComputerWindow);
-        btnDel->setObjectName(QStringLiteral("btnDel"));
-        btnDel->setFont(font);
-        btnDel->setStyleSheet(QLatin1String("QPushButton\n"
+        button_computer_delete = new QPushButton(ComputerWindow);
+        button_computer_delete->setObjectName(QStringLiteral("button_computer_delete"));
+        button_computer_delete->setFont(font);
+        button_computer_delete->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(btnDel);
+        verticalLayout->addWidget(button_computer_delete);
 
         button_computer_relation = new QPushButton(ComputerWindow);
         button_computer_relation->setObjectName(QStringLiteral("button_computer_relation"));
@@ -159,10 +159,10 @@ public:
     void retranslateUi(QDialog *ComputerWindow)
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computers", 0));
-        EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
-        btnAdd->setText(QApplication::translate("ComputerWindow", "Add Computer", 0));
-        buttonEdit->setText(QApplication::translate("ComputerWindow", "Edit Computer", 0));
-        btnDel->setText(QApplication::translate("ComputerWindow", "Delete Computer", 0));
+        search_computer_searchCpu->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
+        button_computer_add->setText(QApplication::translate("ComputerWindow", "Add Computer", 0));
+        button_computer_edit->setText(QApplication::translate("ComputerWindow", "Edit Computer", 0));
+        button_computer_delete->setText(QApplication::translate("ComputerWindow", "Delete Computer", 0));
         button_computer_relation->setText(QApplication::translate("ComputerWindow", "Relate Computer", 0));
         button_computer_return->setText(QApplication::translate("ComputerWindow", "Return to Main Menu", 0));
     } // retranslateUi

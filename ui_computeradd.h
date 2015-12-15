@@ -28,17 +28,17 @@ class Ui_ComputerAdd
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QLineEdit *line_ComputerName;
-    QLabel *label_2;
-    QRadioButton *radioAnalog;
-    QRadioButton *radioDigital;
-    QRadioButton *radioHybrid;
-    QCheckBox *checkWasBuilt;
-    QLabel *label_4;
-    QLineEdit *line_YearBuilt;
-    QPushButton *buttonOK;
-    QPushButton *buttonCancel;
+    QLabel *label_computerAdd_cpuName;
+    QLineEdit *line_computerAdd_cpuName;
+    QLabel *label_computerAdd_cpuType;
+    QRadioButton *rbutton_computerAdd_analog;
+    QRadioButton *rbutton_computerAdd_digital;
+    QRadioButton *rbutton_computerAdd_hybrid;
+    QCheckBox *checkbox_computerAdd_wasBuilt;
+    QLabel *label_computerAdd_yearBuilt;
+    QLineEdit *line_computerAdd_yearBuilt;
+    QPushButton *button_computerAdd_save;
+    QPushButton *button_computeradd_cancel;
 
     void setupUi(QDialog *ComputerAdd)
     {
@@ -66,108 +66,107 @@ public:
         ComputerAdd->setPalette(palette);
         verticalLayout = new QVBoxLayout(ComputerAdd);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label = new QLabel(ComputerAdd);
-        label->setObjectName(QStringLiteral("label"));
+        label_computerAdd_cpuName = new QLabel(ComputerAdd);
+        label_computerAdd_cpuName->setObjectName(QStringLiteral("label_computerAdd_cpuName"));
         QFont font;
         font.setPointSize(10);
         font.setBold(true);
         font.setWeight(75);
-        label->setFont(font);
+        label_computerAdd_cpuName->setFont(font);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(label_computerAdd_cpuName);
 
-        line_ComputerName = new QLineEdit(ComputerAdd);
-        line_ComputerName->setObjectName(QStringLiteral("line_ComputerName"));
+        line_computerAdd_cpuName = new QLineEdit(ComputerAdd);
+        line_computerAdd_cpuName->setObjectName(QStringLiteral("line_computerAdd_cpuName"));
 
-        verticalLayout->addWidget(line_ComputerName);
+        verticalLayout->addWidget(line_computerAdd_cpuName);
 
-        label_2 = new QLabel(ComputerAdd);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setFont(font);
+        label_computerAdd_cpuType = new QLabel(ComputerAdd);
+        label_computerAdd_cpuType->setObjectName(QStringLiteral("label_computerAdd_cpuType"));
+        label_computerAdd_cpuType->setFont(font);
 
-        verticalLayout->addWidget(label_2);
+        verticalLayout->addWidget(label_computerAdd_cpuType);
 
-        radioAnalog = new QRadioButton(ComputerAdd);
-        radioAnalog->setObjectName(QStringLiteral("radioAnalog"));
+        rbutton_computerAdd_analog = new QRadioButton(ComputerAdd);
+        rbutton_computerAdd_analog->setObjectName(QStringLiteral("rbutton_computerAdd_analog"));
         QFont font1;
         font1.setPointSize(9);
-        radioAnalog->setFont(font1);
-        radioAnalog->setChecked(true);
+        rbutton_computerAdd_analog->setFont(font1);
+        rbutton_computerAdd_analog->setChecked(true);
 
-        verticalLayout->addWidget(radioAnalog);
+        verticalLayout->addWidget(rbutton_computerAdd_analog);
 
-        radioDigital = new QRadioButton(ComputerAdd);
-        radioDigital->setObjectName(QStringLiteral("radioDigital"));
-        radioDigital->setFont(font1);
+        rbutton_computerAdd_digital = new QRadioButton(ComputerAdd);
+        rbutton_computerAdd_digital->setObjectName(QStringLiteral("rbutton_computerAdd_digital"));
+        rbutton_computerAdd_digital->setFont(font1);
 
-        verticalLayout->addWidget(radioDigital);
+        verticalLayout->addWidget(rbutton_computerAdd_digital);
 
-        radioHybrid = new QRadioButton(ComputerAdd);
-        radioHybrid->setObjectName(QStringLiteral("radioHybrid"));
-        radioHybrid->setFont(font1);
+        rbutton_computerAdd_hybrid = new QRadioButton(ComputerAdd);
+        rbutton_computerAdd_hybrid->setObjectName(QStringLiteral("rbutton_computerAdd_hybrid"));
+        rbutton_computerAdd_hybrid->setFont(font1);
 
-        verticalLayout->addWidget(radioHybrid);
+        verticalLayout->addWidget(rbutton_computerAdd_hybrid);
 
-        checkWasBuilt = new QCheckBox(ComputerAdd);
-        checkWasBuilt->setObjectName(QStringLiteral("checkWasBuilt"));
-        checkWasBuilt->setFont(font1);
-        checkWasBuilt->setLayoutDirection(Qt::LeftToRight);
-        checkWasBuilt->setAutoFillBackground(false);
+        checkbox_computerAdd_wasBuilt = new QCheckBox(ComputerAdd);
+        checkbox_computerAdd_wasBuilt->setObjectName(QStringLiteral("checkbox_computerAdd_wasBuilt"));
+        checkbox_computerAdd_wasBuilt->setFont(font1);
+        checkbox_computerAdd_wasBuilt->setLayoutDirection(Qt::LeftToRight);
+        checkbox_computerAdd_wasBuilt->setAutoFillBackground(false);
 
-        verticalLayout->addWidget(checkWasBuilt);
+        verticalLayout->addWidget(checkbox_computerAdd_wasBuilt);
 
-        label_4 = new QLabel(ComputerAdd);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        label_computerAdd_yearBuilt = new QLabel(ComputerAdd);
+        label_computerAdd_yearBuilt->setObjectName(QStringLiteral("label_computerAdd_yearBuilt"));
         QFont font2;
         font2.setPointSize(9);
         font2.setBold(true);
         font2.setWeight(75);
-        label_4->setFont(font2);
+        label_computerAdd_yearBuilt->setFont(font2);
 
-        verticalLayout->addWidget(label_4);
+        verticalLayout->addWidget(label_computerAdd_yearBuilt);
 
-        line_YearBuilt = new QLineEdit(ComputerAdd);
-        line_YearBuilt->setObjectName(QStringLiteral("line_YearBuilt"));
-        line_YearBuilt->setEnabled(false);
-        line_YearBuilt->setMaxLength(4);
+        line_computerAdd_yearBuilt = new QLineEdit(ComputerAdd);
+        line_computerAdd_yearBuilt->setObjectName(QStringLiteral("line_computerAdd_yearBuilt"));
+        line_computerAdd_yearBuilt->setEnabled(false);
+        line_computerAdd_yearBuilt->setMaxLength(4);
 
-        verticalLayout->addWidget(line_YearBuilt);
+        verticalLayout->addWidget(line_computerAdd_yearBuilt);
 
-        buttonOK = new QPushButton(ComputerAdd);
-        buttonOK->setObjectName(QStringLiteral("buttonOK"));
+        button_computerAdd_save = new QPushButton(ComputerAdd);
+        button_computerAdd_save->setObjectName(QStringLiteral("button_computerAdd_save"));
         QFont font3;
         font3.setFamily(QStringLiteral("Rockwell"));
         font3.setPointSize(10);
         font3.setBold(true);
         font3.setWeight(75);
-        buttonOK->setFont(font3);
-        buttonOK->setStyleSheet(QLatin1String("QPushButton\n"
+        button_computerAdd_save->setFont(font3);
+        button_computerAdd_save->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(buttonOK);
+        verticalLayout->addWidget(button_computerAdd_save);
 
-        buttonCancel = new QPushButton(ComputerAdd);
-        buttonCancel->setObjectName(QStringLiteral("buttonCancel"));
-        buttonCancel->setFont(font3);
-        buttonCancel->setStyleSheet(QLatin1String("QPushButton\n"
+        button_computeradd_cancel = new QPushButton(ComputerAdd);
+        button_computeradd_cancel->setObjectName(QStringLiteral("button_computeradd_cancel"));
+        button_computeradd_cancel->setFont(font3);
+        button_computeradd_cancel->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
 "	background-color: rgba(255, 170, 0); border: none;\n"
 "}"));
 
-        verticalLayout->addWidget(buttonCancel);
+        verticalLayout->addWidget(button_computeradd_cancel);
 
-        QWidget::setTabOrder(line_ComputerName, checkWasBuilt);
-        QWidget::setTabOrder(checkWasBuilt, line_YearBuilt);
-        QWidget::setTabOrder(line_YearBuilt, buttonOK);
-        QWidget::setTabOrder(buttonOK, buttonCancel);
+        QWidget::setTabOrder(checkbox_computerAdd_wasBuilt, line_computerAdd_yearBuilt);
+        QWidget::setTabOrder(line_computerAdd_yearBuilt, button_computerAdd_save);
+        QWidget::setTabOrder(button_computerAdd_save, button_computeradd_cancel);
 
         retranslateUi(ComputerAdd);
 
-        buttonOK->setDefault(true);
+        button_computerAdd_save->setDefault(true);
 
 
         QMetaObject::connectSlotsByName(ComputerAdd);
@@ -176,17 +175,17 @@ public:
     void retranslateUi(QDialog *ComputerAdd)
     {
         ComputerAdd->setWindowTitle(QApplication::translate("ComputerAdd", "Add new Computer", 0));
-        label->setText(QApplication::translate("ComputerAdd", "Computer name:", 0));
-        line_ComputerName->setPlaceholderText(QApplication::translate("ComputerAdd", "Type name of computer here", 0));
-        label_2->setText(QApplication::translate("ComputerAdd", "Computer type:", 0));
-        radioAnalog->setText(QApplication::translate("ComputerAdd", "Analog", 0));
-        radioDigital->setText(QApplication::translate("ComputerAdd", "Digital", 0));
-        radioHybrid->setText(QApplication::translate("ComputerAdd", "Hybrid", 0));
-        checkWasBuilt->setText(QApplication::translate("ComputerAdd", "Was built?", 0));
-        label_4->setText(QApplication::translate("ComputerAdd", "Year built:", 0));
-        line_YearBuilt->setPlaceholderText(QApplication::translate("ComputerAdd", "Type here when computer was built.", 0));
-        buttonOK->setText(QApplication::translate("ComputerAdd", "Save", 0));
-        buttonCancel->setText(QApplication::translate("ComputerAdd", "Cancel", 0));
+        label_computerAdd_cpuName->setText(QApplication::translate("ComputerAdd", "Computer name:", 0));
+        line_computerAdd_cpuName->setPlaceholderText(QApplication::translate("ComputerAdd", "Type name of computer here", 0));
+        label_computerAdd_cpuType->setText(QApplication::translate("ComputerAdd", "Computer type:", 0));
+        rbutton_computerAdd_analog->setText(QApplication::translate("ComputerAdd", "Analog", 0));
+        rbutton_computerAdd_digital->setText(QApplication::translate("ComputerAdd", "Digital", 0));
+        rbutton_computerAdd_hybrid->setText(QApplication::translate("ComputerAdd", "Hybrid", 0));
+        checkbox_computerAdd_wasBuilt->setText(QApplication::translate("ComputerAdd", "Was built?", 0));
+        label_computerAdd_yearBuilt->setText(QApplication::translate("ComputerAdd", "Year built:", 0));
+        line_computerAdd_yearBuilt->setPlaceholderText(QApplication::translate("ComputerAdd", "Type here when computer was built.", 0));
+        button_computerAdd_save->setText(QApplication::translate("ComputerAdd", "Save", 0));
+        button_computeradd_cancel->setText(QApplication::translate("ComputerAdd", "Cancel", 0));
     } // retranslateUi
 
 };

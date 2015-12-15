@@ -139,36 +139,14 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLineEdit" name="search_students">
+    <widget class="QLineEdit" name="search_scientist_scientists">
      <property name="placeholderText">
       <string>Write here to search</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="button_scientist_relation">
-     <property name="font">
-      <font>
-       <family>Rockwell</family>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	color: black;
-	background-color: rgba(255, 170, 0);
-	border: none;
-}</string>
-     </property>
-     <property name="text">
-      <string>Relate</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QTableWidget" name="table_scientists">
+    <widget class="QTableWidget" name="table_scientist_scientists">
      <property name="minimumSize">
       <size>
        <width>452</width>
@@ -290,7 +268,30 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="ret_button">
+    <widget class="QPushButton" name="button_scientist_relation">
+     <property name="font">
+      <font>
+       <family>Rockwell</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	color: black;
+	background-color: rgba(255, 170, 0);
+	border: none;
+}</string>
+     </property>
+     <property name="text">
+      <string>Relate Schientist</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="button_scientist_return">
      <property name="font">
       <font>
        <family>Rockwell</family>

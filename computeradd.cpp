@@ -16,18 +16,18 @@ void ComputerAdd::edit(Computers c)
 {
     isEditing = true;
     this->setWindowTitle("Edit computer");
-    ui->line_ComputerName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
+    ui->line_computerAdd_cpuName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
     if(c.getYearBuilt()>0)
-        ui->line_YearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
+        ui->line_computerAdd_yearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
 
     if(c.getTypeOfCpu()=="h")
-        ui->radioHybrid->setChecked(true);
+        ui->rbutton_computerAdd_hybrid->setChecked(true);
     else if(c.getTypeOfCpu()=="d")
-        ui->radioDigital->setChecked(true);
+        ui->rbutton_computerAdd_digital->setChecked(true);
     else
-        ui->radioAnalog->setChecked(true);
+        ui->rbutton_computerAdd_analog->setChecked(true);
 
-    ui->checkWasBuilt->setChecked(c.getWasBuilt()=="y");
+    ui->checkbox_computerAdd_wasBuilt->setChecked(c.getWasBuilt()=="y");
     idToEdit = c.getId();
 }
 
@@ -43,44 +43,38 @@ ComputerAdd::~ComputerAdd()
 
 void ComputerAdd::on_checkBox_toggled(bool checked)
 {
-    ui->line_YearBuilt->setEnabled(checked);
+    ui->line_computerAdd_yearBuilt->setEnabled(checked);
 }
 
-void ComputerAdd::on_checkWasBuilt_stateChanged(int arg1)
+void ComputerAdd::on_button_computerAdd_save_clicked()
 {
-    ui->line_YearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
-
-}
-
-void ComputerAdd::on_buttonOK_clicked()
-{
-    if(ui->line_ComputerName->text()=="")
+    if(ui->line_computerAdd_cpuName->text()=="")
     {
         QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter Computer name!"));
-        ui->line_ComputerName->setFocus();
+        ui->line_computerAdd_cpuName->setFocus();
 
         return;
     }
 
-    if((ui->checkWasBuilt->isChecked()) && (ui->line_YearBuilt->text()==""))
+    if((ui->checkbox_computerAdd_wasBuilt->isChecked()) && (ui->line_computerAdd_yearBuilt->text()==""))
     {
         QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter year built!"));
-        ui->line_YearBuilt->setFocus();
+        ui->line_computerAdd_yearBuilt->setFocus();
 
         return;
     }
 
     string type;
-    if(ui->radioAnalog->isChecked())
+    if(ui->rbutton_computerAdd_analog->isChecked())
         type = "a";
-    else if (ui->radioDigital->isChecked())
+    else if (ui->rbutton_computerAdd_digital->isChecked())
         type = "d";
-    else if (ui->radioHybrid->isChecked())
+    else if (ui->rbutton_computerAdd_hybrid->isChecked())
         type = "h";
-    Computers c( ui->line_ComputerName->text().toStdString(),
-                 ui->line_YearBuilt->text().toInt(),
+    Computers c( ui->line_computerAdd_cpuName->text().toStdString(),
+                 ui->line_computerAdd_yearBuilt->text().toInt(),
                  type,
-                 ui->checkWasBuilt->isChecked()?"y":"n");
+                 ui->checkbox_computerAdd_wasBuilt->isChecked()?"y":"n");
 
     string res = "";
     if (isEditing)
@@ -98,7 +92,12 @@ void ComputerAdd::on_buttonOK_clicked()
     this->setResult(QDialog::Accepted);
 }
 
-void ComputerAdd::on_buttonCancel_clicked()
+void ComputerAdd::on_checkbox_computerAdd_wasBuilt_stateChanged(int arg1)
+{
+    ui->line_computerAdd_yearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
+}
+
+void ComputerAdd::on_button_computeradd_cancel_clicked()
 {
     this->close();
     this->setResult(QDialog::Rejected);

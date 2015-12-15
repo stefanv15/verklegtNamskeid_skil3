@@ -24,6 +24,8 @@ private slots:
     //void on_search_relation_searchScientist_textChanged(const QString &arg1);
     void on_button_relation_return_clicked();
 
+    void on_button_relation_relate_clicked();
+
 private:
     Ui::RelationWindow *ui;
     Domain m_domain;

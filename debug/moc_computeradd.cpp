@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ComputerAdd_t {
     QByteArrayData data[8];
-    char stringdata0[120];
+    char stringdata0[164];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,16 +33,16 @@ QT_MOC_LITERAL(0, 0, 11), // "ComputerAdd"
 QT_MOC_LITERAL(1, 12, 19), // "on_checkBox_toggled"
 QT_MOC_LITERAL(2, 32, 0), // ""
 QT_MOC_LITERAL(3, 33, 7), // "checked"
-QT_MOC_LITERAL(4, 41, 29), // "on_checkWasBuilt_stateChanged"
-QT_MOC_LITERAL(5, 71, 4), // "arg1"
-QT_MOC_LITERAL(6, 76, 19), // "on_buttonOK_clicked"
-QT_MOC_LITERAL(7, 96, 23) // "on_buttonCancel_clicked"
+QT_MOC_LITERAL(4, 41, 34), // "on_button_computerAdd_save_cl..."
+QT_MOC_LITERAL(5, 76, 45), // "on_checkbox_computerAdd_wasBu..."
+QT_MOC_LITERAL(6, 122, 4), // "arg1"
+QT_MOC_LITERAL(7, 127, 36) // "on_button_computeradd_cancel_..."
 
     },
     "ComputerAdd\0on_checkBox_toggled\0\0"
-    "checked\0on_checkWasBuilt_stateChanged\0"
-    "arg1\0on_buttonOK_clicked\0"
-    "on_buttonCancel_clicked"
+    "checked\0on_button_computerAdd_save_clicked\0"
+    "on_checkbox_computerAdd_wasBuilt_stateChanged\0"
+    "arg1\0on_button_computeradd_cancel_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,14 +61,14 @@ static const uint qt_meta_data_ComputerAdd[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    1,   34,    2, 0x08 /* Private */,
-       4,    1,   37,    2, 0x08 /* Private */,
-       6,    0,   40,    2, 0x08 /* Private */,
+       4,    0,   37,    2, 0x08 /* Private */,
+       5,    1,   38,    2, 0x08 /* Private */,
        7,    0,   41,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void,
 
        0        // eod
@@ -81,9 +81,9 @@ void ComputerAdd::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_checkBox_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: _t->on_checkWasBuilt_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->on_buttonOK_clicked(); break;
-        case 3: _t->on_buttonCancel_clicked(); break;
+        case 1: _t->on_button_computerAdd_save_clicked(); break;
+        case 2: _t->on_checkbox_computerAdd_wasBuilt_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->on_button_computeradd_cancel_clicked(); break;
         default: ;
         }
     }
