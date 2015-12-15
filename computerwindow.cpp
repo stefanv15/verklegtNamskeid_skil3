@@ -63,6 +63,7 @@ void ComputerWindow::fillList()
 //Nær í upplýsingar um computer lista.
 void ComputerWindow::displayComputer(vector<Computers> computer)
 {
+    ui->table_computer_listCpu->setSortingEnabled(false);
     ui->table_computer_listCpu->clearContents();
     ui->table_computer_listCpu->setRowCount(computer.size());
 
@@ -83,6 +84,7 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
     // Select first row if any data in grid
     if(computer.size()>0)
         ui->table_computer_listCpu->selectRow(0);
+    ui->table_computer_listCpu->setSortingEnabled(true);
 }
 
 //Lokar computer glugganum.
@@ -146,10 +148,15 @@ void ComputerWindow::on_button_computer_relation_clicked()
     RelationWindow relation;
     relation.setModal(true);
     relation.exec();
+    fillList();
 }
 
+<<<<<<< HEAD
 //Opnar edit gluggann ef það er tvíklikkað
 void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)
+=======
+void ComputerWindow::on_table_computer_listCpu_doubleClicked()
+>>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
 {
     on_button_computer_edit_clicked();
 }

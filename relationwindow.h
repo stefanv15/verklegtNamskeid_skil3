@@ -24,7 +24,15 @@ private slots:
     void on_button_relation_return_clicked();               //Hættir keyrslu relation gluggans.
     void on_button_relation_relate_clicked();               //Leyfir notandanum að vensla saman upplýsingar.
 
+<<<<<<< HEAD
 private:                                                    //Private breytur.
+=======
+    void on_search_relation_searchCpu_textChanged();
+
+    void on_search_relation_searchScientist_textChanged();
+
+private:
+>>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
     Ui::RelationWindow *ui;
     Domain m_domain;
     void displayScientist(vector<Person> persons);          //Birtir person lista.

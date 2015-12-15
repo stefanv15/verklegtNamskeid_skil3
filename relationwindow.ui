@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>723</width>
+    <width>726</width>
     <height>264</height>
    </rect>
   </property>
@@ -86,6 +86,9 @@
      <height>211</height>
     </rect>
    </property>
+   <property name="columnCount">
+    <number>6</number>
+   </property>
    <column>
     <property name="text">
      <string>Computer name</string>
@@ -111,6 +114,7 @@
      <string>ID</string>
     </property>
    </column>
+   <column/>
   </widget>
   <widget class="QLineEdit" name="search_relation_searchScientist">
    <property name="geometry">
@@ -147,6 +151,9 @@
      <height>211</height>
     </rect>
    </property>
+   <property name="columnCount">
+    <number>6</number>
+   </property>
    <column>
     <property name="text">
      <string>Scientist name</string>
@@ -167,6 +174,8 @@
      <string>Year died</string>
     </property>
    </column>
+   <column/>
+   <column/>
   </widget>
   <widget class="QPushButton" name="button_relation_relate">
    <property name="enabled">
@@ -225,34 +234,6 @@
    </property>
    <property name="text">
     <string> Return</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button_relation_remove">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>170</y>
-     <width>81</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Rockwell</family>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton
-{
-	color: black;
-	background-color: rgba(255, 170, 0); border: none;
-}</string>
-   </property>
-   <property name="text">
-    <string>Remove </string>
    </property>
   </widget>
  </widget>

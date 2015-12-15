@@ -21,6 +21,7 @@ public:
     void setDomain(Domain domain);                                  //Sækir aðgang að domain fallinu í gegnum m_domain breytu.
 
 private slots:
+<<<<<<< HEAD
     void on_button_scientist_addScientist_clicked();                //Opnar addScientist gluggann.
     void on_button_scientist_editscientist_clicked();               //Opnar editScientist gluggann.
     void on_button_Scientist_delscientist_clicked();                //Leyfir notandanum að eyða persónu.
@@ -30,6 +31,24 @@ private slots:
     void on_search_scientist_scientists_textChanged();              //Leyfir notandanaum að leita eftir persónu.
 
 private:                                                            //Private breytur.
+=======
+
+    void on_button_scientist_addScientist_clicked();
+
+    void on_button_scientist_editscientist_clicked();
+
+    void on_button_Scientist_delscientist_clicked();
+
+    void on_button_scientist_relation_clicked();
+
+    void on_table_scientist_scientists_doubleClicked();
+
+    void on_button_scientist_return_clicked();
+
+    void on_search_scientist_scientists_textChanged();
+
+private:
+>>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
     Ui::ScientistsWindow *ui;
     Domain m_domain;
     void displayAllScientists();                                    //Sækir lista yfir tölvunarfræðinga.

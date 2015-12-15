@@ -21,21 +21,12 @@ public:
     vector<Computers> getComputerList();                        //Sækir lista af tölvum.
     void removeScientist(int input);                            //Eyðir persónu úr gagnagrunninum.
     void removeComputer(int input);                             //Eyðir tölvu úr gagnagrunnninum.
+    void removeScientistRelation(int input);
+    void removeComputerRelation(int input);
     void editScientist(int input, Person& pers);                //Yfirskrifar persónu í gagnagrunninum.
     void editComputer(int input, Computers& comp);              //Yfirskrifar tölvu í gagnagrunninum.
     vector<Person> searchPersons(string search);                //Leitar af persónum í gagnagrunninum.
     vector<Computers> searchComputers(string search);           //Leitar af tölvum í gagnagrunninum.
-    vector<Person> sortAscName();                               //Raðar persónum í gagnagrunninum eftir stafrófsröð.
-    vector<Person> sortDescName();                              //Raðar persónum í gagnagrunninum eftir öfugri stafrófsröð.
-    vector<Person> sortGender();                                //Raðar persónum í gagnagrunninum eftir kyni.
-    vector<Person> sortAscYearOfBirth();                        //Raðar persónum í gagnagrunninum eftir fæðingarári.
-    vector<Person> sortDescYearOfBirth();                       //Raðar persónum í gagnagrunninum eftir öfugu fæðingarári.
-    vector<Computers> sortAscNameOfCpu();                       //Raðar tölvum í gagnagrunninum eftir stafrófsröð.
-    vector<Computers> sortDescNameOfCpu();                      //Raðar tölvum í gagnagrunninum eftir öfugri stafrófsröð.
-    vector<Computers> sortAscYearBuilt();                       //Raðar tölvum í gagnagrunninum eftir byggingarári.
-    vector<Computers> sortDescYearBuilt();                      //Raðar tölvum í gagnagrunninum eftir öfugu byggingarári.
-    vector<Computers> sortAscTypeOfCpu();                       //Raðar tölvum í gagnagrunninum eftir stafrófsröð týpu.
-    vector<Computers> sortDescTypeOfCpu();                      //Raðar tölvum í gagnagrunninum eftir öfugri stafrófsröð týpu.
 
 private:                                                        //Prívat breytur.
     QSqlDatabase m_db;

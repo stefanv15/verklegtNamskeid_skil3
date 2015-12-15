@@ -57,8 +57,9 @@ void RelationWindow::fillLists()
 void RelationWindow::displayComputer(vector<Computers> computer)
 {
     ComputerWindow m_computerwindow;
+    ui->table_relation_computers->setSortingEnabled(false);
     ui->table_relation_computers->clear();
-    ui->table_relation_computers->setColumnCount(5);
+    ui->table_relation_computers->setColumnCount(6);
 
     QStringList TableHeader;
     TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"Related scientists"<<"id";
@@ -74,18 +75,21 @@ void RelationWindow::displayComputer(vector<Computers> computer)
            ui->table_relation_computers->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
         else
             ui->table_relation_computers->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
-        ui->table_relation_computers->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
+
         //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
 
         ui->table_relation_computers->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
+        ui->table_relation_computers->setItem(i, 5, new QTableWidgetItem(QString::number(computer[i].getId())));
     }
+    ui->table_relation_computers->setSortingEnabled(true);
 }
 
 //Birtir scientist lista.
 void RelationWindow::displayScientist(vector<Person> persons)
 {
+    ui->table_relation_scientists->setSortingEnabled(false);
     ui->table_relation_scientists->clear();
-    ui->table_relation_scientists->setColumnCount(5);
+    ui->table_relation_scientists->setColumnCount(6);
 
     QStringList TableHeader;
     TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"Related computers"<<"id";
@@ -111,6 +115,7 @@ void RelationWindow::displayScientist(vector<Person> persons)
         ui->table_relation_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }
+    ui->table_relation_scientists->setSortingEnabled(true);
 }
 
 //Hættir keyrslu relation gluggans.
@@ -129,4 +134,18 @@ void RelationWindow::on_button_relation_relate_clicked()
     int compId = ui->table_relation_computers->model()->index(compRowid, 5).data().toInt();
     m_domain.createRelation(compId, persId);
     fillLists();
+}
+
+void RelationWindow::on_search_relation_searchCpu_textChanged()
+{
+    string search = ui->search_relation_searchCpu->text().toStdString();
+    vector<Computers> computers = m_domain.searchComputer(search);
+    displayComputer(computers);
+}
+
+void RelationWindow::on_search_relation_searchScientist_textChanged()
+{
+    string search = ui->search_relation_searchScientist->text().toStdString();
+    vector<Person> persons = m_domain.searchScientist(search);
+    displayScientist(persons);
 }

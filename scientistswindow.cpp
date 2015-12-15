@@ -42,6 +42,7 @@ void ScientistsWindow::displayAllScientists()
 //Sýnir notanda lista yfir tölvunarfræðinga.
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
+    ui->table_scientist_scientists->setSortingEnabled(false);
     ui->table_scientist_scientists->clearContents();
 
     ui->table_scientist_scientists->setRowCount(persons.size());
@@ -65,6 +66,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
     if(persons.size()> 0)
         ui->table_scientist_scientists->selectRow(0);
+    ui->table_scientist_scientists->setSortingEnabled(true);
 }
 
 //Opnar addScientist gluggann.
@@ -116,9 +118,13 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     RelationWindow relation;
     relation.setModal(true);
     relation.exec();
+    displayAllScientists();
 }
 
+<<<<<<< HEAD
 //Leyfir notandanum að tvíklikka á persónu og opnar svo edit gluggann.
+=======
+>>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
 void ScientistsWindow::on_table_scientist_scientists_doubleClicked()
 {
     on_button_scientist_editscientist_clicked();
