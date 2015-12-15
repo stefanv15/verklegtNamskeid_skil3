@@ -121,10 +121,7 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     displayAllScientists();
 }
 
-<<<<<<< HEAD
 //Leyfir notandanum að tvíklikka á persónu og opnar svo edit gluggann.
-=======
->>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
 void ScientistsWindow::on_table_scientist_scientists_doubleClicked()
 {
     on_button_scientist_editscientist_clicked();
