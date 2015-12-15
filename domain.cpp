@@ -129,13 +129,13 @@ Computers Domain::findComputerById(int cID)
 //Leitar af persónu í lista eftir ID og fjarlægir hana endanlega úr gagnagrunninum.
 void Domain::removeScientist(int input)
 {
-    return m_sqlite.removeScientist(input);
+    m_sqlite.removeScientist(input);
 }
 
 //Leitar af tölvu í lista eftir ID og fjarlægir hana endanlega úr gagnagrunninum.
 void Domain::removeComputer(int input)
 {
-    return m_sqlite.removeComputer(input);
+    m_sqlite.removeComputer(input);
 }
 
 //Býr til tengingu milli persónu og tölvu.

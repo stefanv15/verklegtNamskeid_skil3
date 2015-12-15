@@ -24,11 +24,9 @@ void AddScientist::edit(Person p)
         ui->rbutton_addScientist_male->setChecked(true);
     else
         ui->rbutton_addScientist_female->setChecked(true);
-
     ui->line_addScientist_yearBorn->setText(QString::number(p.getDayOfBirth()));
     if(p.getDayOfDeath()>0)
         ui->line_addScientist_yearDied->setText(QString::number(p.getDayOfDeath()));
-
     ui->checkBox_addScientist_isdead->setChecked(p.getDayOfDeath()>0);
     idToEdit = p.getId();
 }
@@ -67,23 +65,14 @@ void AddScientist::on_button_addScientist_save_clicked()
         ui->line_addScientist_yearBorn->setFocus();
         return;
     }
-<<<<<<< HEAD
-
     if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addScientist_yearDied->text().toInt(&ok)<1700))
-=======
-    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addSchientist_yearDied->text().toInt(&ok)<1700))
->>>>>>> 453da1d8c819dd51ce1d8bc0c4c98e883513d916
     {
         QMessageBox::warning(this, "Warning", QString::fromStdString("Please insert a valid year died!"));
         ui->line_addScientist_yearDied->setFocus();
         return;
     }
-<<<<<<< HEAD
-
-    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addScientist_yearDied->text().toInt()<ui->line_addScientist_yearBorn->text().toInt()))
-=======
-    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addSchientist_yearDied->text().toInt()<ui->line_addScientist_yearBorn->text().toInt()))
->>>>>>> 453da1d8c819dd51ce1d8bc0c4c98e883513d916
+    if((ui->checkBox_addScientist_isdead->isChecked())
+            &&(ui->line_addScientist_yearDied->text().toInt()<ui->line_addScientist_yearBorn->text().toInt()))
     {
         QMessageBox::warning(this, "Warning", QString::fromStdString("Year died is not valid before year born!"));
         ui->line_addScientist_yearDied->setFocus();

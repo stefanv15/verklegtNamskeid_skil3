@@ -145,8 +145,8 @@ string SQLite::updateComputer(Computers &c)
 {
     string retVal = "";
     QString sInsertSQL = "UPDATE computers "
-                         "SET nameOfCpu = :nameOfCpu, yearBuilt = :yearBuilt, typeOfCpu = :typeOfCpu, wasBuilt = :wasBuilt "
-                         "WHERE id=:id";
+                         "SET nameOfCpu = :nameOfCpu, yearBuilt = :yearBuilt, typeOfCpu = :typeOfCpu, "
+                         "wasBuilt = :wasBuilt WHERE id=:id";
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);
     query.bindValue(":nameOfCpu",QString::fromStdString(c.getNameOfCpu()));

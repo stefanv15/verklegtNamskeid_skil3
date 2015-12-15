@@ -23,9 +23,9 @@ void ComputerAdd::edit(Computers c)
 {
     isEditing = true;
     this->setWindowTitle("Edit computer");
-    ui->line_computerAdd_cpuName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
+    ui->line_computerAdd_cpuName->setText(QString::fromStdString(c.getNameOfCpu()));
     if(c.getYearBuilt()>0)
-        ui->line_computerAdd_yearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
+        ui->line_computerAdd_yearBuilt->setText(QString::number(c.getYearBuilt()));
     if(c.getTypeOfCpu()=="h")
         ui->rbutton_computerAdd_hybrid->setChecked(true);
     else if(c.getTypeOfCpu()=="d")
@@ -94,7 +94,7 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
 //Athugar hvort tölva var byggð.
 void ComputerAdd::on_checkbox_computerAdd_wasBuilt_stateChanged(int arg1)
 {
-    ui->line_computerAdd_yearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
+    ui->line_computerAdd_yearBuilt->setEnabled(arg1);
 }
 
 //Hættir keyrslu computerAdd gluggans.
