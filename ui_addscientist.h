@@ -37,7 +37,7 @@ public:
     QLineEdit *line_addScientist_yearBorn;
     QCheckBox *checkBox_addScientist_isdead;
     QLabel *label_addScientist_yearDied;
-    QLineEdit *line_addSchientist_yearDied;
+    QLineEdit *line_addScientist_yearDied;
     QPushButton *button_addScientist_save;
     QPushButton *button_addScientist_cancel;
 
@@ -121,12 +121,12 @@ public:
 
         verticalLayout->addWidget(label_addScientist_yearDied);
 
-        line_addSchientist_yearDied = new QLineEdit(AddScientist);
-        line_addSchientist_yearDied->setObjectName(QStringLiteral("line_addSchientist_yearDied"));
-        line_addSchientist_yearDied->setEnabled(false);
-        line_addSchientist_yearDied->setMaxLength(4);
+        line_addScientist_yearDied = new QLineEdit(AddScientist);
+        line_addScientist_yearDied->setObjectName(QStringLiteral("line_addScientist_yearDied"));
+        line_addScientist_yearDied->setEnabled(false);
+        line_addScientist_yearDied->setMaxLength(4);
 
-        verticalLayout->addWidget(line_addSchientist_yearDied);
+        verticalLayout->addWidget(line_addScientist_yearDied);
 
         button_addScientist_save = new QPushButton(AddScientist);
         button_addScientist_save->setObjectName(QStringLiteral("button_addScientist_save"));
@@ -173,7 +173,7 @@ public:
         line_addScientist_yearBorn->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist was born", 0));
         checkBox_addScientist_isdead->setText(QApplication::translate("AddScientist", "Is this scientist dead?", 0));
         label_addScientist_yearDied->setText(QApplication::translate("AddScientist", "Year died", 0));
-        line_addSchientist_yearDied->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist died", 0));
+        line_addScientist_yearDied->setPlaceholderText(QApplication::translate("AddScientist", "Type here when scientist died", 0));
         button_addScientist_save->setText(QApplication::translate("AddScientist", "Save", 0));
         button_addScientist_cancel->setText(QApplication::translate("AddScientist", "Cancel", 0));
     } // retranslateUi

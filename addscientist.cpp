@@ -29,7 +29,7 @@ void AddScientist::edit(Person p)
     ui->line_addScientist_yearBorn->setText(QString::number(p.getDayOfBirth()));
 
     if(p.getDayOfDeath()>0)
-        ui->line_addSchientist_yearDied->setText(QString::number(p.getDayOfDeath()));
+        ui->line_addScientist_yearDied->setText(QString::number(p.getDayOfDeath()));
 
     ui->checkBox_addScientist_isdead->setChecked(p.getDayOfDeath()>0);
     idToEdit = p.getId();
@@ -50,7 +50,7 @@ void AddScientist::setDomain(Domain domain)
 //Athugar hvort persóna sé á lífi eða ekki.
 void AddScientist::on_check_isdead_toggled(bool checked)
 {
-    ui->line_addSchientist_yearDied->setEnabled(checked);
+    ui->line_addScientist_yearDied->setEnabled(checked);
 }
 
 //Vistar persónu og setur í lista.
@@ -72,23 +72,23 @@ void AddScientist::on_button_addScientist_save_clicked()
         return;
     }
 
-    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addSchientist_yearDied->text().toInt(&ok)<1700))
+    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addScientist_yearDied->text().toInt(&ok)<1700))
     {
         QMessageBox::warning(this, "Warning", QString::fromStdString("Please insert a valid year died!"));
-        ui->line_addSchientist_yearDied->setFocus();
+        ui->line_addScientist_yearDied->setFocus();
         return;
     }
 
-    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addSchientist_yearDied->text().toInt()<ui->line_addScientist_yearBorn->text().toInt()))
+    if((ui->checkBox_addScientist_isdead->isChecked())&&(ui->line_addScientist_yearDied->text().toInt()<ui->line_addScientist_yearBorn->text().toInt()))
     {
         QMessageBox::warning(this, "Warning", QString::fromStdString("Year died is not valid before year born!"));
-        ui->line_addSchientist_yearDied->setFocus();
+        ui->line_addScientist_yearDied->setFocus();
         return;
     }
 
     // Set year died = 0 if isDead not checked
     if(!ui->checkBox_addScientist_isdead->isChecked())
-        ui->line_addSchientist_yearDied->setText("0");
+        ui->line_addScientist_yearDied->setText("0");
 
     string gender;
     if(ui->rbutton_addScientist_female->isChecked())
@@ -98,7 +98,7 @@ void AddScientist::on_button_addScientist_save_clicked()
     Person p(ui->line_addScientist_nOs->text().toStdString(),
              gender,
              ui->line_addScientist_yearBorn->text().toInt(),
-             ui->line_addSchientist_yearDied->text().toInt());
+             ui->line_addScientist_yearDied->text().toInt());
     string ErrorMessage = "";
     if(isEditing)
     {
@@ -124,5 +124,5 @@ void AddScientist::on_button_addScientist_cancel_clicked()
 //Athugar hvort persóna sé á lífi eða ekki.
 void AddScientist::on_checkBox_addScientist_isdead_stateChanged(int arg1)
 {
-    ui->line_addSchientist_yearDied->setEnabled(arg1);
+    ui->line_addScientist_yearDied->setEnabled(arg1);
 }
