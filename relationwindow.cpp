@@ -30,6 +30,8 @@ RelationWindow::RelationWindow(QWidget *parent) :
     ui->table_relation_schientists->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->table_relation_schientists->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->table_relation_schientists->hideColumn(5);
+
+    fillLists();
 }
 
 void RelationWindow::setDomain(Domain domain)
@@ -116,11 +118,21 @@ RelationWindow::~RelationWindow()
 void RelationWindow::on_button_relation_return_clicked()
 {
     this->close();
+    this->setResult(QDialog::Accepted);
 }
 
 
 
 void RelationWindow::on_button_relation_relate_clicked()
 {
+<<<<<<< HEAD
 
+=======
+    int persRowid = ui->table_relation_schientists->selectionModel()->currentIndex().row();
+    int persId = ui->table_relation_schientists->model()->index(persRowid, 5).data().toInt();
+    int compRowid = ui->table_relation_computers->selectionModel()->currentIndex().row();
+    int compId = ui->table_relation_computers->model()->index(compRowid, 5).data().toInt();
+    m_domain.createRelation(compId, persId);
+    fillLists();
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 }

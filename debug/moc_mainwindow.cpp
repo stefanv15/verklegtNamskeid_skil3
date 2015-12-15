@@ -20,7 +20,11 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[6];
+<<<<<<< HEAD
     char stringdata0[132];
+=======
+    char stringdata0[107];
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,6 +34,7 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
+<<<<<<< HEAD
 QT_MOC_LITERAL(1, 11, 26), // "on_button_main_fun_clicked"
 QT_MOC_LITERAL(2, 38, 0), // ""
 QT_MOC_LITERAL(3, 39, 31), // "on_button_main_computer_clicked"
@@ -41,6 +46,18 @@ QT_MOC_LITERAL(5, 99, 32) // "on_button_main_scientist_clicked"
     "\0on_button_main_computer_clicked\0"
     "on_button_main_quit_clicked\0"
     "on_button_main_scientist_clicked"
+=======
+QT_MOC_LITERAL(1, 11, 28), // "on_scientists_button_clicked"
+QT_MOC_LITERAL(2, 40, 0), // ""
+QT_MOC_LITERAL(3, 41, 27), // "on_computers_button_clicked"
+QT_MOC_LITERAL(4, 69, 15), // "on_Quit_clicked"
+QT_MOC_LITERAL(5, 85, 21) // "on_Button_fun_clicked"
+
+    },
+    "MainWindow\0on_scientists_button_clicked\0"
+    "\0on_computers_button_clicked\0"
+    "on_Quit_clicked\0on_Button_fun_clicked"
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 };
 #undef QT_MOC_LITERAL
 
@@ -78,10 +95,17 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
+<<<<<<< HEAD
         case 0: _t->on_button_main_fun_clicked(); break;
         case 1: _t->on_button_main_computer_clicked(); break;
         case 2: _t->on_button_main_quit_clicked(); break;
         case 3: _t->on_button_main_scientist_clicked(); break;
+=======
+        case 0: _t->on_scientists_button_clicked(); break;
+        case 1: _t->on_computers_button_clicked(); break;
+        case 2: _t->on_Quit_clicked(); break;
+        case 3: _t->on_Button_fun_clicked(); break;
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
         default: ;
         }
     }

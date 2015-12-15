@@ -20,7 +20,11 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_ComputerWindow_t {
     QByteArrayData data[12];
+<<<<<<< HEAD
     char stringdata0[314];
+=======
+    char stringdata0[254];
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,6 +37,7 @@ QT_MOC_LITERAL(0, 0, 14), // "ComputerWindow"
 QT_MOC_LITERAL(1, 15, 14), // "sectionClicked"
 QT_MOC_LITERAL(2, 30, 0), // ""
 QT_MOC_LITERAL(3, 31, 5), // "index"
+<<<<<<< HEAD
 QT_MOC_LITERAL(4, 37, 33), // "on_button_computer_return_cli..."
 QT_MOC_LITERAL(5, 71, 35), // "on_button_computer_relation_c..."
 QT_MOC_LITERAL(6, 107, 28), // "on_tableWidget_doubleClicked"
@@ -52,6 +57,25 @@ QT_MOC_LITERAL(11, 274, 39) // "on_table_computer_listCpu_dou..."
     "on_button_computer_delete_clicked\0"
     "on_button_computer_add_clicked\0"
     "on_table_computer_listCpu_doubleClicked"
+=======
+QT_MOC_LITERAL(4, 37, 33), // "on_button_computer_addCpu_cli..."
+QT_MOC_LITERAL(5, 71, 33), // "on_button_computer_return_cli..."
+QT_MOC_LITERAL(6, 105, 21), // "on_buttonEdit_clicked"
+QT_MOC_LITERAL(7, 127, 17), // "on_btnAdd_clicked"
+QT_MOC_LITERAL(8, 145, 17), // "on_btnDel_clicked"
+QT_MOC_LITERAL(9, 163, 25), // "on_EditSearch_textChanged"
+QT_MOC_LITERAL(10, 189, 35), // "on_button_computer_relation_c..."
+QT_MOC_LITERAL(11, 225, 28) // "on_tableWidget_doubleClicked"
+
+    },
+    "ComputerWindow\0sectionClicked\0\0index\0"
+    "on_button_computer_addCpu_clicked\0"
+    "on_button_computer_return_clicked\0"
+    "on_buttonEdit_clicked\0on_btnAdd_clicked\0"
+    "on_btnDel_clicked\0on_EditSearch_textChanged\0"
+    "on_button_computer_relation_clicked\0"
+    "on_tableWidget_doubleClicked"
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 };
 #undef QT_MOC_LITERAL
 
@@ -72,12 +96,21 @@ static const uint qt_meta_data_ComputerWindow[] = {
        1,    1,   59,    2, 0x0a /* Public */,
        4,    0,   62,    2, 0x08 /* Private */,
        5,    0,   63,    2, 0x08 /* Private */,
+<<<<<<< HEAD
        6,    1,   64,    2, 0x08 /* Private */,
        7,    0,   67,    2, 0x08 /* Private */,
        8,    0,   68,    2, 0x08 /* Private */,
        9,    0,   69,    2, 0x08 /* Private */,
       10,    0,   70,    2, 0x08 /* Private */,
       11,    1,   71,    2, 0x08 /* Private */,
+=======
+       6,    0,   64,    2, 0x08 /* Private */,
+       7,    0,   65,    2, 0x08 /* Private */,
+       8,    0,   66,    2, 0x08 /* Private */,
+       9,    0,   67,    2, 0x08 /* Private */,
+      10,    0,   68,    2, 0x08 /* Private */,
+      11,    1,   69,    2, 0x08 /* Private */,
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -88,6 +121,10 @@ static const uint qt_meta_data_ComputerWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+<<<<<<< HEAD
+=======
+    QMetaType::Void,
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
     QMetaType::Void, QMetaType::QModelIndex,    3,
 
        0        // eod
@@ -100,6 +137,7 @@ void ComputerWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sectionClicked((*reinterpret_cast< int(*)>(_a[1]))); break;
+<<<<<<< HEAD
         case 1: _t->on_button_computer_return_clicked(); break;
         case 2: _t->on_button_computer_relation_clicked(); break;
         case 3: _t->on_tableWidget_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
@@ -108,6 +146,16 @@ void ComputerWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 6: _t->on_button_computer_delete_clicked(); break;
         case 7: _t->on_button_computer_add_clicked(); break;
         case 8: _t->on_table_computer_listCpu_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+=======
+        case 1: _t->on_button_computer_addCpu_clicked(); break;
+        case 2: _t->on_button_computer_return_clicked(); break;
+        case 3: _t->on_buttonEdit_clicked(); break;
+        case 4: _t->on_btnAdd_clicked(); break;
+        case 5: _t->on_btnDel_clicked(); break;
+        case 6: _t->on_EditSearch_textChanged(); break;
+        case 7: _t->on_button_computer_relation_clicked(); break;
+        case 8: _t->on_tableWidget_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
         default: ;
         }
     }

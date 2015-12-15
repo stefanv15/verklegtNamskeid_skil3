@@ -35,6 +35,7 @@ void MainWindow::on_button_main_computer_clicked()
 
 void MainWindow::on_button_main_quit_clicked()
 {
+    m_domain.saveAllData();
     exit(1);
 }
 

@@ -88,6 +88,7 @@ public:
 
         rbutton_addScientist_male = new QRadioButton(AddScientist);
         rbutton_addScientist_male->setObjectName(QStringLiteral("rbutton_addScientist_male"));
+        rbutton_addScientist_male->setChecked(true);
 
         verticalLayout->addWidget(rbutton_addScientist_male);
 

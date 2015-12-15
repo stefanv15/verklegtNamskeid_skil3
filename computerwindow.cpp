@@ -137,11 +137,24 @@ void ComputerWindow::on_button_computer_delete_clicked()
 
 void ComputerWindow::on_button_computer_add_clicked()
 {
+<<<<<<< HEAD
     ComputerAdd ca;
     ca.setModal(true);
     ca.exec();
     if(ca.result()==QDialog::Accepted)
        fillList();
+=======
+    string search = ui->EditSearch->text().toStdString();
+    vector<Computers> computers = m_domain.searchComputer(search);
+    displayComputer(computers);
+}
+
+void ComputerWindow::on_button_computer_relation_clicked()
+{
+    RelationWindow relation;
+    relation.setModal(true);
+    relation.exec();
+>>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 }
 
 void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)
