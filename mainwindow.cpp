@@ -23,7 +23,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_scientists_button_clicked()
 {
     ScientistsWindow scientistswindow;
-    scientistswindow.setDomain(m_domain);
     scientistswindow.setModal(true);
     scientistswindow.exec();
 }
@@ -31,7 +30,6 @@ void MainWindow::on_scientists_button_clicked()
 void MainWindow::on_computers_button_clicked()
 {
     ComputerWindow computerwindow;  // Computer list gluggi verður til
-    computerwindow.setDomain(m_domain);
     computerwindow.setModal(true);  // Stilla gluggann þannig að hann opnist án þess að hægt sé að komast í glugga bakvið
     computerwindow.exec();          // Opna glugga
 }

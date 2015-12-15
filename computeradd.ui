@@ -120,7 +120,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="editComputerName">
+    <widget class="QLineEdit" name="line_ComputerName">
      <property name="placeholderText">
       <string>Type name of computer here</string>
      </property>
@@ -212,7 +212,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="editYearBuilt">
+    <widget class="QLineEdit" name="line_YearBuilt">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -274,9 +274,9 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>editComputerName</tabstop>
+  <tabstop>line_ComputerName</tabstop>
   <tabstop>checkWasBuilt</tabstop>
-  <tabstop>editYearBuilt</tabstop>
+  <tabstop>line_YearBuilt</tabstop>
   <tabstop>buttonOK</tabstop>
   <tabstop>buttonCancel</tabstop>
  </tabstops>

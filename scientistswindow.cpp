@@ -16,12 +16,13 @@ ScientistsWindow::ScientistsWindow(QWidget *parent) :
     ui->table_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->table_scientists->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->table_scientists->setSelectionMode(QAbstractItemView::SingleSelection);
-    ui->table_scientists->hideColumn(4);
-}
+    ui->table_scientists->setColumnCount(6);
 
-void ScientistsWindow::setDomain(Domain domain)
-{
-    m_domain = domain;
+    QStringList TableHeader;
+    TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"Related computers"<<"id";
+    ui->table_scientists->setHorizontalHeaderLabels(TableHeader);
+    ui->table_scientists->hideColumn(5);
+
     displayAllScientists();
 }
 
@@ -38,15 +39,7 @@ void ScientistsWindow::displayAllScientists()
 
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
-
-    ui->table_scientists->clear();
-    ui->table_scientists->setColumnCount(5);
-
-    QStringList TableHeader;
-    TableHeader<<"Scientist name"<<"Gender"<<"Year born"<<"Year died"<<"Related computers"<<"id";
-
-
-    ui->table_scientists->setHorizontalHeaderLabels(TableHeader);
+    ui->table_scientists->clearContents();
 
     ui->table_scientists->setRowCount(persons.size());
 
@@ -66,6 +59,9 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->table_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }
+
+    if(persons.size()> 0)
+        ui->table_scientists->selectRow(0);
 }
 
 void ScientistsWindow::on_ret_button_clicked()
@@ -80,13 +76,13 @@ void ScientistsWindow::on_button_scientist_addScientist_clicked()
     addscientist.setModal(true);
     addscientist.exec();
     if(addscientist.result()==QDialog::Accepted)
-        displayAllScientists();
+        on_search_students_textChanged();
 }
 
 void ScientistsWindow::on_button_scientist_editscientist_clicked()
 {
     int rowidx = ui->table_scientists->selectionModel()->currentIndex().row();
-    int id = ui->table_scientists->model()->index(rowidx, 4).data().toInt();
+    int id = ui->table_scientists->model()->index(rowidx, 5).data().toInt();
     Person p = m_domain.findPersonById(id);
 
     AddScientist editScientist;
@@ -95,7 +91,7 @@ void ScientistsWindow::on_button_scientist_editscientist_clicked()
     editScientist.setModal(true);
     editScientist.exec();
     if(editScientist.result()==QDialog::Accepted)
-        displayAllScientists();
+        on_search_students_textChanged();
 }
 
 void ScientistsWindow::on_search_students_textChanged()
@@ -111,9 +107,9 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
     if (answer == QMessageBox::Yes)
     {
         int rowid = ui->table_scientists->selectionModel()->currentIndex().row();
-        int id = ui->table_scientists->model()->index(rowid, 4).data().toInt();
+        int id = ui->table_scientists->model()->index(rowid, 5).data().toInt();
         m_domain.removeScientist(id);
-        displayAllScientists();
+        on_search_students_textChanged();
     }
     else
     {
@@ -126,4 +122,9 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     RelationWindow relation;
 
     relation.exec();
+}
+
+void ScientistsWindow::on_table_scientists_doubleClicked(const QModelIndex &index)
+{
+    on_button_scientist_editscientist_clicked();
 }

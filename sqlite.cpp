@@ -14,8 +14,7 @@ void SQLite::openDatabase()
     QString dbName = "scientists.sqlite";
     m_db.setDatabaseName(dbName);
 
-    if(!m_db.open())
-        m_db.close();
+    m_db.open();
 }
 
 //Nær í nýjust  gögn úr gagnagrunni persóna og skilar í vektor.
@@ -115,6 +114,7 @@ string SQLite::updateData(Person &p)
     query.bindValue(":gender",QString::fromStdString(p.getGender()));
     query.bindValue(":yearOfBirth",p.getDayOfBirth());
     query.bindValue(":yearOfDeath",p.getDayOfDeath());
+    query.bindValue(":id",p.getId());
     if (!query.exec())
         retVal = query.lastError().text().toStdString();
     return retVal;

@@ -16,9 +16,9 @@ void ComputerAdd::edit(Computers c)
 {
     isEditing = true;
     this->setWindowTitle("Edit computer");
-    ui->editComputerName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
+    ui->line_ComputerName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
     if(c.getYearBuilt()>0)
-        ui->editYearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
+        ui->line_YearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
 
     if(c.getTypeOfCpu()=="h")
         ui->radioHybrid->setChecked(true);
@@ -43,29 +43,29 @@ ComputerAdd::~ComputerAdd()
 
 void ComputerAdd::on_checkBox_toggled(bool checked)
 {
-    ui->editYearBuilt->setEnabled(checked);
+    ui->line_YearBuilt->setEnabled(checked);
 }
 
 void ComputerAdd::on_checkWasBuilt_stateChanged(int arg1)
 {
-    ui->editYearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
+    ui->line_YearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
 
 }
 
 void ComputerAdd::on_buttonOK_clicked()
 {
-    if(ui->editComputerName->text()=="")
+    if(ui->line_ComputerName->text()=="")
     {
         QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter Computer name!"));
-        ui->editComputerName->setFocus();
+        ui->line_ComputerName->setFocus();
 
         return;
     }
 
-    if((ui->checkWasBuilt->isChecked()) && (ui->editYearBuilt->text()==""))
+    if((ui->checkWasBuilt->isChecked()) && (ui->line_YearBuilt->text()==""))
     {
         QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter year built!"));
-        ui->editYearBuilt->setFocus();
+        ui->line_YearBuilt->setFocus();
 
         return;
     }
@@ -77,8 +77,8 @@ void ComputerAdd::on_buttonOK_clicked()
         type = "d";
     else if (ui->radioHybrid->isChecked())
         type = "h";
-    Computers c( ui->editComputerName->text().toStdString(),
-                 ui->editYearBuilt->text().toInt(),
+    Computers c( ui->line_ComputerName->text().toStdString(),
+                 ui->line_YearBuilt->text().toInt(),
                  type,
                  ui->checkWasBuilt->isChecked()?"y":"n");
 

@@ -86,16 +86,6 @@ public:
         verticalLayout->addWidget(button_scientist_relation);
 
         table_scientists = new QTableWidget(ScientistsWindow);
-        if (table_scientists->columnCount() < 4)
-            table_scientists->setColumnCount(4);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        table_scientists->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        table_scientists->setHorizontalHeaderItem(1, __qtablewidgetitem1);
-        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
-        table_scientists->setHorizontalHeaderItem(2, __qtablewidgetitem2);
-        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        table_scientists->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         table_scientists->setObjectName(QStringLiteral("table_scientists"));
         table_scientists->setMinimumSize(QSize(452, 140));
         QPalette palette1;
@@ -177,14 +167,6 @@ public:
         ScientistsWindow->setWindowTitle(QApplication::translate("ScientistsWindow", "Scientists", 0));
         search_students->setPlaceholderText(QApplication::translate("ScientistsWindow", "Write here to search", 0));
         button_scientist_relation->setText(QApplication::translate("ScientistsWindow", "Relate", 0));
-        QTableWidgetItem *___qtablewidgetitem = table_scientists->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("ScientistsWindow", "Name", 0));
-        QTableWidgetItem *___qtablewidgetitem1 = table_scientists->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("ScientistsWindow", "Gender", 0));
-        QTableWidgetItem *___qtablewidgetitem2 = table_scientists->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("ScientistsWindow", "Year born", 0));
-        QTableWidgetItem *___qtablewidgetitem3 = table_scientists->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("ScientistsWindow", "Year died", 0));
         button_scientist_addScientist->setText(QApplication::translate("ScientistsWindow", "Add Scientist", 0));
         button_scientist_editscientist->setText(QApplication::translate("ScientistsWindow", "Edit Scientist", 0));
         button_Scientist_delscientist->setText(QApplication::translate("ScientistsWindow", "Delete Scientist", 0));

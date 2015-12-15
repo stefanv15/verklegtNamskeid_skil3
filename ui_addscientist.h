@@ -104,6 +104,7 @@ public:
 
         line_yearborn = new QLineEdit(AddScientist);
         line_yearborn->setObjectName(QStringLiteral("line_yearborn"));
+        line_yearborn->setMaxLength(4);
 
         verticalLayout->addWidget(line_yearborn);
 
@@ -122,6 +123,7 @@ public:
         line_yeardied = new QLineEdit(AddScientist);
         line_yeardied->setObjectName(QStringLiteral("line_yeardied"));
         line_yeardied->setEnabled(false);
+        line_yeardied->setMaxLength(4);
 
         verticalLayout->addWidget(line_yeardied);
 

@@ -11,38 +11,28 @@ ComputerWindow::ComputerWindow(QWidget *parent) :
     ui(new Ui::ComputerWindow)
 {
     ui->setupUi(this);
-    //ui->tableWidget->setClickable(true);
-    //ui->tableWidget->connect(ui->tableWidget,SIGNAL(sectionClicked(int)),this,SLOT(sectionClicked(int)));
+
+    // Enable minimize and maximize buttons
+    Qt::WindowFlags flags = this->windowFlags();
+    flags |= Qt::WindowMaximizeButtonHint;
+    flags |= Qt::WindowMinimizeButtonHint;
+    setWindowFlags( flags );
 
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
-    ui->tableWidget->hideColumn(5);
-}
+    ui->tableWidget->setColumnCount(6);
 
-void ComputerWindow::setDomain(Domain domain)
-{
-    m_domain = domain;
-    fillList();
+    QStringList TableHeader;
+    TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"Related scientists"<<"id";
+    ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
+    ui->tableWidget->hideColumn(5);
+    displayComputer(m_domain.getComputerList());
 }
 
 ComputerWindow::~ComputerWindow()
 {
     delete ui;
-}
-
-void ComputerWindow::sectionClicked(int index)
-{
-    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
-}
-
-void ComputerWindow::on_ComputerWindow_accepted()
-{
-
-}
-
-void ComputerWindow::on_button_computer_deleteCpu_clicked()
-{
 }
 
 QString getType(string type)
@@ -64,14 +54,8 @@ void ComputerWindow::fillList()
 
 void ComputerWindow::displayComputer(vector<Computers> computer)
 {
-    ui->tableWidget->clear();
-    ui->tableWidget->setColumnCount(5);
-
-    QStringList TableHeader;
-    TableHeader<<"Computer name"<<"Computer type"<<"Was created"<<"Year created"<<"Related scientists"<<"id";
-    ui->tableWidget->setHorizontalHeaderLabels(TableHeader);
+    ui->tableWidget->clearContents();
     ui->tableWidget->setRowCount(computer.size());
-
 
     for(unsigned int i = 0; i < computer.size(); i++)
     {
@@ -79,14 +63,17 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
         ui->tableWidget->setItem(i, 1, new QTableWidgetItem(getType(computer[i].getTypeOfCpu())));
         ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::fromStdString(computer[i].getWasBuilt()=="y"?"Yes":"No")));
         if (computer[i].getYearBuilt()!=0)
-           ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
+            ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
         else
             ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
-        ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
-        //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
 
         ui->tableWidget->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
+        ui->tableWidget->setItem(i, 5, new QTableWidgetItem(QString::number(computer[i].getId())));
     }
+
+    // Select first row if any data in grid
+    if(computer.size()>0)
+        ui->tableWidget->selectRow(0);
 }
 
 void ComputerWindow::on_button_computer_addCpu_clicked()
@@ -101,7 +88,7 @@ void ComputerWindow::on_buttonEdit_clicked()
 {
     int rowidx = ui->tableWidget->selectionModel()->currentIndex().row();
 
-    int id = ui->tableWidget->model()->index(rowidx, 4).data().toInt();
+    int id = ui->tableWidget->model()->index(rowidx, 5).data().toInt();
     Computers c = m_domain.findComputerById(id);
 
     ComputerAdd ca;
@@ -136,13 +123,10 @@ void ComputerWindow::on_btnDel_clicked()
     if(mbAnswer == QMessageBox::Yes)
     {
         int rowidx = ui->tableWidget->selectionModel()->currentIndex().row();
-        int id = ui->tableWidget->model()->index(rowidx, 4).data().toInt();
+        int id = ui->tableWidget->model()->index(rowidx, 5).data().toInt();
         m_domain.removeComputer(id);
         fillList();
-       // QMessageBox::information(this,"Info","Ok, lets delete!");
     }
-    else
-        QMessageBox::information(this,"Info","Ok, see you!");
 }
 
 void ComputerWindow::on_EditSearch_textChanged()
@@ -157,4 +141,9 @@ void ComputerWindow::on_button_computer_relation_clicked()
     RelationWindow relation;
 
     relation.exec();
+}
+
+void ComputerWindow::on_tableWidget_doubleClicked(const QModelIndex &index)
+{
+    on_buttonEdit_clicked();
 }

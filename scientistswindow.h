@@ -34,6 +34,8 @@ private slots:
 
     void on_button_scientist_relation_clicked();
 
+    void on_table_scientists_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::ScientistsWindow *ui;
     Domain m_domain;

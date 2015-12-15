@@ -221,26 +221,6 @@
      <attribute name="horizontalHeaderStretchLastSection">
       <bool>true</bool>
      </attribute>
-     <column>
-      <property name="text">
-       <string>Name</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Gender</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Year born</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Year died</string>
-      </property>
-     </column>
     </widget>
    </item>
    <item>
