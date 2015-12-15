@@ -86,19 +86,6 @@ void ComputerWindow::on_button_computer_return_clicked()
     this->close();
 }
 
-void ComputerWindow::on_button_computer_relation_clicked()
-{
-    RelationWindow relation;
-    relation.setDomain(m_domain);
-    relation.setModal(true);
-    relation.exec();
-}
-
-void ComputerWindow::on_tableWidget_doubleClicked(const QModelIndex &index)
-{
-
-}
-
 void ComputerWindow::on_search_computer_searchCpu_textChanged()
 {
     string search = ui->search_computer_searchCpu->text().toStdString();
@@ -137,16 +124,11 @@ void ComputerWindow::on_button_computer_delete_clicked()
 
 void ComputerWindow::on_button_computer_add_clicked()
 {
-<<<<<<< HEAD
     ComputerAdd ca;
     ca.setModal(true);
     ca.exec();
     if(ca.result()==QDialog::Accepted)
        fillList();
-=======
-    string search = ui->EditSearch->text().toStdString();
-    vector<Computers> computers = m_domain.searchComputer(search);
-    displayComputer(computers);
 }
 
 void ComputerWindow::on_button_computer_relation_clicked()
@@ -154,7 +136,6 @@ void ComputerWindow::on_button_computer_relation_clicked()
     RelationWindow relation;
     relation.setModal(true);
     relation.exec();
->>>>>>> 757bd2ed5b0e9cb536e6a3742bc51ba02e2bc1fb
 }
 
 void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)
