@@ -39,6 +39,7 @@ void ScientistsWindow::displayAllScientists()
 
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
+    ui->table_scientist_scientists->setSortingEnabled(false);
     ui->table_scientist_scientists->clearContents();
 
     ui->table_scientist_scientists->setRowCount(persons.size());
@@ -62,6 +63,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 
     if(persons.size()> 0)
         ui->table_scientist_scientists->selectRow(0);
+    ui->table_scientist_scientists->setSortingEnabled(true);
 }
 
 void ScientistsWindow::on_button_scientist_addScientist_clicked()

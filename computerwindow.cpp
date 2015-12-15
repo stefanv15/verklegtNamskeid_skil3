@@ -59,6 +59,7 @@ void ComputerWindow::fillList()
 
 void ComputerWindow::displayComputer(vector<Computers> computer)
 {
+    ui->table_computer_listCpu->setSortingEnabled(false);
     ui->table_computer_listCpu->clearContents();
     ui->table_computer_listCpu->setRowCount(computer.size());
 
@@ -79,6 +80,7 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
     // Select first row if any data in grid
     if(computer.size()>0)
         ui->table_computer_listCpu->selectRow(0);
+    ui->table_computer_listCpu->setSortingEnabled(true);
 }
 
 void ComputerWindow::on_button_computer_return_clicked()

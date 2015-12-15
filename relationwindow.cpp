@@ -48,6 +48,7 @@ void RelationWindow::fillLists()
 void RelationWindow::displayComputer(vector<Computers> computer)
 {
     ComputerWindow m_computerwindow;
+    ui->table_relation_computers->setSortingEnabled(false);
     ui->table_relation_computers->clear();
     ui->table_relation_computers->setColumnCount(6);
 
@@ -71,10 +72,12 @@ void RelationWindow::displayComputer(vector<Computers> computer)
         ui->table_relation_computers->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
         ui->table_relation_computers->setItem(i, 5, new QTableWidgetItem(QString::number(computer[i].getId())));
     }
+    ui->table_relation_computers->setSortingEnabled(true);
 }
 
 void RelationWindow::displayScientist(vector<Person> persons)
 {
+    ui->table_relation_scientists->setSortingEnabled(false);
     ui->table_relation_scientists->clear();
     ui->table_relation_scientists->setColumnCount(6);
 
@@ -102,6 +105,7 @@ void RelationWindow::displayScientist(vector<Person> persons)
         ui->table_relation_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
 
     }
+    ui->table_relation_scientists->setSortingEnabled(true);
 }
 
 RelationWindow::~RelationWindow()
