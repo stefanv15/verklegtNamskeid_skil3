@@ -65,7 +65,7 @@ void RelationWindow::displayComputer(vector<Computers> computer)
            ui->table_relation_computers->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
         else
             ui->table_relation_computers->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
-        ui->table_relation_computers->setItem(i, 4, new QTableWidgetItem(QString::number(computer[i].getId())));
+        ui->table_relation_computers->setItem(i, 5, new QTableWidgetItem(QString::number(computer[i].getId())));
         //ui->tableWidget->setItem(1, 0, new QTableWidgetItem(list[i].getName()));
 
         ui->table_relation_computers->setItem(i, 5, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
