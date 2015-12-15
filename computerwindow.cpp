@@ -155,6 +155,7 @@ void ComputerWindow::on_EditSearch_textChanged()
 void ComputerWindow::on_button_computer_relation_clicked()
 {
     RelationWindow relation;
-
+    relation.setDomain(m_domain);
+    relation.setModal(true);
     relation.exec();
 }

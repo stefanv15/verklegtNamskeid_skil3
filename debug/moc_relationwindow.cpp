@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_RelationWindow_t {
-    QByteArrayData data[4];
-    char stringdata0[62];
+    QByteArrayData data[3];
+    char stringdata0[50];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,13 +30,12 @@ struct qt_meta_stringdata_RelationWindow_t {
 static const qt_meta_stringdata_RelationWindow_t qt_meta_stringdata_RelationWindow = {
     {
 QT_MOC_LITERAL(0, 0, 14), // "RelationWindow"
-QT_MOC_LITERAL(1, 15, 39), // "on_table_relation_schientists..."
-QT_MOC_LITERAL(2, 55, 0), // ""
-QT_MOC_LITERAL(3, 56, 5) // "index"
+QT_MOC_LITERAL(1, 15, 33), // "on_button_relation_return_cli..."
+QT_MOC_LITERAL(2, 49, 0) // ""
 
     },
-    "RelationWindow\0on_table_relation_schientists_activated\0"
-    "\0index"
+    "RelationWindow\0on_button_relation_return_clicked\0"
+    ""
 };
 #undef QT_MOC_LITERAL
 
@@ -54,10 +53,10 @@ static const uint qt_meta_data_RelationWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x08 /* Private */,
+       1,    0,   19,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QModelIndex,    3,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -68,10 +67,11 @@ void RelationWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         RelationWindow *_t = static_cast<RelationWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_table_relation_schientists_activated((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 0: _t->on_button_relation_return_clicked(); break;
         default: ;
         }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObject RelationWindow::staticMetaObject = {

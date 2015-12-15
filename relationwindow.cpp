@@ -1,9 +1,19 @@
+#include <vector>
 #include "relationwindow.h"
 #include "ui_relationwindow.h"
 #include "computerwindow.h"
 #include "domain.h"
 #include "computers.h"
 #include "person.h"
+#include "mainwindow.h"
+#include "addscientist.h"
+
+#include "scientistswindow.h"
+#include "ui_scientistswindow.h"
+
+#include "relationwindow.h"
+#include <QMessageBox>
+
 
 RelationWindow::RelationWindow(QWidget *parent) :
     QDialog(parent),
@@ -101,9 +111,11 @@ RelationWindow::~RelationWindow()
     delete ui;
 }
 
-void RelationWindow::on_table_relation_schientists_activated(const QModelIndex &index)
+
+
+void RelationWindow::on_button_relation_return_clicked()
 {
-    
+    this->close();
 }
 
 

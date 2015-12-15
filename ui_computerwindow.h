@@ -27,11 +27,11 @@ class Ui_ComputerWindow
 public:
     QVBoxLayout *verticalLayout;
     QLineEdit *EditSearch;
-    QPushButton *button_computer_relation;
     QTableWidget *tableWidget;
     QPushButton *btnAdd;
     QPushButton *buttonEdit;
     QPushButton *btnDel;
+    QPushButton *button_computer_relation;
     QPushButton *button_computer_return;
 
     void setupUi(QDialog *ComputerWindow)
@@ -57,23 +57,6 @@ public:
         EditSearch->setObjectName(QStringLiteral("EditSearch"));
 
         verticalLayout->addWidget(EditSearch);
-
-        button_computer_relation = new QPushButton(ComputerWindow);
-        button_computer_relation->setObjectName(QStringLiteral("button_computer_relation"));
-        QFont font;
-        font.setFamily(QStringLiteral("Rockwell"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setItalic(false);
-        font.setWeight(75);
-        button_computer_relation->setFont(font);
-        button_computer_relation->setStyleSheet(QLatin1String("QPushButton\n"
-"{\n"
-"	color: black;\n"
-"	background-color: rgba(255, 170, 0); border: none;\n"
-"}"));
-
-        verticalLayout->addWidget(button_computer_relation);
 
         tableWidget = new QTableWidget(ComputerWindow);
         if (tableWidget->columnCount() < 6)
@@ -112,12 +95,12 @@ public:
 
         btnAdd = new QPushButton(ComputerWindow);
         btnAdd->setObjectName(QStringLiteral("btnAdd"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Rockwell"));
-        font1.setPointSize(10);
-        font1.setBold(true);
-        font1.setWeight(75);
-        btnAdd->setFont(font1);
+        QFont font;
+        font.setFamily(QStringLiteral("Rockwell"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
+        btnAdd->setFont(font);
         btnAdd->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -128,7 +111,7 @@ public:
 
         buttonEdit = new QPushButton(ComputerWindow);
         buttonEdit->setObjectName(QStringLiteral("buttonEdit"));
-        buttonEdit->setFont(font1);
+        buttonEdit->setFont(font);
         buttonEdit->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -139,7 +122,7 @@ public:
 
         btnDel = new QPushButton(ComputerWindow);
         btnDel->setObjectName(QStringLiteral("btnDel"));
-        btnDel->setFont(font1);
+        btnDel->setFont(font);
         btnDel->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"
 "	color: black;\n"
@@ -147,6 +130,23 @@ public:
 "}"));
 
         verticalLayout->addWidget(btnDel);
+
+        button_computer_relation = new QPushButton(ComputerWindow);
+        button_computer_relation->setObjectName(QStringLiteral("button_computer_relation"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Rockwell"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setItalic(false);
+        font1.setWeight(75);
+        button_computer_relation->setFont(font1);
+        button_computer_relation->setStyleSheet(QLatin1String("QPushButton\n"
+"{\n"
+"	color: black;\n"
+"	background-color: rgba(255, 170, 0); border: none;\n"
+"}"));
+
+        verticalLayout->addWidget(button_computer_relation);
 
         button_computer_return = new QPushButton(ComputerWindow);
         button_computer_return->setObjectName(QStringLiteral("button_computer_return"));
@@ -174,7 +174,6 @@ public:
     {
         ComputerWindow->setWindowTitle(QApplication::translate("ComputerWindow", "Computer list", 0));
         EditSearch->setPlaceholderText(QApplication::translate("ComputerWindow", "Write here to search", 0));
-        button_computer_relation->setText(QApplication::translate("ComputerWindow", "Relate", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ComputerWindow", "Computer name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -190,6 +189,7 @@ public:
         btnAdd->setText(QApplication::translate("ComputerWindow", "Add Computer", 0));
         buttonEdit->setText(QApplication::translate("ComputerWindow", "Edit Computer", 0));
         btnDel->setText(QApplication::translate("ComputerWindow", "Delete Computer", 0));
+        button_computer_relation->setText(QApplication::translate("ComputerWindow", "Relate Computer", 0));
         button_computer_return->setText(QApplication::translate("ComputerWindow", "Return to Main Menu", 0));
     } // retranslateUi
 
