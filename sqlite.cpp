@@ -247,9 +247,24 @@ vector<Computers> SQLite::searchComputers(string search)
     return addComputerQueryToList(query);
 }
 
+void SQLite::removeScientistRelation(int input)
+{
+    QSqlQuery query(m_db);
+    QString delSQL = "DELETE FROM comp_pers WHERE persID = "+QString::number(input);
+    query.exec(delSQL);
+}
+
+void SQLite::removeComputerRelation(int input)
+{
+    QSqlQuery query(m_db);
+    QString delSQL = "DELETE FROM comp_pers WHERE compID = "+QString::number(input);
+    query.exec(delSQL);
+}
+
 //Fjarlægir persónu endanlega úr gagnagrunninum.
 void SQLite::removeScientist(int input)
 {
+    removeScientistRelation(input);
     QSqlQuery query(m_db);
     QString delSQL = "DELETE FROM person WHERE id = "+QString::number(input);
     query.exec(delSQL);
@@ -258,6 +273,7 @@ void SQLite::removeScientist(int input)
 //Fjarlægir tölvu endanlega úr gagnagrunninum.
 void SQLite::removeComputer(int input)
 {
+    removeComputerRelation(input);
     QSqlQuery query(m_db);
     QString delSQL = "DELETE FROM computers WHERE id = "+QString::number(input);
     query.exec(delSQL);
