@@ -128,3 +128,17 @@ void RelationWindow::on_button_relation_relate_clicked()
     m_domain.createRelation(compId, persId);
     fillLists();
 }
+
+void RelationWindow::on_search_relation_searchCpu_textChanged(const QString &arg1)
+{
+    string search = ui->search_relation_searchCpu->text().toStdString();
+    vector<Computers> computers = m_domain.searchComputer(search);
+    displayComputer(computers);
+}
+
+void RelationWindow::on_search_relation_searchScientist_textChanged(const QString &arg1)
+{
+    string search = ui->search_relation_searchScientist->text().toStdString();
+    vector<Person> persons = m_domain.searchScientist(search);
+    displayScientist(persons);
+}
