@@ -17,6 +17,7 @@ public:
     void setDomain(Domain domain);
     ~ComputerWindow();
 
+    QString getType(string type);
 public slots:
       void sectionClicked(int index);
 

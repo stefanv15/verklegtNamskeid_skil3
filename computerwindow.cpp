@@ -45,7 +45,7 @@ void ComputerWindow::on_button_computer_deleteCpu_clicked()
 {
 }
 
-QString getType(string type)
+QString ComputerWindow::getType(string type)
 {
     if (type=="h")
         return "Hybrid";
