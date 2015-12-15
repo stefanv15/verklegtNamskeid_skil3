@@ -4,6 +4,8 @@
 #include <qmessagebox.h>
 #include "Person.h"
 
+
+//Aðal gluggi fyrir AddScientist fallið.
 AddScientist::AddScientist(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddScientist)
@@ -12,19 +14,23 @@ AddScientist::AddScientist(QWidget *parent) :
     isEditing = false;
 }
 
+//0
 void AddScientist::edit(Person p)
 {
     isEditing = true;
     this->setWindowTitle("Edit scientist");
     ui->line_addScientist_nOs->setText(QString::fromStdString(p.getName()));
+
     if(p.getGender()=="m")
         ui->rbutton_addScientist_male->setChecked(true);
     else
         ui->rbutton_addScientist_female->setChecked(true);
+
     ui->line_addScientist_yearBorn->setText(QString::number(p.getDayOfBirth()));
 
     if(p.getDayOfDeath()>0)
         ui->line_addSchientist_yearDied->setText(QString::number(p.getDayOfDeath()));
+
     ui->checkBox_addScientist_isdead->setChecked(p.getDayOfDeath()>0);
     idToEdit = p.getId();
 }
