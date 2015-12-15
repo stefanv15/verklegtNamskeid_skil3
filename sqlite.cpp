@@ -264,7 +264,7 @@ void SQLite::removeComputerRelation(int input)
 //Fjarlægir persónu endanlega úr gagnagrunninum.
 void SQLite::removeScientist(int input)
 {
-    removeScientistRelation(input);
+   //removeScientistRelation(input);
     QSqlQuery query(m_db);
     QString delSQL = "DELETE FROM person WHERE id = "+QString::number(input);
     query.exec(delSQL);
@@ -273,7 +273,7 @@ void SQLite::removeScientist(int input)
 //Fjarlægir tölvu endanlega úr gagnagrunninum.
 void SQLite::removeComputer(int input)
 {
-    removeComputerRelation(input);
+    //removeComputerRelation(input);
     QSqlQuery query(m_db);
     QString delSQL = "DELETE FROM computers WHERE id = "+QString::number(input);
     query.exec(delSQL);
