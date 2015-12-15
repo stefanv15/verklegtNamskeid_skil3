@@ -136,6 +136,7 @@ void ComputerWindow::on_button_computer_relation_clicked()
     RelationWindow relation;
     relation.setModal(true);
     relation.exec();
+    fillList();
 }
 
 void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)

@@ -36,7 +36,7 @@ public:
     {
         if (RelationWindow->objectName().isEmpty())
             RelationWindow->setObjectName(QStringLiteral("RelationWindow"));
-        RelationWindow->resize(723, 264);
+        RelationWindow->resize(726, 264);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -50,8 +50,8 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         RelationWindow->setPalette(palette);
         table_relation_computers = new QTableWidget(RelationWindow);
-        if (table_relation_computers->columnCount() < 5)
-            table_relation_computers->setColumnCount(5);
+        if (table_relation_computers->columnCount() < 6)
+            table_relation_computers->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         table_relation_computers->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -64,6 +64,7 @@ public:
         table_relation_computers->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         table_relation_computers->setObjectName(QStringLiteral("table_relation_computers"));
         table_relation_computers->setGeometry(QRect(410, 10, 301, 211));
+        table_relation_computers->setColumnCount(6);
         search_relation_searchScientist = new QLineEdit(RelationWindow);
         search_relation_searchScientist->setObjectName(QStringLiteral("search_relation_searchScientist"));
         search_relation_searchScientist->setGeometry(QRect(10, 230, 301, 20));
@@ -71,8 +72,8 @@ public:
         search_relation_searchCpu->setObjectName(QStringLiteral("search_relation_searchCpu"));
         search_relation_searchCpu->setGeometry(QRect(410, 230, 301, 20));
         table_relation_scientists = new QTableWidget(RelationWindow);
-        if (table_relation_scientists->columnCount() < 4)
-            table_relation_scientists->setColumnCount(4);
+        if (table_relation_scientists->columnCount() < 6)
+            table_relation_scientists->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
         table_relation_scientists->setHorizontalHeaderItem(0, __qtablewidgetitem5);
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
@@ -83,6 +84,7 @@ public:
         table_relation_scientists->setHorizontalHeaderItem(3, __qtablewidgetitem8);
         table_relation_scientists->setObjectName(QStringLiteral("table_relation_scientists"));
         table_relation_scientists->setGeometry(QRect(10, 10, 301, 211));
+        table_relation_scientists->setColumnCount(6);
         button_relation_relate = new QPushButton(RelationWindow);
         button_relation_relate->setObjectName(QStringLiteral("button_relation_relate"));
         button_relation_relate->setEnabled(true);
