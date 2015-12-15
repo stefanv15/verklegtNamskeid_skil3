@@ -12,6 +12,13 @@ ComputerAdd::ComputerAdd(QWidget *parent) :
     isEditing = false;
 }
 
+//Eyðir.
+ComputerAdd::~ComputerAdd()
+{
+    delete ui;
+}
+
+//Lagfærir tölvu upplýsingar.
 void ComputerAdd::edit(Computers c)
 {
     isEditing = true;
@@ -31,21 +38,19 @@ void ComputerAdd::edit(Computers c)
     idToEdit = c.getId();
 }
 
+//Sækir private breytuna m_domain.
 void ComputerAdd::setDomain(Domain domain)
 {
     m_domain = domain;
 }
 
-ComputerAdd::~ComputerAdd()
-{
-    delete ui;
-}
-
+//
 void ComputerAdd::on_checkBox_toggled(bool checked)
 {
     ui->line_computerAdd_yearBuilt->setEnabled(checked);
 }
 
+//Vistar upplýsingar um tölvu.
 void ComputerAdd::on_button_computerAdd_save_clicked()
 {
     if(ui->line_computerAdd_cpuName->text()=="")
@@ -92,11 +97,13 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
     this->setResult(QDialog::Accepted);
 }
 
+//Athugar hvort tölva var byggð.
 void ComputerAdd::on_checkbox_computerAdd_wasBuilt_stateChanged(int arg1)
 {
     ui->line_computerAdd_yearBuilt->setEnabled(arg1); //ui->checkWasBuilt->isChecked());
 }
 
+//Hættir keyrslu computerAdd gluggans.
 void ComputerAdd::on_button_computeradd_cancel_clicked()
 {
     this->close();

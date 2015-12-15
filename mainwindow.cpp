@@ -15,17 +15,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
+//Eyðir.
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+//Opnar link á lag á youtube.com.
 void MainWindow::on_button_main_fun_clicked()
 {
     QString link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     QDesktopServices::openUrl(QUrl(link));
 }
 
+//Opnar computer gluggann.
 void MainWindow::on_button_main_computer_clicked()
 {
     ComputerWindow computerwindow;  // Computer list gluggi verður til
@@ -33,12 +36,14 @@ void MainWindow::on_button_main_computer_clicked()
     computerwindow.exec();          // Opna glugga
 }
 
+//Lokar forriti.
 void MainWindow::on_button_main_quit_clicked()
 {
     m_domain.saveAllData();
     exit(1);
 }
 
+//Opnar Scientist gluggann.
 void MainWindow::on_button_main_scientist_clicked()
 {
     ScientistsWindow scientistswindow;

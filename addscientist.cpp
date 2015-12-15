@@ -14,7 +14,7 @@ AddScientist::AddScientist(QWidget *parent) :
     isEditing = false;
 }
 
-//0
+//Leyfir notanda að lagfæra upplýsingar
 void AddScientist::edit(Person p)
 {
     isEditing = true;
@@ -35,21 +35,25 @@ void AddScientist::edit(Person p)
     idToEdit = p.getId();
 }
 
+//Eyðir
 AddScientist::~AddScientist()
 {
     delete ui;
 }
 
+//Sækir private breytu í domain klasanum.
 void AddScientist::setDomain(Domain domain)
 {
     m_domain = domain;
 }
 
+//Athugar hvort persóna sé á lífi eða ekki.
 void AddScientist::on_check_isdead_toggled(bool checked)
 {
     ui->line_addSchientist_yearDied->setEnabled(checked);
 }
 
+//Vistar persónu og setur í lista.
 void AddScientist::on_button_addScientist_save_clicked()
 {
     if(ui->line_addScientist_nOs->text()=="")
@@ -110,12 +114,14 @@ void AddScientist::on_button_addScientist_save_clicked()
     this->setResult(QDialog::Accepted);
 }
 
+//Hættir keyrslu scientist glugga.
 void AddScientist::on_button_addScientist_cancel_clicked()
 {
     this->close();
     this->setResult(QDialog::Rejected);
 }
 
+//Athugar hvort persóna sé á lífi eða ekki.
 void AddScientist::on_checkBox_addScientist_isdead_stateChanged(int arg1)
 {
     ui->line_addSchientist_yearDied->setEnabled(arg1);

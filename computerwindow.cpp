@@ -30,11 +30,13 @@ ComputerWindow::ComputerWindow(QWidget *parent) :
     displayComputer(m_domain.getComputerList());
 }
 
+//Eyðir.
 ComputerWindow::~ComputerWindow()
 {
     delete ui;
 }
 
+//Sækir tegund tölvu.
 QString ComputerWindow::getType(string type)
 {
     if (type=="h")
@@ -52,11 +54,13 @@ void ComputerWindow::sectionClicked(int index)
     QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
 }
 
+//Nær í upplýsingar um computer lista og person lista.
 void ComputerWindow::fillList()
 {    vector<Computers> list =  m_domain.getComputerList();
      displayComputer(list);
 }
 
+//Nær í upplýsingar um computer lista.
 void ComputerWindow::displayComputer(vector<Computers> computer)
 {
     ui->table_computer_listCpu->clearContents();
@@ -81,11 +85,13 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
         ui->table_computer_listCpu->selectRow(0);
 }
 
+//Lokar computer glugganum.
 void ComputerWindow::on_button_computer_return_clicked()
 {
     this->close();
 }
 
+//Leyfir notanda að leita eftir tölvum.
 void ComputerWindow::on_search_computer_searchCpu_textChanged()
 {
     string search = ui->search_computer_searchCpu->text().toStdString();
@@ -93,6 +99,7 @@ void ComputerWindow::on_search_computer_searchCpu_textChanged()
     displayComputer(computers);
 }
 
+//Leyfir notandanum að lagfæra upplýsingar.
 void ComputerWindow::on_button_computer_edit_clicked()
 {
     int rowidx = ui->table_computer_listCpu->selectionModel()->currentIndex().row();
@@ -109,6 +116,7 @@ void ComputerWindow::on_button_computer_edit_clicked()
         fillList();
 }
 
+//Leyfir notandanum að eyða upplýsingum.
 void ComputerWindow::on_button_computer_delete_clicked()
 {
     int mbAnswer = QMessageBox::question(this,"Question","Are you sure you want to delete the selected computer?");
@@ -122,6 +130,7 @@ void ComputerWindow::on_button_computer_delete_clicked()
     }
 }
 
+//Leyfir notandanum að setja inn upplýsingar.
 void ComputerWindow::on_button_computer_add_clicked()
 {
     ComputerAdd ca;
@@ -131,6 +140,7 @@ void ComputerWindow::on_button_computer_add_clicked()
        fillList();
 }
 
+//Opnar relation gluggann.
 void ComputerWindow::on_button_computer_relation_clicked()
 {
     RelationWindow relation;
@@ -138,6 +148,7 @@ void ComputerWindow::on_button_computer_relation_clicked()
     relation.exec();
 }
 
+//Opnar edit gluggann ef það er tvíklikkað
 void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)
 {
     on_button_computer_edit_clicked();

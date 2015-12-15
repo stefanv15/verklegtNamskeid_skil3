@@ -31,12 +31,20 @@ RelationWindow::RelationWindow(QWidget *parent) :
     fillLists();
 }
 
+//Eyðir.
+RelationWindow::~RelationWindow()
+{
+    delete ui;
+}
+
+//Sækir aðgang í domain.cpp.
 void RelationWindow::setDomain(Domain domain)
 {
     m_domain = domain;
     fillLists();
 }
 
+//Sækir tvo lista. Peronlist og computerlist.
 void RelationWindow::fillLists()
 {
     vector<Computers> compList = m_domain.getComputerList();
@@ -45,6 +53,7 @@ void RelationWindow::fillLists()
     displayScientist(persList);
 }
 
+//Birtir computer lista.
 void RelationWindow::displayComputer(vector<Computers> computer)
 {
     ComputerWindow m_computerwindow;
@@ -72,6 +81,7 @@ void RelationWindow::displayComputer(vector<Computers> computer)
     }
 }
 
+//Birtir scientist lista.
 void RelationWindow::displayScientist(vector<Person> persons)
 {
     ui->table_relation_scientists->clear();
@@ -103,17 +113,14 @@ void RelationWindow::displayScientist(vector<Person> persons)
     }
 }
 
-RelationWindow::~RelationWindow()
-{
-    delete ui;
-}
-
+//Hættir keyrslu relation gluggans.
 void RelationWindow::on_button_relation_return_clicked()
 {
     this->close();
     this->setResult(QDialog::Accepted);
 }
 
+//Leyfir notandanum að vensla saman upplýsingar.
 void RelationWindow::on_button_relation_relate_clicked()
 {
     int persRowid = ui->table_relation_scientists->selectionModel()->currentIndex().row();

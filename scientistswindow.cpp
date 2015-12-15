@@ -26,17 +26,20 @@ ScientistsWindow::ScientistsWindow(QWidget *parent) :
     displayAllScientists();
 }
 
+//Eyðir.
 ScientistsWindow::~ScientistsWindow()
 {
     delete ui;
 }
 
+//Sækir lista yfir tölvunarfræðinga.
 void ScientistsWindow::displayAllScientists()
 {
     vector<Person> persons = m_domain.getList();
     displayScientists(persons);
 }
 
+//Sýnir notanda lista yfir tölvunarfræðinga.
 void ScientistsWindow::displayScientists(vector<Person> persons)
 {
     ui->table_scientist_scientists->clearContents();
@@ -64,6 +67,7 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
         ui->table_scientist_scientists->selectRow(0);
 }
 
+//Opnar addScientist gluggann.
 void ScientistsWindow::on_button_scientist_addScientist_clicked()
 {
     AddScientist addscientist;
@@ -73,6 +77,7 @@ void ScientistsWindow::on_button_scientist_addScientist_clicked()
         on_search_scientist_scientists_textChanged();
 }
 
+//Opnar editScientist gluggann.
 void ScientistsWindow::on_button_scientist_editscientist_clicked()
 {
     int rowidx = ui->table_scientist_scientists->selectionModel()->currentIndex().row();
@@ -88,6 +93,7 @@ void ScientistsWindow::on_button_scientist_editscientist_clicked()
         on_search_scientist_scientists_textChanged();
 }
 
+//Leyfir notandanum að eyða persónu.
 void ScientistsWindow::on_button_Scientist_delscientist_clicked()
 {
     int answer = QMessageBox::question(this,"Question","Are you sure you want to delete selected scientist?");
@@ -104,6 +110,7 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
     }
 }
 
+//Opnar relation glugann
 void ScientistsWindow::on_button_scientist_relation_clicked()
 {
     RelationWindow relation;
@@ -111,16 +118,19 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     relation.exec();
 }
 
-void ScientistsWindow::on_table_scientist_scientists_doubleClicked(const QModelIndex &index)
+//Leyfir notandanum að tvíklikka á persónu og opnar svo edit gluggann.
+void ScientistsWindow::on_table_scientist_scientists_doubleClicked()
 {
     on_button_scientist_editscientist_clicked();
 }
 
+//Hættir keyrslu addScientist gluggans.
 void ScientistsWindow::on_button_scientist_return_clicked()
 {
    this->close();
 }
 
+//Leyfir notandanaum að leita eftir persónu.
 void ScientistsWindow::on_search_scientist_scientists_textChanged()
 {
     string search = ui->search_scientist_scientists->text().toStdString();
