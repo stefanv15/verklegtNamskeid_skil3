@@ -30,7 +30,6 @@ public:
     QTableWidget *table_relation_scientists;
     QPushButton *button_relation_relate;
     QPushButton *button_relation_return;
-    QPushButton *button_relation_remove;
 
     void setupUi(QDialog *RelationWindow)
     {
@@ -109,15 +108,6 @@ public:
 "	color: black;\n"
 "	background-color: rgba(255, 200, 0); border: none;\n"
 "}"));
-        button_relation_remove = new QPushButton(RelationWindow);
-        button_relation_remove->setObjectName(QStringLiteral("button_relation_remove"));
-        button_relation_remove->setGeometry(QRect(320, 170, 81, 41));
-        button_relation_remove->setFont(font);
-        button_relation_remove->setStyleSheet(QLatin1String("QPushButton\n"
-"{\n"
-"	color: black;\n"
-"	background-color: rgba(255, 170, 0); border: none;\n"
-"}"));
 
         retranslateUi(RelationWindow);
 
@@ -149,7 +139,6 @@ public:
         ___qtablewidgetitem8->setText(QApplication::translate("RelationWindow", "Year died", 0));
         button_relation_relate->setText(QApplication::translate("RelationWindow", "Relate!", 0));
         button_relation_return->setText(QApplication::translate("RelationWindow", " Return", 0));
-        button_relation_remove->setText(QApplication::translate("RelationWindow", "Remove ", 0));
     } // retranslateUi
 
 };

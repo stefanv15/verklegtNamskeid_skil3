@@ -236,34 +236,6 @@
     <string> Return</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="button_relation_remove">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>170</y>
-     <width>81</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Rockwell</family>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton
-{
-	color: black;
-	background-color: rgba(255, 170, 0); border: none;
-}</string>
-   </property>
-   <property name="text">
-    <string>Remove </string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

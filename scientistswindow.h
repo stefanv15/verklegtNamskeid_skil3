@@ -30,7 +30,7 @@ private slots:
 
     void on_button_scientist_relation_clicked();
 
-    void on_table_scientist_scientists_doubleClicked(const QModelIndex &index);
+    void on_table_scientist_scientists_doubleClicked();
 
     void on_button_scientist_return_clicked();
 

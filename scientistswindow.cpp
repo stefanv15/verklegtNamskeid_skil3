@@ -114,7 +114,7 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     displayAllScientists();
 }
 
-void ScientistsWindow::on_table_scientist_scientists_doubleClicked(const QModelIndex &index)
+void ScientistsWindow::on_table_scientist_scientists_doubleClicked()
 {
     on_button_scientist_editscientist_clicked();
 }
