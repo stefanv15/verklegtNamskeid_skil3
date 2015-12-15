@@ -141,7 +141,7 @@ void ComputerWindow::on_button_computer_relation_clicked()
     fillList();
 }
 
-void ComputerWindow::on_table_computer_listCpu_doubleClicked(const QModelIndex &index)
+void ComputerWindow::on_table_computer_listCpu_doubleClicked()
 {
     on_button_computer_edit_clicked();
 }

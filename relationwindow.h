@@ -26,9 +26,9 @@ private slots:
 
     void on_button_relation_relate_clicked();
 
-    void on_search_relation_searchCpu_textChanged(const QString &arg1);
+    void on_search_relation_searchCpu_textChanged();
 
-    void on_search_relation_searchScientist_textChanged(const QString &arg1);
+    void on_search_relation_searchScientist_textChanged();
 
 private:
     Ui::RelationWindow *ui;

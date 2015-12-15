@@ -28,7 +28,7 @@ private slots:
     void on_button_computer_delete_clicked();
     void on_button_computer_add_clicked();
 
-    void on_table_computer_listCpu_doubleClicked(const QModelIndex &index);
+    void on_table_computer_listCpu_doubleClicked();
 
 private:
     Ui::ComputerWindow *ui;

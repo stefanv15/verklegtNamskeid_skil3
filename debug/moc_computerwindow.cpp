@@ -74,7 +74,7 @@ static const uint qt_meta_data_ComputerWindow[] = {
        7,    0,   60,    2, 0x08 /* Private */,
        8,    0,   61,    2, 0x08 /* Private */,
        9,    0,   62,    2, 0x08 /* Private */,
-      10,    1,   63,    2, 0x08 /* Private */,
+      10,    0,   63,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -84,7 +84,7 @@ static const uint qt_meta_data_ComputerWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex,    3,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -102,7 +102,7 @@ void ComputerWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 4: _t->on_button_computer_edit_clicked(); break;
         case 5: _t->on_button_computer_delete_clicked(); break;
         case 6: _t->on_button_computer_add_clicked(); break;
-        case 7: _t->on_table_computer_listCpu_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 7: _t->on_table_computer_listCpu_doubleClicked(); break;
         default: ;
         }
     }
