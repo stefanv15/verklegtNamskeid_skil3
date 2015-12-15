@@ -122,6 +122,7 @@ void RelationWindow::on_button_relation_relate_clicked()
     fillLists();
 }
 
+//Leyfir notandanum að leita að upplýsingum til að vensla.
 void RelationWindow::on_search_relation_searchCpu_textChanged()
 {
     string search = ui->search_relation_searchCpu->text().toStdString();
@@ -129,6 +130,7 @@ void RelationWindow::on_search_relation_searchCpu_textChanged()
     displayComputer(computers);
 }
 
+//Leyfir notandanum að leita að upplýsingum til að vensla.
 void RelationWindow::on_search_relation_searchScientist_textChanged()
 {
     string search = ui->search_relation_searchScientist->text().toStdString();

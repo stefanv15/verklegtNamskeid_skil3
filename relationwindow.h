@@ -22,15 +22,15 @@ public:
 private slots:
     void on_button_relation_return_clicked();               //Hættir keyrslu relation gluggans.
     void on_button_relation_relate_clicked();               //Leyfir notandanum að vensla saman upplýsingar.
+    void on_search_relation_searchCpu_textChanged();        //Leyfir notandanum að leita að upplýsingum til að vensla.
+    void on_search_relation_searchScientist_textChanged();  //Leyfir notandanum að leita að upplýsingum til að vensla.
 
-private:                                                    //Private breytur.
+private:
     Ui::RelationWindow *ui;
     Domain m_domain;
     void displayScientist(vector<Person> persons);          //Birtir person lista.
     void displayComputer(vector<Computers> computer);       //Birtist computer lista.
     void fillLists();                                       //Sækir tvo lista. Peronlist og computerlist.
-    void on_search_relation_searchCpu_textChanged();        //Leyfir notanda að leita eftir tölvum.
-    void on_search_relation_searchScientist_textChanged();  //Leyfir notanda að leita eftir persónum.
 };
 
 #endif // RELATIONWINDOW_H
