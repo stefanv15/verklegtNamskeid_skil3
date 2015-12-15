@@ -2,6 +2,7 @@
 #include "computers.h"
 #include "sqlite.h"
 
+//Sjálfgefni smiðurinn fyrir SQLite klasann.
 SQLite::SQLite()
 {
     openDatabase();
@@ -130,12 +131,10 @@ string SQLite::addComputer(Computers& c)
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);
     query.bindValue(":nameOfCpu",QString::fromStdString(c.getNameOfCpu()));
-
     if(c.getYearBuilt()>0)
         query.bindValue(":yearBuilt",QString::number(c.getYearBuilt()));
     else
         query.bindValue(":yearBuilt",QVariant(QVariant::Int)); // Null value
-
     query.bindValue(":typeOfCpu",QString::fromStdString(c.getTypeOfCpu()));
     query.bindValue(":wasBuilt",QString::fromStdString(c.getWasBuilt()));
     if (!query.exec())
@@ -153,12 +152,10 @@ string SQLite::updateComputer(Computers &c)
     QSqlQuery query(m_db);
     query.prepare(sInsertSQL);
     query.bindValue(":nameOfCpu",QString::fromStdString(c.getNameOfCpu()));
-
     if(c.getYearBuilt()>0)
         query.bindValue(":yearBuilt",QString::number(c.getYearBuilt()));
     else
         query.bindValue(":yearBuilt",QVariant(QVariant::Int)); // Null value
-
     query.bindValue(":typeOfCpu",QString::fromStdString(c.getTypeOfCpu()));
     query.bindValue(":wasBuilt",QString::fromStdString(c.getWasBuilt()));
     query.bindValue(":id",QString::number(c.getId()));
@@ -276,7 +273,6 @@ vector <Person> SQLite::sortAscName()
 }
 
 //Raðar nafni tölvunarfræðings í öfugri stafrófsröð.
-
 vector<Person> SQLite::sortDescName()
 {
      QSqlQuery query(m_db);
@@ -286,7 +282,6 @@ vector<Person> SQLite::sortDescName()
 }
 
 //Raðar tölvunarfræðingi eftir kyni.
-
 vector<Person> SQLite::sortGender()
 {
      QSqlQuery query(m_db);
@@ -296,7 +291,6 @@ vector<Person> SQLite::sortGender()
 }
 
 //Raðar tölvunarfræðingi eftir fæðingarári frá 1-10.
-
 vector<Person> SQLite::sortAscYearOfBirth()
 {
      QSqlQuery query(m_db);
@@ -306,7 +300,6 @@ vector<Person> SQLite::sortAscYearOfBirth()
 }
 
 //Raðar tölvunarfræðingi eftir fæðingarári frá 10-1.
-
 vector<Person> SQLite::sortDescYearOfBirth()
 {
      QSqlQuery query(m_db);

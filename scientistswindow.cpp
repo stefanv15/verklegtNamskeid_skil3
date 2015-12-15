@@ -120,7 +120,6 @@ void ScientistsWindow::on_button_Scientist_delscientist_clicked()
 void ScientistsWindow::on_button_scientist_relation_clicked()
 {
     RelationWindow relation;
-    relation.setDomain(m_domain);
     relation.setModal(true);
     relation.exec();
 }

@@ -59,6 +59,7 @@ string Computers::getWasBuilt()
     return wasBuilt;
 }
 
+//Stillir id á tölvu út frá id völdu úr töflu.
 void Computers::setId(int id)
 {
     this->id = id;

@@ -60,6 +60,7 @@ int Person::getDayOfDeath()
     return dayOfDeath;
 }
 
+//Stillir id á persónu út frá id völdu úr töflu.
 void Person::setId(int id)
 {
     this->id = id;
