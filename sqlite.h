@@ -21,8 +21,8 @@ public:
     vector<Computers> getComputerList();                        //Sækir lista af tölvum.
     void removeScientist(int input);                            //Eyðir persónu úr gagnagrunninum.
     void removeComputer(int input);                             //Eyðir tölvu úr gagnagrunnninum.
-    void removeScientistRelation(int input);
-    void removeComputerRelation(int input);
+    void removeScientistRelation(int input);                    //Eyðir tengslum viðkomandi persónu og tölvum.
+    void removeComputerRelation(int input);                     //Eyðir tengslum viðkomandi tölvu og persónum.
     void editScientist(int input, Person& pers);                //Yfirskrifar persónu í gagnagrunninum.
     void editComputer(int input, Computers& comp);              //Yfirskrifar tölvu í gagnagrunninum.
     vector<Person> searchPersons(string search);                //Leitar af persónum í gagnagrunninum.

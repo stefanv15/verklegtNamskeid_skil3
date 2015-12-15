@@ -30,7 +30,6 @@ public:
     Person findPersonById(int cID);                     //Finnur og skilar persónu út frá id.
     void createRelation(int computerID, int personID);  //Býr til tengsl milli tölvu og persónu.
 
-
 private:
     SQLite m_sqlite;                                    //Object af DataLayer fyrir Domain klasann.
 };

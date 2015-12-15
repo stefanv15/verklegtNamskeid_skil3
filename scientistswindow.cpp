@@ -44,14 +44,10 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
 {
     ui->table_scientist_scientists->setSortingEnabled(false);
     ui->table_scientist_scientists->clearContents();
-
     ui->table_scientist_scientists->setRowCount(persons.size());
-
-    //ui->table_scientist_scientists->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     for(unsigned int i = 0; i < persons.size(); i++)
     {
-       // Person currentScientist = persons[i];
         ui->table_scientist_scientists->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(persons[i].getName())));
         ui->table_scientist_scientists->setItem(i, 1, new QTableWidgetItem(QString::fromStdString(persons[i].getGender() == "m"?"Male":"Female")));
         ui->table_scientist_scientists->setItem(i, 2, new QTableWidgetItem(QString::number(persons[i].getDayOfBirth())));
@@ -61,7 +57,6 @@ void ScientistsWindow::displayScientists(vector<Person> persons)
             ui->table_scientist_scientists->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Still alive")));
         ui->table_scientist_scientists->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getComputerList(persons[i].getId()))));
         ui->table_scientist_scientists->setItem(i, 5, new QTableWidgetItem(QString::number(persons[i].getId())));
-
     }
 
     if(persons.size()> 0)
@@ -121,10 +116,7 @@ void ScientistsWindow::on_button_scientist_relation_clicked()
     displayAllScientists();
 }
 
-<<<<<<< HEAD
 //Leyfir notandanum að tvíklikka á persónu og opnar svo edit gluggann.
-=======
->>>>>>> fa1e4b72003115fd0225f7b271ecfe188f97f8e5
 void ScientistsWindow::on_table_scientist_scientists_doubleClicked()
 {
     on_button_scientist_editscientist_clicked();

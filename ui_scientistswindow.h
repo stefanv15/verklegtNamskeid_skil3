@@ -165,7 +165,7 @@ public:
         button_scientist_addScientist->setText(QApplication::translate("ScientistsWindow", "Add Scientist", 0));
         button_scientist_editscientist->setText(QApplication::translate("ScientistsWindow", "Edit Scientist", 0));
         button_Scientist_delscientist->setText(QApplication::translate("ScientistsWindow", "Delete Scientist", 0));
-        button_scientist_relation->setText(QApplication::translate("ScientistsWindow", "Relate Schientist", 0));
+        button_scientist_relation->setText(QApplication::translate("ScientistsWindow", "Relate Scientist", 0));
         button_scientist_return->setText(QApplication::translate("ScientistsWindow", "Return To Main Menu", 0));
     } // retranslateUi
 

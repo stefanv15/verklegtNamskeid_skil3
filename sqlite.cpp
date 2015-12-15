@@ -88,7 +88,6 @@ void SQLite::saveData()
 string SQLite::addData(Person& p)
 {
     string retVal = "";
-
     QString sInsertSQL = "INSERT INTO person(name, gender, yearOfBirth, yearOfDeath) "
                          "VALUES (:name,:gender,:yearOfBirth,:yearOfDeath)";
     QSqlQuery query(m_db);
@@ -125,7 +124,6 @@ string SQLite::updateData(Person &p)
 string SQLite::addComputer(Computers& c)
 {
     string retVal = "";
-
     QString sInsertSQL = "INSERT INTO computers(nameOfCpu, yearBuilt, typeOfCpu, wasBuilt) "
                          "VALUES (:nameOfCpu,:yearBuilt,:typeOfCpu,:wasBuilt)";
     QSqlQuery query(m_db);
@@ -226,7 +224,6 @@ vector<Person> SQLite::searchPersons(string search)
     query.prepare(sSQL);
     search = "%%"+search+"%%";
     query.bindValue(":search", QString::fromStdString(search));
-
     query.exec();
 
     return addPersonQueryToList(query);
@@ -241,12 +238,12 @@ vector<Computers> SQLite::searchComputers(string search)
     query.prepare(sSQL);
     search = "%%"+search+"%%";
     query.bindValue(":search", QString::fromStdString(search));
-
     query.exec();
 
     return addComputerQueryToList(query);
 }
 
+//Eyðir tengslum viðkomandi persónu og tölvum.
 void SQLite::removeScientistRelation(int input)
 {
     QSqlQuery query(m_db);
@@ -254,6 +251,7 @@ void SQLite::removeScientistRelation(int input)
     query.exec(delSQL);
 }
 
+//Eyðir tengslum viðkomandi tölvu og persónum.
 void SQLite::removeComputerRelation(int input)
 {
     QSqlQuery query(m_db);
@@ -278,4 +276,3 @@ void SQLite::removeComputer(int input)
     QString delSQL = "DELETE FROM computers WHERE id = "+QString::number(input);
     query.exec(delSQL);
 }
-
