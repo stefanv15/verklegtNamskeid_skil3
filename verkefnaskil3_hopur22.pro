@@ -41,10 +41,9 @@ HEADERS += computers.h
 HEADERS += domain.h
 HEADERS += sqlite.h
 
-FORMS    += \
-    scientistswindow.ui \
-    computerwindow.ui \
-    relationwindow.ui \
-    mainwindow.ui \
-    computeradd.ui \
-    addscientist.ui
+FORMS    +=    scientistswindow.ui
+FORMS    +=    computerwindow.ui
+FORMS    +=    relationwindow.ui
+FORMS    +=    mainwindow.ui
+FORMS    +=    computeradd.ui
+FORMS    +=    addscientist.ui

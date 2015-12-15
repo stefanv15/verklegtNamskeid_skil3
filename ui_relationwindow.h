@@ -35,7 +35,7 @@ public:
     {
         if (RelationWindow->objectName().isEmpty())
             RelationWindow->setObjectName(QStringLiteral("RelationWindow"));
-        RelationWindow->resize(733, 276);
+        RelationWindow->resize(723, 264);
         QPalette palette;
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -99,7 +99,7 @@ public:
 "}"));
         button_relation_return = new QPushButton(RelationWindow);
         button_relation_return->setObjectName(QStringLiteral("button_relation_return"));
-        button_relation_return->setGeometry(QRect(320, 230, 81, 31));
+        button_relation_return->setGeometry(QRect(320, 230, 81, 21));
         button_relation_return->setFont(font);
         button_relation_return->setStyleSheet(QLatin1String("QPushButton\n"
 "{\n"

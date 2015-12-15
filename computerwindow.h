@@ -16,15 +16,18 @@ public:
     explicit ComputerWindow(QWidget *parent = 0);
     ~ComputerWindow();
 
+    QString getType(string type);
+public slots:
+      void sectionClicked(int index);
+
 private slots:
-    void on_button_computer_return_clicked();
     void on_button_computer_addCpu_clicked();
+    void on_button_computer_return_clicked();
     void on_buttonEdit_clicked();
     void on_btnAdd_clicked();
     void on_btnDel_clicked();
     void on_EditSearch_textChanged();
     void on_button_computer_relation_clicked();
-
     void on_tableWidget_doubleClicked(const QModelIndex &index);
 
 private:

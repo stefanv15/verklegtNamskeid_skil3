@@ -35,7 +35,12 @@ ComputerWindow::~ComputerWindow()
     delete ui;
 }
 
-QString getType(string type)
+void ComputerWindow::sectionClicked(int index)
+{
+    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
+}
+
+QString ComputerWindow::getType(string type)
 {
     if (type=="h")
         return "Hybrid";
@@ -139,7 +144,8 @@ void ComputerWindow::on_EditSearch_textChanged()
 void ComputerWindow::on_button_computer_relation_clicked()
 {
     RelationWindow relation;
-
+    relation.setDomain(m_domain);
+    relation.setModal(true);
     relation.exec();
 }
 

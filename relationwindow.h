@@ -16,15 +16,20 @@ class RelationWindow : public QDialog
 
 public:
     explicit RelationWindow(QWidget *parent = 0);
+    void setDomain(Domain domain);
     ~RelationWindow();
+
 
 private slots:
     //void on_search_relation_searchScientist_textChanged(const QString &arg1);
-    
-    void on_table_relation_schientists_activated(const QModelIndex &index);
-    
+    void on_button_relation_return_clicked();
+
 private:
     Ui::RelationWindow *ui;
+    Domain m_domain;
+    void displayScientist(vector<Person> persons);
+    void displayComputer(vector<Computers> computer);
+    void fillLists();
 };
 
 #endif // RELATIONWINDOW_H

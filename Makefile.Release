@@ -410,7 +410,7 @@ release/moc_scientistswindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		scientistswindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore scientistswindow.h -o release\moc_scientistswindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore scientistswindow.h -o release\moc_scientistswindow.cpp
 
 release/moc_computerwindow.cpp: domain.h \
 		SQLite.h \
@@ -664,7 +664,7 @@ release/moc_computerwindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		computerwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computerwindow.h -o release\moc_computerwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computerwindow.h -o release\moc_computerwindow.cpp
 
 release/moc_relationwindow.cpp: domain.h \
 		SQLite.h \
@@ -918,7 +918,7 @@ release/moc_relationwindow.cpp: domain.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
 		relationwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore relationwindow.h -o release\moc_relationwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore relationwindow.h -o release\moc_relationwindow.cpp
 
 release/moc_mainwindow.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
@@ -1172,7 +1172,7 @@ release/moc_mainwindow.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow 
 		computers.h \
 		comp_pers.h \
 		mainwindow.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore mainwindow.h -o release\moc_mainwindow.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_computeradd.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -1426,7 +1426,7 @@ release/moc_computeradd.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		computers.h \
 		comp_pers.h \
 		computeradd.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computeradd.h -o release\moc_computeradd.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore computeradd.h -o release\moc_computeradd.cpp
 
 release/moc_addscientist.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
@@ -1680,7 +1680,7 @@ release/moc_addscientist.cpp: C:/qt/5.5/mingw492_32/include/QtWidgets/QDialog \
 		computers.h \
 		comp_pers.h \
 		addscientist.h
-	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Búi/Skóli/Verklegt námskeið 1/Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore addscientist.h -o release\moc_addscientist.cpp
+	C:\qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/qt/5.5/mingw492_32/mkspecs/win32-g++ -I"C:/Users/Bríet/Documents/GitHub/Verl.namsk. Skil 3/verklegtNamskeid_skil3" -IC:/qt/5.5/mingw492_32/include -IC:/qt/5.5/mingw492_32/include/QtWebKitWidgets -IC:/qt/5.5/mingw492_32/include/QtWidgets -IC:/qt/5.5/mingw492_32/include/QtWebKit -IC:/qt/5.5/mingw492_32/include/QtGui -IC:/qt/5.5/mingw492_32/include/QtANGLE -IC:/qt/5.5/mingw492_32/include/QtNetwork -IC:/qt/5.5/mingw492_32/include/QtSql -IC:/qt/5.5/mingw492_32/include/QtCore addscientist.h -o release\moc_addscientist.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -2837,7 +2837,21 @@ release/relationwindow.o: relationwindow.cpp relationwindow.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/QTableWidget \
 		C:/qt/5.5/mingw492_32/include/QtWidgets/qtablewidget.h \
-		C:/qt/5.5/mingw492_32/include/QtWidgets/qtableview.h
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qtableview.h \
+		computerwindow.h \
+		mainwindow.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qmainwindow.h \
+		addscientist.h \
+		scientistswindow.h \
+		ui_scientistswindow.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
+		C:/qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\relationwindow.o relationwindow.cpp
 
 release/mainwindow.o: mainwindow.cpp mainwindow.h \
