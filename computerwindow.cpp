@@ -35,11 +35,6 @@ ComputerWindow::~ComputerWindow()
     delete ui;
 }
 
-void ComputerWindow::sectionClicked(int index)
-{
-    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
-}
-
 QString ComputerWindow::getType(string type)
 {
     if (type=="h")
@@ -50,6 +45,11 @@ QString ComputerWindow::getType(string type)
         return "Analog";
     else
         return "";
+}
+
+void ComputerWindow::sectionClicked(int index)
+{
+    QMessageBox::about(this,"Hi! Header Click Detected!","Index:"+QString::number(index));
 }
 
 void ComputerWindow::fillList()
