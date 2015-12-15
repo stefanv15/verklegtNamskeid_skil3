@@ -17,7 +17,6 @@ class RelationWindow : public QDialog
 
 public:
     explicit RelationWindow(QWidget *parent = 0);           //Sjálfgefinn smiður.
-    void setDomain(Domain domain);                          //Sækir aðgang í domain.cpp
     ~RelationWindow();                                      //Eyðir.
 
 private slots:
@@ -25,6 +24,7 @@ private slots:
     void on_button_relation_relate_clicked();               //Leyfir notandanum að vensla saman upplýsingar.
     void on_search_relation_searchCpu_textChanged();        //Leyfir notandanum að leita að upplýsingum til að vensla.
     void on_search_relation_searchScientist_textChanged();  //Leyfir notandanum að leita að upplýsingum til að vensla.
+
 private:
     Ui::RelationWindow *ui;
     Domain m_domain;

@@ -56,8 +56,9 @@ void ComputerWindow::sectionClicked(int index)
 
 //Nær í upplýsingar um computer lista og person lista.
 void ComputerWindow::fillList()
-{    vector<Computers> list =  m_domain.getComputerList();
-     displayComputer(list);
+{
+    vector<Computers> list =  m_domain.getComputerList();
+    displayComputer(list);
 }
 
 //Nær í upplýsingar um computer lista.
@@ -76,12 +77,9 @@ void ComputerWindow::displayComputer(vector<Computers> computer)
             ui->table_computer_listCpu->setItem(i, 3, new QTableWidgetItem(QString::number(computer[i].getYearBuilt())));
         else
             ui->table_computer_listCpu->setItem(i, 3, new QTableWidgetItem(QString::fromStdString("Not built")));
-
         ui->table_computer_listCpu->setItem(i, 4, new QTableWidgetItem(QString::fromStdString(m_domain.getPersList(computer[i].getId()))));
         ui->table_computer_listCpu->setItem(i, 5, new QTableWidgetItem(QString::number(computer[i].getId())));
     }
-
-    // Select first row if any data in grid
     if(computer.size()>0)
         ui->table_computer_listCpu->selectRow(0);
     ui->table_computer_listCpu->setSortingEnabled(true);
@@ -105,7 +103,6 @@ void ComputerWindow::on_search_computer_searchCpu_textChanged()
 void ComputerWindow::on_button_computer_edit_clicked()
 {
     int rowidx = ui->table_computer_listCpu->selectionModel()->currentIndex().row();
-
     int id = ui->table_computer_listCpu->model()->index(rowidx, 5).data().toInt();
     Computers c = m_domain.findComputerById(id);
 

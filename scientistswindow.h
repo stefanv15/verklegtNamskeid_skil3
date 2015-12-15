@@ -7,7 +7,8 @@
 #include <QDialog>
 using namespace std;
 
-namespace Ui {
+namespace Ui
+{
 class ScientistsWindow;
 }
 
@@ -18,7 +19,6 @@ class ScientistsWindow : public QDialog
 public:
     explicit ScientistsWindow(QWidget *parent = 0);
     ~ScientistsWindow();                                            //Eyðir.
-    void setDomain(Domain domain);                                  //Sækir aðgang að domain fallinu í gegnum m_domain breytu.
 
 private slots:
     void on_button_scientist_addScientist_clicked();                //Opnar addScientist gluggann.

@@ -14,10 +14,10 @@ class AddScientist : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddScientist(QWidget *parent = 0); //Sjálfgefinn smiður.
-    ~AddScientist();                            //Eyðir
-    void setDomain(Domain domain);              //Sækir private breytu í domain klasanum.
-    void edit(Person p);                        //Leyfir notanda að lagfæra upplýsingar
+    explicit AddScientist(QWidget *parent = 0);                     //Sjálfgefinn smiður.
+    ~AddScientist();                                                //Eyðir
+    void setDomain(Domain domain);                                  //Sækir private breytu í domain klasanum.
+    void edit(Person p);                                            //Leyfir notanda að lagfæra upplýsingar
 
 private slots:
     void on_check_isdead_toggled(bool checked);                     //Athugar hvort persóna sé á lífi eða ekki.
@@ -26,7 +26,7 @@ private slots:
     void on_checkBox_addScientist_isdead_stateChanged(int arg1);    //Athugar hvort persóna sé á lífi eða ekki.
 
 private:
-    Ui::AddScientist *ui;                       // Private breytur.
+    Ui::AddScientist *ui;                                           // Private breytur.
     Domain m_domain;
     bool isEditing;
     int idToEdit;

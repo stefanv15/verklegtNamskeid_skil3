@@ -26,14 +26,12 @@ void ComputerAdd::edit(Computers c)
     ui->line_computerAdd_cpuName->setText(QString::fromStdString(c.getNameOfCpu())); // Setja heiti tölvu inn í svæðið editComputerName
     if(c.getYearBuilt()>0)
         ui->line_computerAdd_yearBuilt->setText(QString::number(c.getYearBuilt())); // Setja ártal inn í svæðið editYearBuilt
-
     if(c.getTypeOfCpu()=="h")
         ui->rbutton_computerAdd_hybrid->setChecked(true);
     else if(c.getTypeOfCpu()=="d")
         ui->rbutton_computerAdd_digital->setChecked(true);
     else
         ui->rbutton_computerAdd_analog->setChecked(true);
-
     ui->checkbox_computerAdd_wasBuilt->setChecked(c.getWasBuilt()=="y");
     idToEdit = c.getId();
 }
@@ -60,7 +58,6 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
 
         return;
     }
-
     if((ui->checkbox_computerAdd_wasBuilt->isChecked()) && (ui->line_computerAdd_yearBuilt->text()==""))
     {
         QMessageBox::warning(this,"Warning",QString::fromStdString("Please enter year built!"));
@@ -68,7 +65,6 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
 
         return;
     }
-
     string type;
     if(ui->rbutton_computerAdd_analog->isChecked())
         type = "a";
@@ -80,7 +76,6 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
                  ui->line_computerAdd_yearBuilt->text().toInt(),
                  type,
                  ui->checkbox_computerAdd_wasBuilt->isChecked()?"y":"n");
-
     string res = "";
     if (isEditing)
     {
@@ -91,7 +86,6 @@ void ComputerAdd::on_button_computerAdd_save_clicked()
         res = m_domain.createComputer(c);
     if (res!="")
         QMessageBox::warning(this,"Warning",QString::fromStdString( res));
-
 
     this->close();
     this->setResult(QDialog::Accepted);

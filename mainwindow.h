@@ -6,7 +6,8 @@
 
 using namespace std;
 
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 }
 

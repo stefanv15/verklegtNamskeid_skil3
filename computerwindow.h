@@ -4,7 +4,8 @@
 #include "computers.h"
 #include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class ComputerWindow;
 }
 
@@ -14,10 +15,11 @@ class ComputerWindow : public QDialog
 
 public:
     explicit ComputerWindow(QWidget *parent = 0);
-    ~ComputerWindow();                                                        //Eyðir.
     QString getType(string type);                                             //Sækir tegund tölvu.
+    ~ComputerWindow();                                                        //Eyðir.
+
 public slots:
-      void sectionClicked(int index);
+    void sectionClicked(int index);
 
 private slots:
     void on_button_computer_return_clicked();                                 //Lokar computer glugganum.
